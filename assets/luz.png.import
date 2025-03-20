@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnb38atraodmx"
-path="res://.godot/imported/luz.png-50ed3d8b80e19978e8ee4b6e1e69b949.ctex"
+path="res://.godot/imported/luz.png-9ddf1e6e4d4fb4576e02093a2d34d043.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/luz.png"
-dest_files=["res://.godot/imported/luz.png-50ed3d8b80e19978e8ee4b6e1e69b949.ctex"]
+source_file="res://assets/luz.png"
+dest_files=["res://.godot/imported/luz.png-9ddf1e6e4d4fb4576e02093a2d34d043.ctex"]
 
 [params]
 

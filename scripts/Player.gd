@@ -1,10 +1,11 @@
-
+class_name Player
 extends CharacterBody2D
 
 @export var maxSpeed = 100
 @export var aceleration = 800
 @export var friction = 1200
 
+@onready var respawnPosition = position
 func _physics_process(delta):
 	var inputVector = Vector2.ZERO
 	
@@ -25,3 +26,6 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 
 	move_and_slide()
+
+func die():
+	position = respawnPosition
