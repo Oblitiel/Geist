@@ -7,6 +7,7 @@ extends CharacterBody2D
 
 @onready var respawnPosition = position
 func _physics_process(delta):
+func processVelocity(delta):
 	var inputVector = Vector2.ZERO
 	
 	inputVector.x = Input.get_axis("left","right")

@@ -1,5 +1,6 @@
-class_name Geist
 extends Player
+
+var possed
 
 func _physics_process(delta):
 	processVelocity(delta)

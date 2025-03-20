@@ -1,13 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=8 format=3 uid="uid://wm1rhh1g0mdr"]
 
-[ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_hg2rt"]
-[ext_resource type="Texture2D" uid="uid://ub4qtmc3de4u" path="res://assets/muro.png" id="2_bxw6i"]
-[ext_resource type="Texture2D" uid="uid://dyjj85f6prhic" path="res://assets/suelo.png" id="3_jh75h"]
-[ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://actors/light/light.tscn" id="4_6xm7l"]
-[ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://actors/checkpoint/checkpoint.tscn" id="5_80mmp"]
+[ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
+[ext_resource type="Texture2D" uid="uid://ub4qtmc3de4u" path="res://assets/muro.png" id="2_qf168"]
+[ext_resource type="Texture2D" uid="uid://dyjj85f6prhic" path="res://assets/suelo.png" id="3_q5b11"]
+[ext_resource type="PackedScene" uid="uid://gs6gfrdl7hmx" path="res://actors/player/human/human.tscn" id="4_gkvbk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8385k"]
-texture = ExtResource("2_bxw6i")
+texture = ExtResource("2_qf168")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -46,7 +45,7 @@ texture = ExtResource("2_bxw6i")
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6eitf"]
-texture = ExtResource("3_jh75h")
+texture = ExtResource("3_q5b11")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -83,7 +82,7 @@ sources/1 = SubResource("TileSetAtlasSource_6eitf")
 [node name="Test Level" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("1_hg2rt")]
+[node name="Player" parent="." instance=ExtResource("1_p027j")]
 z_index = 10
 y_sort_enabled = true
 position = Vector2(1, -6)
@@ -99,14 +98,11 @@ tile_set = SubResource("TileSet_wcm1f")
 format = 2
 layer_0/name = "Walls"
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(-65538, 65536, 2, -65537, 65536, 2, -131072, 65536, 2, -131071, 65536, 2, -131070, 65536, 2, -131069, 0, 1, -65533, 0, 1, 3, 0, 2, -65539, 131072, 1, -3, 131072, 1, 65533, 131072, 1, 131069, 131072, 1, 4, 65536, 2, 5, 131072, 2, -65532, 65536, 1, -131068, 65536, 1, -131067, 131072, 1, -65531, 131072, 1, -196603, 131072, 1, -196604, 65536, 1, -196605, 65536, 1, -196606, 65536, 1, -196607, 65536, 1, -196608, 65536, 1, -131073, 65536, 1, -131074, 65536, 1, -131075, 65536, 1, -196611, 65536, 1, -196610, 65536, 1, -196609, 65536, 1, -262144, 65536, 1, -262143, 65536, 1, -262142, 65536, 1, -262141, 65536, 1, -262140, 65536, 1, -262139, 131072, 1, 131068, 0, 1, 65532, 0, 1, -4, 0, 1, -65540, 0, 1, -131076, 0, 1, -196612, 0, 1, 196605, 131072, 2, 196604, 0, 2, -262148, 0, 0, -262147, 65536, 0, -262146, 65536, 0, -262145, 65536, 0, -327680, 65536, 0, -327679, 65536, 0, -327678, 65536, 0, -327677, 65536, 0, -327676, 65536, 0, -327675, 131072, 0, -2, 1, 0, -1, 65537, 0, -65536, 131073, 0, 65534, 1, 1, 131070, 1, 2, 65535, 65537, 1, 131071, 65537, 2, 0, 131073, 1, 65536, 131073, 2)
+layer_0/tile_data = PackedInt32Array(-65538, 65536, 2, -65537, 65536, 2, -131072, 65536, 2, -131071, 65536, 2, -131070, 65536, 2, -65533, 0, 1, 3, 0, 2, -65539, 131072, 1, -3, 131072, 1, 65533, 131072, 1, 131069, 131072, 1, 4, 65536, 2, 5, 131072, 2, -65532, 65536, 1, -131068, 65536, 1, -131067, 131072, 1, -65531, 131072, 1, -196603, 131072, 1, -196604, 65536, 1, -196605, 65536, 1, -196606, 65536, 1, -196607, 65536, 1, -196608, 65536, 1, -131073, 65536, 1, -131074, 65536, 1, -131075, 65536, 1, -196611, 65536, 1, -196610, 65536, 1, -196609, 65536, 1, -262144, 65536, 1, -262143, 65536, 1, -262142, 65536, 1, -262141, 65536, 1, -262140, 65536, 1, -262139, 131072, 1, 131068, 0, 1, 65532, 0, 1, -4, 0, 1, -65540, 0, 1, -131076, 0, 1, -196612, 0, 1, 196605, 131072, 2, 196604, 0, 2, -262148, 0, 0, -262147, 65536, 0, -262146, 65536, 0, -262145, 65536, 0, -327680, 65536, 0, -327679, 65536, 0, -327678, 65536, 0, -327677, 65536, 0, -327676, 65536, 0, -327675, 131072, 0, -2, 1, 0, -1, 65537, 0, -65536, 131073, 0, 65534, 1, 1, 131070, 1, 2, 65535, 65537, 1, 131071, 65537, 2, 0, 131073, 1, 65536, 131073, 2, -131069, 0, 1)
 layer_1/name = "Floor"
 layer_1/y_sort_enabled = true
 layer_1/z_index = -100
 layer_1/tile_data = PackedInt32Array()
 
-[node name="luz" parent="." instance=ExtResource("4_6xm7l")]
-position = Vector2(15, 28)
-
-[node name="checkpoint" parent="." instance=ExtResource("5_80mmp")]
-position = Vector2(46, 49)
+[node name="Human" parent="." instance=ExtResource("4_gkvbk")]
+position = Vector2(28, 21)
