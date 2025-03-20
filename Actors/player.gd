@@ -1,3 +1,4 @@
+
 extends CharacterBody2D
 
 @export var maxSpeed = 100

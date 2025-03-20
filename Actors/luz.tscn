@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://os8clulonheb"]
+
+[ext_resource type="Script" path="res://Actors/luz.gd" id="1_ktscr"]
+[ext_resource type="Texture2D" uid="uid://cnb38atraodmx" path="res://Sprites/luz.png" id="2_qnxsf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4o07j"]
+size = Vector2(13, 13)
+
+[node name="luz" type="Area2D"]
+script = ExtResource("1_ktscr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4o07j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qnxsf")
