@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n0pgp383smxu"
-path="res://.godot/imported/fantasmaPrueba.png-a74ed31bd9fd42995686805acc414496.ctex"
+path="res://.godot/imported/fantasmaPrueba.png-693bec8c3708c277b82f330e18d69bfc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Actors/fantasmaPrueba.png"
-dest_files=["res://.godot/imported/fantasmaPrueba.png-a74ed31bd9fd42995686805acc414496.ctex"]
+source_file="res://assets/actors/fantasmaPrueba.png"
+dest_files=["res://.godot/imported/fantasmaPrueba.png-693bec8c3708c277b82f330e18d69bfc.ctex"]
 
 [params]
 

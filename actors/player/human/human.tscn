@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://gs6gfrdl7hmx"]
+
+[ext_resource type="Texture2D" uid="uid://tupg6x0ar1m" path="res://assets/actors/Humano.png" id="1_qud8y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kae2"]
+size = Vector2(6, 6)
+
+[node name="Human" type="CharacterBody2D"]
+motion_mode = 1
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_qud8y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_2kae2")
