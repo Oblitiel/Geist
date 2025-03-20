@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://gs6gfrdl7hmx"]
+[gd_scene load_steps=4 format=3 uid="uid://gs6gfrdl7hmx"]
 
+[ext_resource type="Script" path="res://actors/player/human/Human.gd" id="1_gpfp7"]
 [ext_resource type="Texture2D" uid="uid://tupg6x0ar1m" path="res://assets/actors/Humano.png" id="1_qud8y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kae2"]
@@ -7,6 +8,7 @@ size = Vector2(6, 6)
 
 [node name="Human" type="CharacterBody2D"]
 motion_mode = 1
+script = ExtResource("1_gpfp7")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_qud8y")

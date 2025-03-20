@@ -1,11 +1,11 @@
-
+class_name Player
 extends CharacterBody2D
 
 @export var maxSpeed = 100
 @export var aceleration = 800
 @export var friction = 1200
 
-func _physics_process(delta):
+func processVelocity(delta):
 	var inputVector = Vector2.ZERO
 	
 	inputVector.x = Input.get_axis("left","right")
@@ -23,5 +23,3 @@ func _physics_process(delta):
 		
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
-
-	move_and_slide()
