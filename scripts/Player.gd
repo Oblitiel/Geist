@@ -6,7 +6,6 @@ extends CharacterBody2D
 @export var friction = 1200
 
 @onready var respawnPosition = position
-func _physics_process(delta):
 func processVelocity(delta):
 	var inputVector = Vector2.ZERO
 	
