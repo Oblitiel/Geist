@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=9 format=4 uid="uid://wm1rhh1g0mdr"]
 
 [ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
 [ext_resource type="Texture2D" uid="uid://ub4qtmc3de4u" path="res://assets/muro.png" id="2_qf168"]
 [ext_resource type="Texture2D" uid="uid://dyjj85f6prhic" path="res://assets/suelo.png" id="3_q5b11"]
+[ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://actors/checkpoint/checkpoint.tscn" id="4_o6mel"]
+[ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://actors/light/light.tscn" id="5_e7anx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8385k"]
 texture = ExtResource("2_qf168")
@@ -57,3 +59,12 @@ zoom = Vector2(5, 5)
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD+//7/AAABAAIAAAD///7/AAABAAIAAAAAAP7/AAABAAIAAAABAP7/AAABAAIAAAACAP7/AAABAAIAAAADAP//AAAAAAEAAAADAAAAAAAAAAIAAAD9//7/AAACAAEAAAD9////AAACAAEAAAD9/wAAAAACAAEAAAD9/wEAAAACAAEAAAAEAAAAAAABAAIAAAAFAAAAAAACAAIAAAAEAP//AAABAAEAAAAEAP7/AAABAAEAAAAFAP7/AAACAAEAAAAFAP//AAACAAEAAAAFAP3/AAACAAEAAAAEAP3/AAABAAEAAAADAP3/AAABAAEAAAACAP3/AAABAAEAAAABAP3/AAABAAEAAAAAAP3/AAABAAEAAAD///3/AAABAAEAAAD+//3/AAABAAEAAAD9//3/AAABAAEAAAD9//z/AAABAAEAAAD+//z/AAABAAEAAAD///z/AAABAAEAAAAAAPz/AAABAAEAAAABAPz/AAABAAEAAAACAPz/AAABAAEAAAADAPz/AAABAAEAAAAEAPz/AAABAAEAAAAFAPz/AAACAAEAAAD8/wEAAAAAAAEAAAD8/wAAAAAAAAEAAAD8////AAAAAAEAAAD8//7/AAAAAAEAAAD8//3/AAAAAAEAAAD8//z/AAAAAAEAAAD9/wIAAAACAAIAAAD8/wIAAAAAAAIAAAD8//v/AAAAAAAAAAD9//v/AAABAAAAAAD+//v/AAABAAAAAAD///v/AAABAAAAAAAAAPv/AAABAAAAAAABAPv/AAABAAAAAAACAPv/AAABAAAAAAADAPv/AAABAAAAAAAEAPv/AAABAAAAAAAFAPv/AAACAAAAAAADAP7/AAAAAAEAAAA=")
 tile_set = SubResource("TileSet_wcm1f")
+
+[node name="checkpoint" parent="." instance=ExtResource("4_o6mel")]
+position = Vector2(0, -1)
+
+[node name="luz" parent="." instance=ExtResource("5_e7anx")]
+position = Vector2(33, 25)
+
+[node name="checkpoint2" parent="." instance=ExtResource("4_o6mel")]
+position = Vector2(-3, 51)
