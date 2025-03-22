@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfwjwkmcgru0k"]
+[gd_scene load_steps=5 format=3 uid="uid://dfwjwkmcgru0k"]
 
 [ext_resource type="Texture2D" uid="uid://n0pgp383smxu" path="res://assets/actors/fantasmaPrueba.png" id="1_73ntn"]
-[ext_resource type="Script" path="res://actors/player/geist/Geist.gd" id="1_h0240"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_g2j1s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtugb"]
 size = Vector2(8, 6)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gl1lw"]
+radius = 6.0
+
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_h0240")
+script = ExtResource("1_g2j1s")
 
 [node name="FantasmaPrueba" type="Sprite2D" parent="."]
 texture = ExtResource("1_73ntn")
@@ -15,3 +18,9 @@ texture = ExtResource("1_73ntn")
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_qtugb")
+
+[node name="PosesionArea" type="Area2D" parent="."]
+
+[node name="TriggerBox" type="CollisionShape2D" parent="PosesionArea"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_gl1lw")
