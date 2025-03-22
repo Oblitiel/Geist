@@ -5,25 +5,16 @@ class_name Player extends CharacterBody2D
 ##
 ## Clase con los metodos comunes de otodos los objetos con los que el jugador puede interactuar.
 
-<<<<<<< Updated upstream
 @onready var respawnPosition = position
-func processVelocity(delta):
-	var inputVector = Vector2.ZERO
-	
-	inputVector.x = Input.get_axis("left","right")
-	inputVector.y = Input.get_axis("up","down")
-	
-	inputVector = inputVector.normalized()
-=======
+
 @export var maxSpeed = 100 ## Velocidad maxima a la que puede llegar el jugador
 @export var aceleration = 800 ## Aceleracion del jugador
 @export var friction = 1200 ## Friccion que se ejerce cunado el jugador deja de moverse
 
 ## Devuelve la velocidad teniendo en cuenta la direccion de las inputs la aceleracion y la friccion
-func processVelocity(delta) -> Vector2:
+func processVelocity(delta):
 	var inputVector = Input.get_vector("left","right","up","down")
 	var vel = Vector2.ZERO
->>>>>>> Stashed changes
 	
 	if inputVector != Vector2.ZERO:
 		#Tratar la velocidad del jugador
@@ -34,17 +25,12 @@ func processVelocity(delta) -> Vector2:
 		
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
-<<<<<<< Updated upstream
 
 	move_and_slide()
-
-func die():
-	position = respawnPosition
-=======
-	
-	return vel
 
 func _physics_process(delta):
 	processVelocity(delta)
 	move_and_slide()
->>>>>>> Stashed changes
+
+func die():
+	position = respawnPosition

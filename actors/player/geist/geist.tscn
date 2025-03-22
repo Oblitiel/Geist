@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfwjwkmcgru0k"]
 
 [ext_resource type="Texture2D" uid="uid://n0pgp383smxu" path="res://assets/actors/fantasmaPrueba.png" id="1_73ntn"]
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_g2j1s"]
+[ext_resource type="Script" path="res://actors/player/geist/geist.gd" id="1_c75mg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtugb"]
 size = Vector2(8, 6)
@@ -10,7 +10,7 @@ size = Vector2(8, 6)
 radius = 6.0
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_g2j1s")
+script = ExtResource("1_c75mg")
 
 [node name="FantasmaPrueba" type="Sprite2D" parent="."]
 texture = ExtResource("1_73ntn")
