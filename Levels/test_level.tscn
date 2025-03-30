@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=10 format=4 uid="uid://wm1rhh1g0mdr"]
 
 [ext_resource type="Script" uid="uid://pll0hvas87k5" path="res://scripts/player/Controler.gd" id="1_o6mel"]
 [ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
@@ -60,14 +60,14 @@ tile_map_data = PackedByteArray("AAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAABAAA
 tile_set = SubResource("TileSet_wcm1f")
 
 [node name="checkpoint" parent="." instance=ExtResource("4_o6mel")]
-position = Vector2(0, -1)
+position = Vector2(141, 109)
 
 [node name="luz" parent="." instance=ExtResource("5_e7anx")]
-position = Vector2(33, 25)
-
-position = Vector2(-3, 51)
+position = Vector2(140, 136)
 
 [node name="checkpoint2" parent="." instance=ExtResource("4_o6mel")]
+position = Vector2(70, 136)
+
 [node name="Geist" parent="." instance=ExtResource("1_p027j")]
 position = Vector2(74, 91)
 
