@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n0pgp383smxu"
-path="res://.godot/imported/fantasmaPrueba.png-693bec8c3708c277b82f330e18d69bfc.ctex"
+uid="uid://tupg6x0ar1m"
+path="res://.godot/imported/Human.png-b82643eb9de1803ded266d374c2a447f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/actors/fantasmaPrueba.png"
-dest_files=["res://.godot/imported/fantasmaPrueba.png-693bec8c3708c277b82f330e18d69bfc.ctex"]
+source_file="res://assets/actors/Human.png"
+dest_files=["res://.godot/imported/Human.png-b82643eb9de1803ded266d374c2a447f.ctex"]
 
 [params]
 

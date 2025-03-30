@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tupg6x0ar1m"
-path="res://.godot/imported/Humano.png-9688e4c20e8f31b5c9ce1fed82756502.ctex"
+uid="uid://n0pgp383smxu"
+path="res://.godot/imported/Geist.png-2844ca077e09f13507334c0559954c36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/actors/Humano.png"
-dest_files=["res://.godot/imported/Humano.png-9688e4c20e8f31b5c9ce1fed82756502.ctex"]
+source_file="res://assets/actors/Geist.png"
+dest_files=["res://.godot/imported/Geist.png-2844ca077e09f13507334c0559954c36.ctex"]
 
 [params]
 

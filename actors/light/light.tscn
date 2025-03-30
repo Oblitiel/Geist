@@ -7,6 +7,7 @@
 size = Vector2(13, 13)
 
 [node name="luz" type="Area2D"]
+collision_layer = 2
 script = ExtResource("1_ktscr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
