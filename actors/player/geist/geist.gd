@@ -9,19 +9,18 @@ class_name Geist extends Controlable
 @export var aceleration = 800 ## Aceleracion del jugador
 @export var friction = 1200 ## Friccion que se ejerce cunado el jugador deja de moverse
 
+
+## Dado delta y un [Vector2] direccion calcula la velocidad de personaje y llama al metodo move_and_slide() de la clase [CharacterBody2D].
 func move(delta, direction : Vector2) -> void:
-	
 	if direction != Vector2.ZERO:
-		#Tratar la velocidad del jugador
 		velocity = velocity.move_toward(direction * maxSpeed, aceleration * delta)
-		
-		var clampValue = Vector2(maxSpeed, maxSpeed)
-		velocity = velocity.clamp(-clampValue,clampValue)
+		velocity = velocity.clamp(-Vector2(maxSpeed, maxSpeed), Vector2(maxSpeed, maxSpeed))
 		
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+		
 	move_and_slide()
 
-func interact() -> void:
-	print("Intractuo")
-	print(%PossessionArea.get_overlapping_bodies())
+func possess() -> void:
+	if (not %PossessionArea.get_overlapping_bodies().is_empty()):
+		changeCharacter.emit(%PossessionArea.get_overlapping_bodies()[0])

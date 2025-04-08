@@ -7,7 +7,7 @@
 size = Vector2(8, 6)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gl1lw"]
-radius = 6.0
+radius = 11.0
 
 [node name="Geist" type="CharacterBody2D"]
 collision_layer = 3
