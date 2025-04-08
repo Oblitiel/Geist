@@ -12,4 +12,6 @@ script = ExtResource("1_1n6hb")
 scale = Vector2(3.96982, 1.73806)
 shape = SubResource("RectangleShape2D_gk8c2")
 
+[node name="Marker2D" type="Marker2D" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
