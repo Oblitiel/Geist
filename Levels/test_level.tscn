@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=4 uid="uid://wm1rhh1g0mdr"]
 
-[ext_resource type="Script" uid="uid://pll0hvas87k5" path="res://scripts/player/Controler.gd" id="1_o6mel"]
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://levels/test_level.gd" id="1_e7anx"]
 [ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
 [ext_resource type="Texture2D" uid="uid://ub4qtmc3de4u" path="res://assets/muro.png" id="2_qf168"]
 [ext_resource type="Texture2D" uid="uid://dyjj85f6prhic" path="res://assets/suelo.png" id="3_q5b11"]
@@ -48,11 +48,7 @@ sources/1 = SubResource("TileSetAtlasSource_6eitf")
 
 [node name="Test Level" type="Node2D"]
 y_sort_enabled = true
-
-[node name="Controler" type="Node" parent="." node_paths=PackedStringArray("underControl")]
-script = ExtResource("1_o6mel")
-underControl = NodePath("../Geist")
-metadata/_custom_type_script = "uid://pll0hvas87k5"
+script = ExtResource("1_e7anx")
 
 [node name="Walls" type="TileMapLayer" parent="."]
 y_sort_enabled = true
