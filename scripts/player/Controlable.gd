@@ -15,3 +15,6 @@ func possess() -> void:
 
 func die() -> void:
 	pass
+
+func newCharacter(character : Controlable):
+	changeCharacter.emit(character)
