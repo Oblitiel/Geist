@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c34bhooywqnj6"
-path="res://.godot/imported/NaturalTiles.png-e42b2d491e04939f41f765b1aa08bf88.ctex"
+uid="uid://cpittaifae1uu"
+path="res://.godot/imported/NatureDecor.png-53f61821b4896b33e18b0b73439ac051.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tileSets/NaturalTiles.png"
-dest_files=["res://.godot/imported/NaturalTiles.png-e42b2d491e04939f41f765b1aa08bf88.ctex"]
+source_file="res://assets/tileSets/NatureDecor.png"
+dest_files=["res://.godot/imported/NatureDecor.png-53f61821b4896b33e18b0b73439ac051.ctex"]
 
 [params]
 
