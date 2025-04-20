@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu5rwbmf1kavc"
-path="res://.godot/imported/Geist.png-2844ca077e09f13507334c0559954c36.ctex"
+uid="uid://ddqpi1not515h"
+path="res://.godot/imported/CityTiles.png-4800ff098818c6863fd9fe1e903ad3e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/actors/Geist.png"
-dest_files=["res://.godot/imported/Geist.png-2844ca077e09f13507334c0559954c36.ctex"]
+source_file="res://assets/tileSets/CityTiles.png"
+dest_files=["res://.godot/imported/CityTiles.png-4800ff098818c6863fd9fe1e903ad3e7.ctex"]
 
 [params]
 

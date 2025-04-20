@@ -9,6 +9,7 @@ class_name Geist extends Controlable
 @export var aceleration = 800 ## Aceleracion del jugador
 @export var friction = 1200 ## Friccion que se ejerce cunado el jugador deja de moverse
 
+@onready var possessionArea: PossessionArea = $PossessionArea
 
 ## Dado delta y un [Vector2] direccion calcula la velocidad de personaje y llama al metodo move_and_slide() de la clase [CharacterBody2D].
 func move(delta, direction : Vector2) -> void:
@@ -21,6 +22,14 @@ func move(delta, direction : Vector2) -> void:
 		
 	move_and_slide()
 
+## Si hay un objeto controlable en el area pasa el control a ese objeto
 func possess() -> void:
-	if (not %PossessionArea.get_overlapping_bodies().is_empty()):
-		changeCharacter.emit(%PossessionArea.get_overlapping_bodies()[0])
+	if (possessionArea.getSelectedBody() != null):
+		PlayerControler.setUnderControl(possessionArea._selectedBody)
+		vanish()
+
+func vanish() -> void:
+	queue_free()
+
+func die() -> void:
+	vanish()

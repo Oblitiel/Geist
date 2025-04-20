@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-PlayerControler="*res://scripts/player/Controler.gd"
+PlayerControler="*res://scripts/player/PlayerControler.gd"
 
 [input]
 

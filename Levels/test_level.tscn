@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=13 format=4 uid="uid://wm1rhh1g0mdr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://levels/test_level.gd" id="1_e7anx"]
 [ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://gs6gfrdl7hmx" path="res://actors/player/human/human.tscn" id="5_o6mel"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://actors/checkpoint/CheckpointManager.gd" id="7_wndkh"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://actors/checkpoint/checkpoint.tscn" id="8_wndkh"]
+[ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://actors/light/light.tscn" id="9_ly3hx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8385k"]
 texture = ExtResource("2_qf168")
@@ -43,7 +44,7 @@ texture = ExtResource("3_q5b11")
 2:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wcm1f"]
-physics_layer_0/collision_layer = 4
+physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_8385k")
 sources/1 = SubResource("TileSetAtlasSource_6eitf")
@@ -54,7 +55,13 @@ script = ExtResource("1_e7anx")
 
 [node name="Walls" type="TileMapLayer" parent="."]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAIAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAEAAAABAAMAAAACAAEAAAABAAQAAAACAAEAAAABAAUAAAACAAEAAAABAAYAAAACAAEAAAABAAcAAAACAAIAAAACAAAAAAABAAAAAAACAAEAAAABAAEAAAACAAIAAAABAAEAAAACAAMAAAABAAIAAAADAAEAAAABAAEAAAADAAIAAAABAAEAAAADAAMAAAABAAIAAAAEAAEAAAABAAEAAAAEAAIAAAABAAEAAAAEAAMAAAABAAIAAAAFAAEAAAABAAEAAAAFAAIAAAABAAEAAAAFAAMAAAABAAIAAAAGAAAAAAABAAAAAAAGAAEAAAABAAEAAAAGAAIAAAABAAEAAAAGAAMAAAABAAIAAAAHAAAAAAABAAAAAAAHAAEAAAABAAEAAAAHAAIAAAABAAEAAAAHAAMAAAAAAAEAAAAHAAQAAAAAAAEAAAAHAAUAAAAAAAIAAAAIAAAAAAABAAAAAAAIAAEAAAABAAEAAAAIAAIAAAABAAEAAAAIAAMAAAABAAEAAAAIAAQAAAABAAEAAAAIAAUAAAABAAIAAAAJAAAAAAACAAAAAAAJAAEAAAACAAEAAAAJAAIAAAACAAEAAAAJAAMAAAACAAEAAAAJAAQAAAACAAEAAAAJAAUAAAACAAIAAAA=")
+tile_map_data = PackedByteArray("AAADAAAAAAABAAAAAAAFAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAYAAAAAAAEAAAAAAAcAAAAAAAIAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAEAAAABAAMAAAACAAEAAAABAAQAAAACAAEAAAABAAUAAAACAAEAAAABAAYAAAACAAEAAAABAAcAAAACAAIAAAACAAAAAAABAAAAAAACAAEAAAABAAEAAAACAAIAAAABAAEAAAACAAMAAAABAAIAAAADAAEAAAABAAEAAAADAAIAAAABAAEAAAADAAMAAAABAAIAAAAFAAEAAAABAAEAAAAFAAIAAAABAAEAAAAFAAMAAAABAAIAAAAGAAAAAAABAAAAAAAGAAEAAAABAAEAAAAGAAIAAAABAAEAAAAGAAMAAAABAAIAAAAHAAAAAAABAAAAAAAHAAEAAAABAAEAAAAHAAIAAAABAAEAAAAHAAMAAAAAAAEAAAAHAAQAAAAAAAEAAAAHAAUAAAAAAAIAAAAIAAAAAAABAAAAAAAIAAEAAAABAAEAAAAIAAIAAAABAAEAAAAIAAMAAAABAAEAAAAIAAQAAAABAAEAAAAIAAUAAAABAAIAAAAJAAAAAAACAAAAAAAJAAEAAAACAAEAAAAJAAIAAAACAAEAAAAJAAMAAAACAAEAAAAJAAQAAAACAAEAAAAJAAUAAAACAAIAAAA=")
+tile_set = SubResource("TileSet_wcm1f")
+
+[node name="Walls2" type="TileMapLayer" parent="."]
+modulate = Color(0.778335, 0.153706, 0.153706, 1)
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAEAAEAAAABAAEAAAAEAAIAAAABAAEAAAAEAAMAAAABAAIAAAAEAAAAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_wcm1f")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("follow")]
@@ -77,8 +84,16 @@ position = Vector2(74, 91)
 [node name="Human" parent="." instance=ExtResource("5_o6mel")]
 position = Vector2(92, 106)
 
+[node name="Human2" parent="." instance=ExtResource("5_o6mel")]
+modulate = Color(0.85301, 0.510131, 0, 1)
+position = Vector2(105, 114)
+
 [node name="CheckpointManager" type="Node" parent="."]
 script = ExtResource("7_wndkh")
 metadata/_custom_type_script = "uid://cfq0owrq0jkht"
 
 [node name="checkpoint" parent="CheckpointManager" instance=ExtResource("8_wndkh")]
+position = Vector2(56, 129)
+
+[node name="luz" parent="." instance=ExtResource("9_ly3hx")]
+position = Vector2(77, 136)

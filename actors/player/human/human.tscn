@@ -8,7 +8,7 @@ size = Vector2(6, 6)
 
 [node name="Controlable" type="CharacterBody2D"]
 collision_layer = 17
-collision_mask = 4
+collision_mask = 12
 script = ExtResource("1_gpfp7")
 metadata/_custom_type_script = "uid://bky2lrxswqomg"
 

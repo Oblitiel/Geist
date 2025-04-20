@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfwjwkmcgru0k"]
+[gd_scene load_steps=7 format=3 uid="uid://dfwjwkmcgru0k"]
 
 [ext_resource type="Texture2D" uid="uid://n0pgp383smxu" path="res://assets/actors/Geist.png" id="1_73ntn"]
 [ext_resource type="Script" uid="uid://cugga1rxoe5jx" path="res://actors/player/geist/Geist.gd" id="1_r3bac"]
+[ext_resource type="Texture2D" uid="uid://n0pgp383smxu" path="res://assets/actors/Geist.png" id="2_jgis4"]
+[ext_resource type="Script" uid="uid://ba185rtdc01fu" path="res://actors/player/geist/PossessionArea.gd" id="3_mut5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtugb"]
 size = Vector2(8, 6)
@@ -11,11 +13,16 @@ radius = 11.0
 
 [node name="Geist" type="CharacterBody2D"]
 collision_layer = 3
-collision_mask = 4
+collision_mask = 12
 script = ExtResource("1_r3bac")
 metadata/_custom_type_script = "uid://bky2lrxswqomg"
 
+[node name="Geist2" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("2_jgis4")
+
 [node name="FantasmaPrueba" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("1_73ntn")
 offset = Vector2(0, -3)
 
@@ -23,9 +30,9 @@ offset = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_qtugb")
 
 [node name="PossessionArea" type="Area2D" parent="."]
-unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 16
+script = ExtResource("3_mut5k")
 
 [node name="TriggerBox" type="CollisionShape2D" parent="PossessionArea"]
 shape = SubResource("CircleShape2D_gl1lw")

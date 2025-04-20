@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu5rwbmf1kavc"
-path="res://.godot/imported/Geist.png-2844ca077e09f13507334c0559954c36.ctex"
+uid="uid://d2or0vkhpyo0j"
+path="res://.godot/imported/Door.png-b96b6245c57c2c89d94c99281f89b77e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/actors/Geist.png"
-dest_files=["res://.godot/imported/Geist.png-2844ca077e09f13507334c0559954c36.ctex"]
+source_file="res://assets/actors/Door.png"
+dest_files=["res://.godot/imported/Door.png-b96b6245c57c2c89d94c99281f89b77e.ctex"]
 
 [params]
 
