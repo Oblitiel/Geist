@@ -1,9 +1,9 @@
-class_name Human extends Controlable
+class_name Cat extends Controlable
 ## Especificacion de la clase [Controlable]
 ##
-## Personaje jugable Human, tiene colision en la capa [b]Player[/b] ; busca colisiones en [b]Wall[/b].
+## Personaje jugable Cat, tiene colision en la capa [b]Player[/b] ; busca colisiones en [b]Wall[/b] ¿¿¿y las evita en [b]ClimeableWall[/b]???.
 ## [br]
-## Es capaz de interactuar con objetos actibables.
+## ¿¿¿Más velocidad / asusta ratones??? Capaz de trepar muros.s
 
 func move(delta, direction : Vector2) -> void:
 	if direction != Vector2.ZERO:

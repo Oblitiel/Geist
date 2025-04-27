@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp7ci5xw23wvq"]
+
+[ext_resource type="Texture2D" uid="uid://bu5rwbmf1kavc" path="res://assets/actors/Geist.png" id="1_uaaoq"]
+[ext_resource type="Script" uid="uid://bvp7nfl5smefs" path="res://actors/player/cat/cat.gd" id="3_7nu7y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sb4gu"]
+size = Vector2(6, 6)
+
+[node name="Controlable" type="CharacterBody2D"]
+collision_layer = 17
+collision_mask = 4
+script = ExtResource("3_7nu7y")
+metadata/_custom_type_script = "uid://bky2lrxswqomg"
+
+[node name="Cat" type="Sprite2D" parent="."]
+rotation = 0.619592
+texture = ExtResource("1_uaaoq")
+offset = Vector2(0, -4)
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sb4gu")

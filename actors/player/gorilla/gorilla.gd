@@ -1,9 +1,9 @@
-class_name Human extends Controlable
+class_name gorilla extends Controlable
 ## Especificacion de la clase [Controlable]
 ##
-## Personaje jugable Human, tiene colision en la capa [b]Player[/b] ; busca colisiones en [b]Wall[/b].
+## Personaje jugable Gorilla, tiene colision en la capa [b]Player[/b] ; busca colisiones en [b]Wall[/b].
 ## [br]
-## Es capaz de interactuar con objetos actibables.
+## Es capaz de mover cajas a voluntad, ¿¿¿Lanzamiento de barril / más lento???.
 
 func move(delta, direction : Vector2) -> void:
 	if direction != Vector2.ZERO:

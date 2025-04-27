@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://wm1rhh1g0mdr"]
 
-[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://levels/test_level.gd" id="1_e7anx"]
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://Levels/test_level.gd" id="1_e7anx"]
 [ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_4n8tn"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="3_wkb0e"]

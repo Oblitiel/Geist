@@ -5,10 +5,6 @@ class_name Geist extends Controlable
 ## [br]
 ## Si esta cerca de un Objeto [Possessable] se pasara el control al objeto poseido cuando el jugador lo ordene
 
-@export var maxSpeed = 100 ## Velocidad maxima a la que puede llegar el jugador
-@export var aceleration = 800 ## Aceleracion del jugador
-@export var friction = 1200 ## Friccion que se ejerce cunado el jugador deja de moverse
-
 @onready var possessionArea: PossessionArea = $PossessionArea
 
 ## Dado delta y un [Vector2] direccion calcula la velocidad de personaje y llama al metodo move_and_slide() de la clase [CharacterBody2D].
