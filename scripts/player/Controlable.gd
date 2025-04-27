@@ -4,6 +4,10 @@ class_name Controlable extends CharacterBody2D
 signal dead()
 signal controlChanged(body)
 
+@export var maxSpeed = 100 ## Velocidad maxima a la que puede llegar el jugador
+@export var aceleration = 800 ## Aceleracion del jugador
+@export var friction = 1200 ## Friccion que se ejerce cunado el jugador deja de moverse
+
 func move(_delta, _direction : Vector2) -> void:
 	pass
 
