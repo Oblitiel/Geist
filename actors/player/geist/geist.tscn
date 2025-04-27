@@ -17,13 +17,16 @@ script = ExtResource("1_r3bac")
 metadata/_custom_type_script = "uid://bky2lrxswqomg"
 
 [node name="Sprite" type="Sprite2D" parent="."]
+z_as_relative = false
 texture = ExtResource("1_73ntn")
-offset = Vector2(0, -3)
+offset = Vector2(0, -6)
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_qtugb")
 
 [node name="PossessionArea" type="Area2D" parent="."]
+position = Vector2(0, -4)
 collision_layer = 0
 collision_mask = 16
 script = ExtResource("3_mut5k")
