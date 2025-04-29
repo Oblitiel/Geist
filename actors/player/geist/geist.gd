@@ -10,8 +10,8 @@ class_name Geist extends Controlable
 ## Si hay un objeto controlable en el area pasa el control a ese objeto
 func possess() -> void:
 	if (possessionArea.getSelectedBody() != null):
-		PlayerControler.setUnderControl(possessionArea._selectedBody)
-		controlChanged.emit(possessionArea._selectedBody)
+		PlayerControler.setUnderControl(possessionArea.getSelectedBody())
+		controlChanged.emit(possessionArea.getSelectedBody())
 		vanish()
 
 func vanish() -> void:
