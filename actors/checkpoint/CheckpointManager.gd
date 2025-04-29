@@ -1,8 +1,9 @@
 class_name CheckpointManager extends Node
+## Encargado de buscar los checkpoints del nivel y guardar la posicion en la que tendra que reaparecer el jugador al morir.
+## La posicion se actualiza caundo los checkpoints mandan una señal al pasar el jugador por estos.
 
-##la posicion en la que aparecera el jugador cuando muera
-var respawnPosition: Vector2
-@export var defaultCheckpoint: Checkpoint
+var respawnPosition: Vector2 ## La posicion en la que aparecera el jugador cuando muera.
+@export var defaultCheckpoint: Checkpoint ## Checkpoint por defecto.
 
 func _ready():
 	for child in get_children():
@@ -11,6 +12,6 @@ func _ready():
 	if defaultCheckpoint:
 		respawnPosition = defaultCheckpoint.getRespawnPosition()
 
-##cambia la posicion de respawn
+## Cambia la posicion de respawn
 func setRespawnPosition(newPosition : Vector2):
 	respawnPosition = newPosition

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bp7ci5xw23wvq"]
 
 [ext_resource type="Texture2D" uid="uid://bu5rwbmf1kavc" path="res://assets/actors/Geist.png" id="1_uaaoq"]
-[ext_resource type="Script" uid="uid://bvp7nfl5smefs" path="res://actors/player/cat/cat.gd" id="3_7nu7y"]
+[ext_resource type="Script" uid="uid://bvp7nfl5smefs" path="res://actors/player/cat/Cat.gd" id="3_7nu7y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sb4gu"]
 size = Vector2(6, 6)

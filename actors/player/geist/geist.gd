@@ -7,21 +7,11 @@ class_name Geist extends Controlable
 
 @onready var possessionArea: PossessionArea = $PossessionArea
 
-## Dado delta y un [Vector2] direccion calcula la velocidad de personaje y llama al metodo move_and_slide() de la clase [CharacterBody2D].
-func move(delta, direction : Vector2) -> void:
-	if direction != Vector2.ZERO:
-		velocity = velocity.move_toward(direction * maxSpeed, aceleration * delta)
-		velocity = velocity.clamp(-Vector2(maxSpeed, maxSpeed), Vector2(maxSpeed, maxSpeed))
-		
-	else:
-		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
-		
-	move_and_slide()
-
 ## Si hay un objeto controlable en el area pasa el control a ese objeto
 func possess() -> void:
 	if (possessionArea.getSelectedBody() != null):
 		PlayerControler.setUnderControl(possessionArea._selectedBody)
+		controlChanged.emit(possessionArea._selectedBody)
 		vanish()
 
 func vanish() -> void:
