@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=13 format=4 uid="uid://wm1rhh1g0mdr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://levels/Level.gd" id="1_e7anx"]
 [ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://actors/checkpoint/CheckpointManager.gd" id="7_wndkh"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://actors/checkpoint/checkpoint.tscn" id="8_wndkh"]
 [ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://actors/light/light.tscn" id="9_ly3hx"]
+[ext_resource type="Texture2D" uid="uid://bj8fv4f3ui73p" path="res://assets/actors/Shadow.png" id="11_paa45"]
+[ext_resource type="Texture2D" uid="uid://c2wd00k1x3hw6" path="res://assets/actors/Logan.png" id="11_wkb0e"]
 
 [node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 script = ExtResource("1_e7anx")
@@ -81,3 +83,11 @@ position = Vector2(40, 72)
 
 [node name="luz" parent="." instance=ExtResource("9_ly3hx")]
 position = Vector2(40, 136)
+
+[node name="Logan" type="Sprite2D" parent="."]
+position = Vector2(98, 75)
+texture = ExtResource("11_paa45")
+
+[node name="Sprite" type="Sprite2D" parent="Logan"]
+position = Vector2(0, -11)
+texture = ExtResource("11_wkb0e")

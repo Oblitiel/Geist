@@ -1,5 +1,5 @@
-class_name Human extends Controlable
-## Especificacion de la clase [Controlable]
+class_name Human extends Possesable
+## Especificacion de la clase [Possesable]
 ##
 ## Personaje jugable Human, tiene colision en la capa [b]Player[/b] ; busca colisiones en [b]Wall[/b].
 ## [br]
