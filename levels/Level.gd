@@ -6,7 +6,9 @@ class_name Level
 	set(value):
 		if player:
 			player.controlChanged.disconnect(_on_player_changed)
+			player.dead.disconnect(_on_player_dead)
 		value.controlChanged.connect(_on_player_changed)
+		value.dead.connect(_on_player_dead)
 		player = value
 @export var camera : CustomCamera
 
@@ -22,5 +24,8 @@ func _ready() -> void:
 	
 	camera.follow = player
 
-func _on_player_changed(player):
-	camera.follow = player
+func _on_player_changed(newBody):
+	camera.follow = newBody
+
+func _on_player_dead():
+	player.respawn(spawnManager.respawnPosition)

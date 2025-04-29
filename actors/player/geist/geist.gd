@@ -7,15 +7,17 @@ class_name Geist extends Controlable
 
 @onready var possessionArea: PossessionArea = $PossessionArea
 
+func move(delta, direction : Vector2) -> void:
+	super(delta, direction)
+	if direction.x != 0:
+		if direction.x > 0:
+			$Sprite.flip_h = true
+		else:
+			$Sprite.flip_h = false
+	pass
+
 ## Si hay un objeto controlable en el area pasa el control a ese objeto
 func possess() -> void:
 	if (possessionArea.getSelectedBody() != null):
 		PlayerControler.setUnderControl(possessionArea.getSelectedBody())
 		controlChanged.emit(possessionArea.getSelectedBody())
-		vanish()
-
-func vanish() -> void:
-	queue_free()
-
-func die() -> void:
-	vanish()

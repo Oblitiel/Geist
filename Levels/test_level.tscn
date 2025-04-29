@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c2wd00k1x3hw6" path="res://assets/actors/Logan.png" id="11_wkb0e"]
 
 [node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
+y_sort_enabled = true
 script = ExtResource("1_e7anx")
 spawnManager = NodePath("CheckpointManager")
 player = NodePath("Geist")
@@ -61,17 +62,15 @@ editor_draw_drag_margin = true
 script = ExtResource("4_e7anx")
 follow = NodePath("../Geist")
 
-[node name="Geist" parent="." instance=ExtResource("1_p027j")]
-position = Vector2(74, 91)
-
 [node name="Human" parent="." instance=ExtResource("5_o6mel")]
-y_sort_enabled = true
 position = Vector2(92, 106)
 
 [node name="Human2" parent="." instance=ExtResource("5_o6mel")]
 modulate = Color(0.85301, 0.510131, 0, 1)
-y_sort_enabled = true
 position = Vector2(105, 114)
+
+[node name="Geist" parent="." instance=ExtResource("1_p027j")]
+position = Vector2(74, 91)
 
 [node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
 script = ExtResource("7_wndkh")
@@ -81,13 +80,21 @@ metadata/_custom_type_script = "uid://cfq0owrq0jkht"
 [node name="checkpoint" parent="CheckpointManager" instance=ExtResource("8_wndkh")]
 position = Vector2(40, 72)
 
+[node name="checkpoint2" parent="CheckpointManager" instance=ExtResource("8_wndkh")]
+position = Vector2(128, 144)
+scale = Vector2(1.93, 2)
+
 [node name="luz" parent="." instance=ExtResource("9_ly3hx")]
 position = Vector2(40, 136)
 
 [node name="Logan" type="Sprite2D" parent="."]
-position = Vector2(98, 75)
-texture = ExtResource("11_paa45")
-
-[node name="Sprite" type="Sprite2D" parent="Logan"]
-position = Vector2(0, -11)
+z_index = 1
+y_sort_enabled = true
+position = Vector2(98, 84)
 texture = ExtResource("11_wkb0e")
+offset = Vector2(0, -8)
+
+[node name="Shadow" type="Sprite2D" parent="Logan"]
+z_as_relative = false
+position = Vector2(0, 3)
+texture = ExtResource("11_paa45")

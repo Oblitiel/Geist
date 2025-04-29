@@ -26,7 +26,9 @@ func possess() -> void:
 	pass
 
 func die() -> void:
-	pass
+	#TODO: animación de muerte
+	dead.emit()
 
-func respawn(position : Vector2) -> void:
-	pass
+func respawn(respawPosition : Vector2) -> void:
+	#TODO: animacion de respawn y mas
+	global_position = respawPosition

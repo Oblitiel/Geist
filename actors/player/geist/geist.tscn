@@ -12,6 +12,8 @@ size = Vector2(8, 6)
 radius = 17.0
 
 [node name="Geist" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
 collision_layer = 3
 collision_mask = 12
 script = ExtResource("1_r3bac")
@@ -20,11 +22,11 @@ friction = 350
 metadata/_custom_type_script = "uid://bky2lrxswqomg"
 
 [node name="Shadow" type="Sprite2D" parent="."]
+z_as_relative = false
 position = Vector2(0, 3)
 texture = ExtResource("2_jgis4")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-z_as_relative = false
 texture = ExtResource("3_o0ghk")
 offset = Vector2(0, -8)
 

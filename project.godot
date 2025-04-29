@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 PlayerControler="*res://scripts/player/PlayerControler.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 up={
@@ -70,3 +74,4 @@ possess={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+viewport/transparent_background=true
