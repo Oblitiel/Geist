@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=14 format=4 uid="uid://wm1rhh1g0mdr"]
 
-[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://levels/Level.gd" id="1_e7anx"]
+[ext_resource type="Script" path="res://Levels/Level.gd" id="1_e7anx"]
 [ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_4n8tn"]
+[ext_resource type="PackedScene" uid="uid://deqlafa4thvkq" path="res://ui/dialog.tscn" id="2_dkv23"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="3_wkb0e"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/Camera.gd" id="4_e7anx"]
 [ext_resource type="TileSet" uid="uid://ckrbh6uslslm8" path="res://assets/tileSets/godotRes/WindowTiles.tres" id="4_paa45"]
@@ -19,7 +20,6 @@ script = ExtResource("1_e7anx")
 spawnManager = NodePath("CheckpointManager")
 player = NodePath("Geist")
 camera = NodePath("Camera2D")
-metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
 
 [node name="TileSet" type="Node2D" parent="."]
 
@@ -50,7 +50,7 @@ tile_set = ExtResource("4_paa45")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("follow")]
 position = Vector2(74, 91)
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
 process_callback = 0
 position_smoothing_enabled = true
 drag_vertical_offset = -0.1
@@ -71,6 +71,8 @@ position = Vector2(105, 114)
 
 [node name="Geist" parent="." instance=ExtResource("1_p027j")]
 position = Vector2(74, 91)
+
+[node name="DialogScreen" parent="Geist" instance=ExtResource("2_dkv23")]
 
 [node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
 script = ExtResource("7_wndkh")
@@ -98,3 +100,5 @@ offset = Vector2(0, -8)
 z_as_relative = false
 position = Vector2(0, 3)
 texture = ExtResource("11_paa45")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

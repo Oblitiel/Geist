@@ -1,0 +1,12 @@
+{
+	"dialog": [
+		{
+			"name": "Geist",
+			"dialog": "TEST"
+		},
+		{
+			"name": "Harold",
+			"dialog": "penesgordos"
+		}
+	]
+}
