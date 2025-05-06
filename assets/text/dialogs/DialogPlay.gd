@@ -12,18 +12,13 @@ var end: int
 func shouldContinue():
 	return (current < end)
 
-func _iter_init(iter):
+func _iter_init(_iter = null):
 	end = dialogScript.size()
 	return shouldContinue()
 
-func _iter_next(iter):
+func _iter_next(_iter = null):
 	current += 1
 	return shouldContinue()
 
-func _iter_get(iter):
+func _iter_get(_iter = null):
 	return dialogScript[current]
-	
-class DialogLine extends Resource:
-	@export var name:String
-	@export var text:String
-	@export var image:CompressedTexture2D

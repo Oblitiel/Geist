@@ -1,9 +1,8 @@
-[gd_scene load_steps=14 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=13 format=4 uid="uid://wm1rhh1g0mdr"]
 
-[ext_resource type="Script" path="res://Levels/Level.gd" id="1_e7anx"]
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://Levels/Level.gd" id="1_e7anx"]
 [ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_4n8tn"]
-[ext_resource type="PackedScene" uid="uid://deqlafa4thvkq" path="res://ui/dialog.tscn" id="2_dkv23"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="3_wkb0e"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/Camera.gd" id="4_e7anx"]
 [ext_resource type="TileSet" uid="uid://ckrbh6uslslm8" path="res://assets/tileSets/godotRes/WindowTiles.tres" id="4_paa45"]
@@ -70,9 +69,6 @@ position = Vector2(105, 114)
 
 [node name="Geist" parent="." instance=ExtResource("1_p027j")]
 position = Vector2(74, 91)
-
-[node name="DialogScreen" parent="Geist" instance=ExtResource("2_dkv23")]
-dialogScript = null
 
 [node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
 script = ExtResource("7_wndkh")
