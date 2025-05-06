@@ -1,6 +1,6 @@
 extends Control
 
-@export var dialogScript: Array[DialogLine]
+@export var dialogScript: DialogPlay
 var line : int = 0
 
 func  _ready():

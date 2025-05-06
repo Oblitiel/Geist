@@ -73,6 +73,7 @@ position = Vector2(105, 114)
 position = Vector2(74, 91)
 
 [node name="DialogScreen" parent="Geist" instance=ExtResource("2_dkv23")]
+dialogScript = null
 
 [node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
 script = ExtResource("7_wndkh")
