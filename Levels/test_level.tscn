@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=20 format=4 uid="uid://wm1rhh1g0mdr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://Levels/Level.gd" id="1_e7anx"]
 [ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
@@ -12,11 +12,29 @@
 [ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://actors/light/light.tscn" id="9_ly3hx"]
 [ext_resource type="Texture2D" uid="uid://bj8fv4f3ui73p" path="res://assets/actors/Shadow.png" id="11_paa45"]
 [ext_resource type="Texture2D" uid="uid://c2wd00k1x3hw6" path="res://assets/actors/Logan.png" id="11_wkb0e"]
+[ext_resource type="Script" uid="uid://lqfi5tnjwi8c" path="res://actors/npc/NPCManager.gd" id="13_662sx"]
+[ext_resource type="Script" uid="uid://b2ylh0fykavic" path="res://Levels/prueba.gd" id="13_ouwm7"]
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://assets/text/dialogs/DialogLine.gd" id="14_662sx"]
+[ext_resource type="Texture2D" uid="uid://tupg6x0ar1m" path="res://assets/actors/Human.png" id="15_cn5b1"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://assets/text/dialogs/DialogPlay.gd" id="16_i45ex"]
 
-[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
+[sub_resource type="Resource" id="Resource_7jovk"]
+script = ExtResource("14_662sx")
+name = "pepe"
+text = "pollas gordas"
+image = ExtResource("15_cn5b1")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_cl38j"]
+script = ExtResource("16_i45ex")
+dialogScript = Array[ExtResource("14_662sx")]([SubResource("Resource_7jovk")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"
+
+[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "npcManager", "player", "camera")]
 y_sort_enabled = true
 script = ExtResource("1_e7anx")
 spawnManager = NodePath("CheckpointManager")
+npcManager = NodePath("NPCManager")
 player = NodePath("Geist")
 camera = NodePath("Camera2D")
 
@@ -98,3 +116,12 @@ position = Vector2(0, 3)
 texture = ExtResource("11_paa45")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NPCManager" type="Node" parent="."]
+script = ExtResource("13_662sx")
+metadata/_custom_type_script = "uid://lqfi5tnjwi8c"
+
+[node name="NPC" type="CharacterBody2D" parent="NPCManager"]
+script = ExtResource("13_ouwm7")
+dialog = SubResource("Resource_cl38j")
+metadata/_custom_type_script = "uid://dy1nd7e85mmql"

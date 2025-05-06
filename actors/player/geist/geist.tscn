@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cugga1rxoe5jx" path="res://actors/player/geist/Geist.gd" id="1_r3bac"]
 [ext_resource type="Texture2D" uid="uid://bj8fv4f3ui73p" path="res://assets/actors/Shadow.png" id="2_jgis4"]
-[ext_resource type="Script" uid="uid://ba185rtdc01fu" path="res://actors/player/geist/PossessionArea.gd" id="3_mut5k"]
+[ext_resource type="Script" path="res://actors/player/geist/PossessionArea.gd" id="3_mut5k"]
 [ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="3_o0ghk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtugb"]
