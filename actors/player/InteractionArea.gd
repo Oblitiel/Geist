@@ -1,10 +1,18 @@
-class_name PossessionArea extends Area2D
+class_name InteractionArea extends Area2D
 ## Este nodo se encarga de recopilar los cuerpos [Controlable] dentro de su area y elegir el mas cercano a su centro.
 
 ## Devuelve el cuerpo mas cercano al area de posesion,
 ## el parametro default es lo que devolvera la funcion si no hubiese cuerpos dentro del area.
 
-func getSelectedBody() -> Node:
+## Interactua devuelve true si lo consige y false si falla
+func interac() -> bool:
+	var body : Node2D = getSelectedBody()
+	if body != null and body.has_method("interact"):
+		body.interact()
+		return true
+	return false
+
+func getSelectedBody() -> Node2D:
 	if (get_overlapping_bodies().is_empty()):
 		return null
 	if (get_overlapping_bodies().size() == 1):

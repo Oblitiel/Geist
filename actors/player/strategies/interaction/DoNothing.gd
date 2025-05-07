@@ -1,0 +1,1 @@
+class_name DoNothing extends InteractionStrat

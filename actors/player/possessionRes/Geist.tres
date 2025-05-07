@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PossesionProperties" load_steps=4 format=3 uid="uid://b6acya7n7jnpa"]
+
+[ext_resource type="Script" uid="uid://bh0xv7bo7kqtt" path="res://actors/player/PossessionProperties.gd" id="1_qq1w5"]
+[ext_resource type="Resource" uid="uid://ccfyxrpxwmk5u" path="res://actors/player/strategies/set/GeistStrats.tres" id="2_24t62"]
+[ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="2_ksudh"]
+
+[resource]
+script = ExtResource("1_qq1w5")
+texture = ExtResource("2_ksudh")
+strategies = ExtResource("2_24t62")
+colisionLayer = 3
+colisionMask = 12
+metadata/_custom_type_script = "uid://bh0xv7bo7kqtt"

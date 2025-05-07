@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="StrategySet" load_steps=6 format=3 uid="uid://1oh70qxyuqvi"]
+
+[ext_resource type="Script" uid="uid://b6uxmnjm58i5i" path="res://actors/player/strategies/interaction/DoNothing.gd" id="1_tcnm0"]
+[ext_resource type="Script" uid="uid://dfxdifyoui1qv" path="res://actors/player/strategies/possession/Depossess.gd" id="2_r0w5m"]
+[ext_resource type="Script" uid="uid://dy6fr1spk4j52" path="res://actors/player/strategies/set/StrategySet.gd" id="3_06fus"]
+
+[sub_resource type="Resource" id="Resource_db1qd"]
+script = ExtResource("1_tcnm0")
+metadata/_custom_type_script = "uid://b6uxmnjm58i5i"
+
+[sub_resource type="Resource" id="Resource_oftkd"]
+script = ExtResource("2_r0w5m")
+metadata/_custom_type_script = "uid://dfxdifyoui1qv"
+
+[resource]
+script = ExtResource("3_06fus")
+possession = SubResource("Resource_oftkd")
+interaction = SubResource("Resource_db1qd")
+metadata/_custom_type_script = "uid://dy6fr1spk4j52"

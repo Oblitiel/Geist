@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="DialogPlay" load_steps=7 format=3 uid="uid://c3kuns5x6lg6f"]
+
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://assets/text/dialogs/DialogLine.gd" id="1_ni4h8"]
+[ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="2_7vd3f"]
+[ext_resource type="Texture2D" uid="uid://c2wd00k1x3hw6" path="res://assets/actors/Logan.png" id="3_ork27"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://assets/text/dialogs/DialogPlay.gd" id="4_jdyc7"]
+
+[sub_resource type="Resource" id="Resource_r8cnc"]
+script = ExtResource("1_ni4h8")
+name = "Harold"
+text = "Hola Esto es una puta prueba"
+image = ExtResource("2_7vd3f")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_18a35"]
+script = ExtResource("1_ni4h8")
+name = "Logan"
+text = "Hola"
+image = ExtResource("3_ork27")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[resource]
+script = ExtResource("4_jdyc7")
+dialogScript = Array[ExtResource("1_ni4h8")]([SubResource("Resource_r8cnc"), SubResource("Resource_18a35")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"
