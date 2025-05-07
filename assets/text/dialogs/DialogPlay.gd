@@ -14,6 +14,7 @@ func shouldContinue():
 
 func _iter_init(_iter = null):
 	end = dialogScript.size()
+	current = start
 	return shouldContinue()
 
 func _iter_next(_iter = null):

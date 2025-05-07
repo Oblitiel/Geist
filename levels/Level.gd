@@ -11,10 +11,10 @@ var dialogScreen = preload("res://ui/dialog.tscn")
 func _ready() -> void:
 	player.position = spawnManager.respawnPosition
 	PlayerControler.underControl = player
-	player.connect("dead",_on_player_dead)
 	
 	camera.follow = player
 	
+	player.dead.connect(_on_player_dead)
 	npcManager.redirectDialog.connect(showDialog)
 
 func _on_player_dead():

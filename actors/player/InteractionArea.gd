@@ -4,14 +4,6 @@ class_name InteractionArea extends Area2D
 ## Devuelve el cuerpo mas cercano al area de posesion,
 ## el parametro default es lo que devolvera la funcion si no hubiese cuerpos dentro del area.
 
-## Interactua devuelve true si lo consige y false si falla
-func interac() -> bool:
-	var body : Node2D = getSelectedBody()
-	if body != null and body.has_method("interact"):
-		body.interact()
-		return true
-	return false
-
 func getSelectedBody() -> Node2D:
 	if (get_overlapping_bodies().is_empty()):
 		return null
@@ -25,5 +17,5 @@ func getSelectedBody() -> Node2D:
 			nearestBody = body
 		if abs(body.global_position - global_position) < abs(nearestBody.global_position - global_position):
 			nearestBody = body
-
+	
 	return nearestBody

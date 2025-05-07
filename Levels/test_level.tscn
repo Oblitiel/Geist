@@ -1,43 +1,41 @@
-[gd_scene load_steps=21 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=19 format=4 uid="uid://wm1rhh1g0mdr"]
 
-[ext_resource type="Script" path="res://Levels/Level.gd" id="1_e7anx"]
-[ext_resource type="PackedScene" uid="uid://dfwjwkmcgru0k" path="res://actors/player/geist/geist.tscn" id="1_p027j"]
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://levels/Level.gd" id="1_xag4j"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_4n8tn"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="3_wkb0e"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/Camera.gd" id="4_e7anx"]
 [ext_resource type="TileSet" uid="uid://ckrbh6uslslm8" path="res://assets/tileSets/godotRes/WindowTiles.tres" id="4_paa45"]
-[ext_resource type="PackedScene" uid="uid://gs6gfrdl7hmx" path="res://actors/player/human/human.tscn" id="5_o6mel"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://actors/checkpoint/CheckpointManager.gd" id="7_wndkh"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://actors/checkpoint/checkpoint.tscn" id="8_wndkh"]
-[ext_resource type="PackedScene" uid="uid://bmq3qdrdy6xqb" path="res://actors/player/rat/rat.tscn" id="8_xag4j"]
 [ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://actors/light/light.tscn" id="9_ly3hx"]
 [ext_resource type="Texture2D" uid="uid://bj8fv4f3ui73p" path="res://assets/actors/Shadow.png" id="11_paa45"]
 [ext_resource type="Texture2D" uid="uid://c2wd00k1x3hw6" path="res://assets/actors/Logan.png" id="11_wkb0e"]
 [ext_resource type="Script" uid="uid://lqfi5tnjwi8c" path="res://actors/npc/NPCManager.gd" id="13_662sx"]
-[ext_resource type="Script" path="res://Levels/prueba.gd" id="13_ouwm7"]
+[ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://actors/npc/npc.tscn" id="13_axl34"]
 [ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://assets/text/dialogs/DialogLine.gd" id="14_662sx"]
 [ext_resource type="Texture2D" uid="uid://tupg6x0ar1m" path="res://assets/actors/Human.png" id="15_cn5b1"]
 [ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://assets/text/dialogs/DialogPlay.gd" id="16_i45ex"]
+[ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://actors/player/Player.tscn" id="19_pgbyh"]
 
-[sub_resource type="Resource" id="Resource_7jovk"]
+[sub_resource type="Resource" id="Resource_o5yuq"]
 script = ExtResource("14_662sx")
-name = "pepe"
-text = "pollas gordas"
+name = "Pepe"
+text = "Pollas sabrosas"
 image = ExtResource("15_cn5b1")
 metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
 
-[sub_resource type="Resource" id="Resource_cl38j"]
+[sub_resource type="Resource" id="Resource_wjuib"]
 script = ExtResource("16_i45ex")
-dialogScript = Array[ExtResource("14_662sx")]([SubResource("Resource_7jovk")])
+dialogScript = Array[ExtResource("14_662sx")]([SubResource("Resource_o5yuq")])
 metadata/_custom_type_script = "uid://cxcmgivfcl054"
 
-[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "npcManager", "player", "camera")]
+[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera", "npcManager")]
 y_sort_enabled = true
-script = ExtResource("1_e7anx")
+script = ExtResource("1_xag4j")
 spawnManager = NodePath("CheckpointManager")
-npcManager = NodePath("NPCManager")
-player = NodePath("Geist")
+player = NodePath("Player")
 camera = NodePath("Camera2D")
+npcManager = NodePath("NPCManager")
 
 [node name="Static" type="Node2D" parent="."]
 
@@ -54,7 +52,7 @@ tile_map_data = PackedByteArray("AAADAAwAAAADAAEAAAAIAAoAAAADAAEAAAAJAAkAAAACAAE
 tile_set = ExtResource("2_4n8tn")
 
 [node name="Buildings" type="TileMapLayer" parent="Static"]
-tile_map_data = PackedByteArray("AAAAAAMAAAAAAAUAAAAAAAIAAAAAAAMAAAABAAIAAAABAAMAAAABAAMAAAABAAUAAAADAAIAAAABAAMAAAADAAMAAAABAAUAAAAEAAMAAAABAAUAAAAEAAIAAAABAAMAAAAFAAMAAAABAAUAAAAFAAIAAAABAAMAAAAGAAIAAAACAAMAAAAGAAMAAAACAAUAAAACAAIAAAABAAMAAAAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAACAAEAAAABAAIAAAABAAEAAAABAAIAAAADAAAAAAABAAAAAAADAAEAAAABAAIAAAAEAAEAAAABAAIAAAAFAAEAAAABAAIAAAAFAAAAAAABAAAAAAAEAAAAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAGAAEAAAABAAIAAAAHAAEAAAADAAEAAAAIAAEAAAACAAEAAAAIAAAAAAACAAAAAAAIAAIAAAACAAEAAAAHAAIAAAAAAAEAAAAHAAMAAAAAAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAACAAEAAAAIAAMAAAACAAEAAAAIAAUAAAACAAIAAAAHAAUAAAAAAAIAAAAHAAYAAAAAAAMAAAAHAAcAAAAAAAUAAAAIAAcAAAACAAUAAAAIAAYAAAACAAMAAAACAAMAAAABAAUAAAABAAQAAAABAAkAAAAAAAQAAAAAAAkAAAACAAQAAAABAAYAAAADAAQAAAABAAYAAAAEAAQAAAABAAYAAAAFAAQAAAABAAYAAAAGAAQAAAACAAYAAAAGAAUAAAACAAcAAAAGAAYAAAACAAcAAAAGAAcAAAACAAgAAAAFAAcAAAABAAgAAAAEAAcAAAABAAsAAAACAAcAAAABAAsAAAABAAcAAAABAAgAAAAAAAUAAAAAAAcAAAAAAAcAAAAAAAsAAAABAAUAAAABAAcAAAADAAUAAAABAAcAAAADAAYAAAABAAcAAAAEAAYAAAABAAcAAAAFAAYAAAABAAcAAAAFAAUAAAABAAcAAAABAAYAAAABAAcAAAAAAAYAAAAAAAcAAAADAAcAAAABAAgAAAACAAYAAAABAAoAAAACAAUAAAABAAcAAAA=")
+tile_map_data = PackedByteArray("AAAAAAMAAAAAAAUAAAAAAAIAAAAAAAMAAAABAAIAAAABAAMAAAABAAMAAAABAAUAAAADAAIAAAABAAMAAAADAAMAAAABAAUAAAAEAAMAAAABAAUAAAAEAAIAAAABAAMAAAAFAAMAAAABAAUAAAAFAAIAAAABAAMAAAAGAAIAAAACAAMAAAAGAAMAAAACAAUAAAACAAIAAAABAAMAAAAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAACAAEAAAABAAIAAAABAAEAAAABAAIAAAADAAAAAAABAAAAAAADAAEAAAABAAIAAAAEAAEAAAABAAIAAAAFAAEAAAABAAIAAAAFAAAAAAABAAAAAAAEAAAAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAGAAEAAAABAAIAAAAHAAEAAAADAAEAAAAIAAEAAAACAAEAAAAIAAAAAAACAAAAAAAIAAIAAAACAAEAAAAHAAIAAAAAAAEAAAAHAAMAAAAAAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAACAAEAAAAIAAMAAAACAAEAAAAIAAUAAAACAAIAAAAHAAUAAAAAAAIAAAAHAAYAAAAAAAMAAAAHAAcAAAAAAAUAAAAIAAcAAAACAAUAAAAIAAYAAAACAAMAAAACAAMAAAABAAUAAAABAAQAAAABAAkAAAAAAAQAAAAAAAkAAAACAAQAAAABAAYAAAADAAQAAAABAAYAAAAEAAQAAAABAAYAAAAFAAQAAAABAAYAAAAGAAQAAAACAAYAAAAGAAUAAAACAAcAAAAGAAYAAAACAAcAAAAGAAcAAAACAAgAAAAFAAcAAAABAAgAAAAEAAcAAAABAAsAAAACAAcAAAABAAsAAAABAAcAAAABAAgAAAAAAAUAAAAAAAcAAAAAAAcAAAAAAAsAAAABAAUAAAABAAcAAAADAAUAAAABAAcAAAADAAYAAAABAAcAAAAEAAYAAAABAAcAAAAFAAYAAAABAAcAAAAFAAUAAAABAAcAAAABAAYAAAABAAcAAAAAAAYAAAAAAAcAAAADAAcAAAABAAgAAAACAAYAAAABAAoAAAACAAUAAAABAAcAAAAEAAUAAAABAAcAAAA=")
 tile_set = ExtResource("3_wkb0e")
 
 [node name="CityDeco" type="TileMapLayer" parent="Static"]
@@ -65,7 +63,7 @@ tile_set = ExtResource("3_wkb0e")
 tile_map_data = PackedByteArray("AAABAAUAAAAAAAAAAAABAAYAAAAAAAIAAAACAAYAAAACAAIAAAACAAUAAAACAAAAAAAPAA0AAAAAAAAAAAAPAA4AAAAAAAIAAAAQAA4AAAACAAIAAAAQAA0AAAACAAAAAAA=")
 tile_set = ExtResource("4_paa45")
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("follow")]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(74, 91)
 zoom = Vector2(4, 4)
 process_callback = 0
@@ -77,20 +75,6 @@ drag_right_margin = 0.1
 drag_bottom_margin = 0.1
 editor_draw_drag_margin = true
 script = ExtResource("4_e7anx")
-follow = NodePath("../Geist")
-
-[node name="Human" parent="." instance=ExtResource("5_o6mel")]
-position = Vector2(25, 95)
-
-[node name="Human2" parent="." instance=ExtResource("5_o6mel")]
-modulate = Color(0.85301, 0.510131, 0, 1)
-position = Vector2(36, 95)
-
-[node name="Geist" parent="." instance=ExtResource("1_p027j")]
-position = Vector2(70, 90)
-
-[node name="Controlable" parent="Geist" instance=ExtResource("8_xag4j")]
-position = Vector2(-56, 25)
 
 [node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
 script = ExtResource("7_wndkh")
@@ -125,7 +109,10 @@ texture = ExtResource("11_paa45")
 script = ExtResource("13_662sx")
 metadata/_custom_type_script = "uid://lqfi5tnjwi8c"
 
-[node name="NPC" type="CharacterBody2D" parent="NPCManager"]
-script = ExtResource("13_ouwm7")
-dialog = SubResource("Resource_cl38j")
-metadata/_custom_type_script = "uid://dy1nd7e85mmql"
+[node name="NPC" parent="NPCManager" instance=ExtResource("13_axl34")]
+position = Vector2(76, 112)
+dialog = SubResource("Resource_wjuib")
+
+[node name="Player" parent="." instance=ExtResource("19_pgbyh")]
+modulate = Color(0.812278, 0, 0, 1)
+position = Vector2(39, 112)
