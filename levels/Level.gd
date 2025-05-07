@@ -4,7 +4,9 @@ class_name Level
 @export var spawnManager : CheckpointManager
 @export var player : Player
 @export var camera : CustomCamera
+@export var npcManager: NPCManager
 
+var dialogScreen = preload("res://ui/dialog.tscn")
 
 func _ready() -> void:
 	player.position = spawnManager.respawnPosition
@@ -12,6 +14,13 @@ func _ready() -> void:
 	player.connect("dead",_on_player_dead)
 	
 	camera.follow = player
+	
+	npcManager.redirectDialog.connect(showDialog)
 
 func _on_player_dead():
 	player.respawn(spawnManager.respawnPosition)
+
+func showDialog(dialogPlay: DialogPlay):
+	var dialogInstance: DialogScreen = dialogScreen.instantiate()
+	dialogInstance.dialogPlay = dialogPlay
+	$CanvasLayer.add_child(dialogInstance)

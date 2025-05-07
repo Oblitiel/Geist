@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://58b6tpjs5k48"]
 
-[ext_resource type="Script" uid="uid://hl27dhex6y7l" path="res://actors/player/gorilla/Gorilla.gd" id="1_alofy"]
+[ext_resource type="Script" uid="uid://hl27dhex6y7l" path="res://actors/player/gorilla/gorilla.gd" id="1_alofy"]
 [ext_resource type="Texture2D" uid="uid://tupg6x0ar1m" path="res://assets/actors/Human.png" id="1_wgc3k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_alofy"]

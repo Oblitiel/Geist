@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://deqlafa4thvkq"]
+[gd_scene load_steps=5 format=3 uid="uid://deqlafa4thvkq"]
 
 [ext_resource type="Script" uid="uid://dtwrh22xbq88p" path="res://ui/DialogScreen.gd" id="1_dthu0"]
 [ext_resource type="Texture2D" uid="uid://dw5yp1jlnx1cl" path="res://ui/images/dialogBox.png" id="1_nqqr4"]
 [ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="1_wb4t7"]
-[ext_resource type="Resource" uid="uid://c3kuns5x6lg6f" path="res://ui/dialog.tres" id="2_avhl4"]
 
 [sub_resource type="Theme" id="Theme_avhl4"]
 default_font_size = 12
@@ -12,7 +11,6 @@ default_font_size = 12
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_dthu0")
-dialogScript = ExtResource("2_avhl4")
 
 [node name="Character" type="TextureRect" parent="."]
 layout_mode = 0

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmq3qdrdy6xqb"]
+
+[ext_resource type="Script" uid="uid://bky2lrxswqomg" path="res://scripts/player/Controlable.gd" id="1_sjti2"]
+[ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="2_38bc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38bc8"]
+size = Vector2(14, 9)
+
+[node name="Controlable" type="CharacterBody2D"]
+script = ExtResource("1_sjti2")
+metadata/_custom_type_script = "uid://bky2lrxswqomg"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_38bc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_38bc8")

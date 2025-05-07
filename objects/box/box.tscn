@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgix1fcws8hq5"]
+
+[ext_resource type="Texture2D" uid="uid://d2or0vkhpyo0j" path="res://assets/actors/Door.png" id="1_2kn5q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xv1ks"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2kn5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xv1ks")

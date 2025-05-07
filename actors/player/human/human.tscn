@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://tupg6x0ar1m" path="res://assets/actors/Human.png" id="1_qud8y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q18gr"]
-size = Vector2(6, 6)
+size = Vector2(13, 14)
 
 [node name="Controlable" type="CharacterBody2D"]
 z_index = 1
@@ -15,8 +15,11 @@ script = ExtResource("1_gpfp7")
 metadata/_custom_type_script = "uid://bky2lrxswqomg"
 
 [node name="Human" type="Sprite2D" parent="."]
+position = Vector2(8.5, -3.75)
+scale = Vector2(2.0625, 1.9375)
 texture = ExtResource("1_qud8y")
 offset = Vector2(0, -4)
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(8.5, -5)
 shape = SubResource("RectangleShape2D_q18gr")

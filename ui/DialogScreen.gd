@@ -1,15 +1,15 @@
-extends Control
+class_name DialogScreen extends Control
 
-@export var dialogScript: DialogPlay
+@export var dialogPlay: DialogPlay
 
 func  _ready():
-	dialogScript._iter_init()
-	update(dialogScript._iter_get())
+	dialogPlay._iter_init()
+	update(dialogPlay._iter_get())
 
 func  _input(event):
 	if event.is_action_pressed("interact"):
-		if dialogScript._iter_next():
-			update(dialogScript._iter_get())
+		if dialogPlay._iter_next():
+			update(dialogPlay._iter_get())
 		else:
 			queue_free()
 
