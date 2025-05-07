@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://h3546r0om1ne"]
+
+[ext_resource type="Script" uid="uid://bky2lrxswqomg" path="res://scripts/player/Controlable.gd" id="1_x5g8c"]
+[ext_resource type="Texture2D" uid="uid://bu5rwbmf1kavc" path="res://assets/actors/Geist.png" id="2_6gj3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tf147"]
+
+[node name="Controlable" type="CharacterBody2D"]
+script = ExtResource("1_x5g8c")
+metadata/_custom_type_script = "uid://bky2lrxswqomg"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6gj3x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tf147")
