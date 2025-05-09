@@ -1,10 +1,13 @@
-[gd_scene load_steps=19 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=24 format=4 uid="uid://wm1rhh1g0mdr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://levels/Level.gd" id="1_xag4j"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_4n8tn"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="3_wkb0e"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/Camera.gd" id="4_e7anx"]
 [ext_resource type="TileSet" uid="uid://ckrbh6uslslm8" path="res://assets/tileSets/godotRes/WindowTiles.tres" id="4_paa45"]
+[ext_resource type="PackedScene" uid="uid://dm121i07uk727" path="res://node_2d.tscn" id="5_n4g7x"]
+[ext_resource type="PackedScene" uid="uid://h7waw17mr5q0" path="res://actors/activatable/Lever.tscn" id="6_atrxo"]
+[ext_resource type="PackedScene" uid="uid://db0nem85kt7uq" path="res://actors/activatable/PushButton.tscn" id="7_vr6yy"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://actors/checkpoint/CheckpointManager.gd" id="7_wndkh"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://actors/checkpoint/checkpoint.tscn" id="8_wndkh"]
 [ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://actors/light/light.tscn" id="9_ly3hx"]
@@ -13,15 +16,17 @@
 [ext_resource type="Script" uid="uid://lqfi5tnjwi8c" path="res://actors/npc/NPCManager.gd" id="13_662sx"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://actors/npc/npc.tscn" id="13_axl34"]
 [ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://assets/text/dialogs/DialogLine.gd" id="14_662sx"]
-[ext_resource type="Texture2D" uid="uid://tupg6x0ar1m" path="res://assets/actors/Human.png" id="15_cn5b1"]
+[ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="14_wjuib"]
 [ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://assets/text/dialogs/DialogPlay.gd" id="16_i45ex"]
+[ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://actors/box/box.tscn" id="17_xag4j"]
+[ext_resource type="Resource" uid="uid://du0gdkx83bgjf" path="res://actors/player/possessionRes/Human.tres" id="19_n4g7x"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://actors/player/Player.tscn" id="19_pgbyh"]
 
 [sub_resource type="Resource" id="Resource_o5yuq"]
 script = ExtResource("14_662sx")
 name = "Pepe"
 text = "Pollas sabrosas"
-image = ExtResource("15_cn5b1")
+image = ExtResource("14_wjuib")
 metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
 
 [sub_resource type="Resource" id="Resource_wjuib"]
@@ -36,6 +41,20 @@ spawnManager = NodePath("CheckpointManager")
 player = NodePath("Player")
 camera = NodePath("Camera2D")
 npcManager = NodePath("NPCManager")
+
+[node name="Node2D" parent="." node_paths=PackedStringArray("power") instance=ExtResource("5_n4g7x")]
+position = Vector2(-51, 75)
+power = NodePath("../Lever")
+
+[node name="Node2D2" parent="." node_paths=PackedStringArray("power") instance=ExtResource("5_n4g7x")]
+position = Vector2(-51, 21)
+power = NodePath("../PushButton")
+
+[node name="Lever" parent="." instance=ExtResource("6_atrxo")]
+position = Vector2(65, 141)
+
+[node name="PushButton" parent="." instance=ExtResource("7_vr6yy")]
+position = Vector2(93, 140)
 
 [node name="Static" type="Node2D" parent="."]
 
@@ -112,7 +131,10 @@ metadata/_custom_type_script = "uid://lqfi5tnjwi8c"
 [node name="NPC" parent="NPCManager" instance=ExtResource("13_axl34")]
 position = Vector2(76, 112)
 dialog = SubResource("Resource_wjuib")
+possesionData = ExtResource("19_n4g7x")
 
 [node name="Player" parent="." instance=ExtResource("19_pgbyh")]
-modulate = Color(0.812278, 0, 0, 1)
 position = Vector2(39, 112)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("17_xag4j")]
+position = Vector2(8, 120)

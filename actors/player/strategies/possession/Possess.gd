@@ -5,5 +5,9 @@ func execute(context : Player):
 	if body != null and body.has_method("getPossesionValue"):
 		body.getPossesionValue().changePlayer(context)
 		#TODO: Esto es un poco guarrindongo
-		body.position = Vector2(-32,-32)
+		hide(body)
 		context.oldBody = body
+
+func hide(body : Node2D):
+	body.global_position = Vector2(-32,-32)
+	body.hide()

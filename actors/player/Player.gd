@@ -1,6 +1,5 @@
 class_name Player extends CharacterBody2D
 ## Clase padre que unicamente declara los metodos que deben implementar su hijo, se usa en vez de una interface por que no existen en godot.
-
 signal dead()
 
 @export var maxSpeed = 100 ## Velocidad maxima a la que puede llegar el jugador
