@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Geist"
-run/main_scene="res://levels/test_level.tscn"
+run/main_scene="res://levels/gabriel_test_level.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 

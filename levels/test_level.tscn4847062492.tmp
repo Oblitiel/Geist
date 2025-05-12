@@ -1,0 +1,149 @@
+[gd_scene load_steps=26 format=4 uid="uid://wm1rhh1g0mdr"]
+
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://levels/Level.gd" id="1_xag4j"]
+[ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_4n8tn"]
+[ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="3_wkb0e"]
+[ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/Camera.gd" id="4_e7anx"]
+[ext_resource type="TileSet" uid="uid://ckrbh6uslslm8" path="res://assets/tileSets/godotRes/WindowTiles.tres" id="4_paa45"]
+[ext_resource type="PackedScene" uid="uid://bk2ywih3ul7pp" path="res://node_2d.tscn" id="5_n4g7x"]
+[ext_resource type="PackedScene" uid="uid://h7waw17mr5q0" path="res://actors/activatable/Lever.tscn" id="6_atrxo"]
+[ext_resource type="PackedScene" uid="uid://db0nem85kt7uq" path="res://actors/activatable/PushButton.tscn" id="7_vr6yy"]
+[ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://actors/checkpoint/CheckpointManager.gd" id="7_wndkh"]
+[ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://actors/checkpoint/checkpoint.tscn" id="8_wndkh"]
+[ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://actors/light/light.tscn" id="9_ly3hx"]
+[ext_resource type="Texture2D" uid="uid://bj8fv4f3ui73p" path="res://assets/actors/Shadow.png" id="11_paa45"]
+[ext_resource type="Texture2D" uid="uid://c2wd00k1x3hw6" path="res://assets/actors/Logan.png" id="11_wkb0e"]
+[ext_resource type="Script" uid="uid://lqfi5tnjwi8c" path="res://actors/npc/NPCManager.gd" id="13_662sx"]
+[ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://actors/npc/npc.tscn" id="13_axl34"]
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://assets/text/dialogs/DialogLine.gd" id="14_662sx"]
+[ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="14_wjuib"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://assets/text/dialogs/DialogPlay.gd" id="16_i45ex"]
+[ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://actors/box/box.tscn" id="17_xag4j"]
+[ext_resource type="Script" uid="uid://bh0xv7bo7kqtt" path="res://actors/player/properties/BodyProperties.gd" id="19_atrxo"]
+[ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://actors/player/Player.tscn" id="19_pgbyh"]
+[ext_resource type="Texture2D" uid="uid://tupg6x0ar1m" path="res://assets/actors/Human.png" id="20_vr6yy"]
+
+[sub_resource type="Resource" id="Resource_o5yuq"]
+script = ExtResource("14_662sx")
+name = "Pepe"
+text = "Pollas sabrosas"
+image = ExtResource("14_wjuib")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_wjuib"]
+script = ExtResource("16_i45ex")
+dialogScript = Array[ExtResource("14_662sx")]([SubResource("Resource_o5yuq")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"
+
+[sub_resource type="Resource" id="Resource_ra35m"]
+script = ExtResource("19_atrxo")
+texture = ExtResource("20_vr6yy")
+_strategy = 1
+colisionLayer = 1
+colisionMask = 12
+metadata/_custom_type_script = "uid://bh0xv7bo7kqtt"
+
+[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera", "npcManager")]
+y_sort_enabled = true
+script = ExtResource("1_xag4j")
+spawnManager = NodePath("CheckpointManager")
+player = NodePath("Player")
+camera = NodePath("Camera2D")
+npcManager = NodePath("NPCManager")
+
+[node name="Node2D" parent="." node_paths=PackedStringArray("power") instance=ExtResource("5_n4g7x")]
+position = Vector2(-51, 75)
+power = NodePath("../Lever")
+
+[node name="Node2D2" parent="." node_paths=PackedStringArray("power") instance=ExtResource("5_n4g7x")]
+position = Vector2(-51, 21)
+power = NodePath("../PushButton")
+
+[node name="Lever" parent="." instance=ExtResource("6_atrxo")]
+position = Vector2(65, 141)
+
+[node name="PushButton" parent="." instance=ExtResource("7_vr6yy")]
+position = Vector2(93, 140)
+
+[node name="Static" type="Node2D" parent="."]
+
+[node name="Dirt" type="TileMapLayer" parent="Static"]
+tile_map_data = PackedByteArray("AAAAAAQAAQABAAQAAAAAAAUAAQABAAQAAAAAAAYAAQABAAQAAAABAAYAAQABAAQAAAABAAcAAQABAAQAAAAAAAcAAQABAAQAAAABAAUAAQABAAQAAAABAAQAAQABAAQAAAACAAQAAQACAAQAAAACAAUAAQACAAQAAAACAAYAAQACAAQAAAABAAgAAQABAAQAAAAAAAgAAQABAAQAAAABAAkAAQABAAQAAAACAAkAAQABAAQAAAAAAAkAAQABAAQAAAACAAcAAQAEAAMAAAACAAgAAQABAAQAAAACAAoAAQABAAQAAAACAAsAAQADAAQAAAADAAsAAQABAAQAAAAEAAsAAQABAAQAAAABAAsAAQABAAUAAAABAAoAAQABAAQAAAADAAkAAQABAAQAAAADAAgAAQABAAQAAAAEAAgAAQABAAQAAAAEAAcAAQABAAMAAAAFAAcAAQABAAMAAAAFAAgAAQABAAQAAAAEAAkAAQABAAQAAAAEAAoAAQABAAQAAAADAAoAAQABAAQAAAAFAAkAAQABAAQAAAAGAAkAAQABAAQAAAAGAAoAAQABAAQAAAAGAAsAAQAEAAQAAAAFAAoAAQABAAQAAAAHAAkAAQABAAQAAAAHAAgAAQABAAQAAAAHAAcAAQABAAMAAAAGAAcAAQABAAMAAAAGAAgAAQABAAQAAAAHAAoAAQABAAQAAAAHAAsAAQABAAUAAAAFAAsAAQABAAQAAAD//wgAAQADAAQAAAD//wcAAQABAAQAAAD//wYAAQABAAQAAAD//wUAAQABAAQAAAD//wQAAQABAAQAAAD+/wQAAQAAAAQAAAD+/wMAAQAAAAMAAAD//wIAAQAAAAQAAAD//wEAAQAAAAMAAAAAAAEAAQABAAMAAAABAAEAAQABAAMAAAABAAIAAQABAAQAAAAAAAIAAQABAAQAAAAAAAMAAQABAAQAAAD//wMAAQADAAMAAAD+/wUAAQAAAAQAAAD+/wcAAQAAAAQAAAD+/wYAAQAAAAQAAAACAAIAAQABAAQAAAADAAIAAQABAAQAAAAEAAIAAQABAAQAAAAFAAIAAQABAAQAAAAFAAMAAQABAAUAAAAGAAMAAQACAAUAAAAHAAMAAQAEAAUAAAAIAAQAAQAAAAQAAAAIAAUAAQAAAAQAAAAIAAYAAQAAAAQAAAAIAAcAAQADAAMAAAAIAAgAAQABAAQAAAAIAAkAAQABAAQAAAAIAAoAAQAEAAQAAAAJAAkAAQABAAQAAAAKAAkAAQAEAAQAAAAKAAgAAQABAAQAAAAKAAcAAQABAAQAAAAKAAYAAQABAAQAAAAJAAYAAQABAAQAAAAJAAcAAQABAAQAAAAJAAgAAQABAAQAAAALAAgAAQACAAQAAAALAAcAAQACAAQAAAAKAAUAAQAEAAMAAAAKAAQAAQACAAQAAAAJAAQAAQABAAQAAAAJAAUAAQABAAQAAAALAAYAAQACAAQAAAALAAUAAQACAAMAAAAKAAMAAQACAAMAAAAJAAMAAQAEAAMAAAAJAAIAAQACAAMAAAAIAAIAAQAAAAMAAAAIAAMAAQADAAMAAAABAAMAAQABAAQAAAADAAMAAQABAAUAAAACAAMAAQAEAAQAAAACAAEAAQABAAMAAAADAAEAAQABAAMAAAAEAAEAAQABAAMAAAAFAAEAAQACAAMAAAAGAAIAAQACAAQAAAAEAAMAAQABAAUAAAADAAcAAQABAAMAAAAAAAoAAQADAAQAAAD//wkAAQAAAAQAAAD+/wgAAQAAAAUAAAAAAAsAAQAAAAUAAAD//woAAQAAAAUAAAACAAwAAQAAAAUAAAADAAwAAQABAAUAAAAEAAwAAQABAAUAAAAFAAwAAQABAAUAAAAJAAoAAQABAAUAAAAGAAwAAQACAAUAAAAIAAsAAQACAAUAAAALAAkAAQACAAUAAAAKAAoAAQACAAUAAAA=")
+tile_set = ExtResource("2_4n8tn")
+
+[node name="Grass" type="TileMapLayer" parent="Static"]
+tile_map_data = PackedByteArray("AAD//wQAAQAAAAEAAAD//wUAAQAAAAEAAAD//wYAAQAAAAEAAAD//wcAAQAAAAEAAAD//wgAAQAAAAIAAAAAAAgAAQADAAEAAAAAAAcAAQAEAAAAAAAAAAYAAQACAAEAAAAAAAUAAQAEAAEAAAAAAAQAAQABAAEAAAABAAgAAQABAAEAAAAAAAkAAQAAAAEAAAABAAkAAQABAAEAAAABAAoAAQABAAIAAAAAAAoAAQAAAAIAAAACAAoAAQADAAEAAAACAAsAAQAAAAIAAAACAAkAAQABAAEAAAACAAgAAQABAAEAAAADAAgAAQABAAEAAAADAAkAAQABAAEAAAADAAoAAQABAAEAAAADAAsAAQABAAIAAAAEAAoAAQABAAEAAAAEAAkAAQABAAEAAAAEAAgAAQABAAEAAAAEAAsAAQABAAIAAAAFAAsAAQABAAIAAAAGAAsAAQACAAIAAAAGAAoAAQAEAAEAAAAFAAoAAQABAAEAAAAFAAkAAQABAAEAAAAGAAkAAQABAAEAAAAGAAgAAQABAAEAAAAFAAgAAQABAAEAAAAHAAkAAQAEAAEAAAAHAAgAAQABAAEAAAAIAAgAAQAEAAEAAAAIAAkAAQACAAIAAAAHAAoAAQACAAIAAAAJAAgAAQACAAIAAAAJAAcAAQACAAEAAAAJAAYAAQACAAEAAAAJAAUAAQACAAEAAAAHAAcAAQABAAAAAAAIAAcAAQADAAAAAAAGAAcAAQABAAAAAAAFAAcAAQABAAAAAAAEAAcAAQAEAAAAAAADAAcAAQABAAEAAAACAAcAAQABAAEAAAABAAcAAQABAAAAAAAIAAUAAQAAAAEAAAAIAAYAAQAAAAEAAAAIAAQAAQAAAAEAAAAJAAQAAQACAAEAAAAIAAMAAQAAAAEAAAAJAAMAAQACAAEAAAAJAAIAAQACAAAAAAAIAAIAAQADAAEAAAAHAAIAAQABAAIAAAAGAAIAAQABAAIAAAAFAAIAAQABAAIAAAAEAAIAAQABAAIAAAADAAIAAQABAAIAAAACAAIAAQAEAAEAAAABAAIAAQABAAEAAAAAAAIAAQABAAEAAAD//wIAAQAAAAEAAAD//wMAAQAAAAEAAAAAAAMAAQABAAEAAAABAAMAAQABAAEAAAACAAMAAQACAAEAAAACAAQAAQACAAEAAAABAAQAAQABAAEAAAABAAUAAQABAAIAAAAEAAYAAQACAAAAAAADAAYAAQABAAAAAAACAAYAAQADAAAAAAACAAUAAQADAAEAAAD//wEAAQAAAAAAAAAAAAEAAQABAAAAAAABAAEAAQABAAAAAAACAAEAAQABAAAAAAADAAEAAQABAAAAAAAEAAEAAQABAAAAAAAFAAEAAQABAAAAAAAGAAEAAQABAAAAAAAHAAEAAQABAAAAAAAIAAEAAQABAAAAAAA=")
+tile_set = ExtResource("2_4n8tn")
+
+[node name="NatureDeco" type="TileMapLayer" parent="Static"]
+tile_map_data = PackedByteArray("AAADAAwAAAADAAEAAAAIAAoAAAADAAEAAAAJAAkAAAACAAEAAAAKAAUAAAABAAEAAAAKAAcAAAADAAEAAAD+/wUAAAAAAAEAAAD//wkAAAADAAEAAAACAAkAAAADAAAAAAAEAAoAAAAEAAAAAAAIAAgAAAAEAAAAAAAJAAUAAAABAAAAAAAGAAgAAAAAAAAAAAD//wUAAAABAAAAAAAGAAkAAAADAAAAAAD//wIAAAACAAAAAAABAAgAAAAEAAEAAAA=")
+tile_set = ExtResource("2_4n8tn")
+
+[node name="Buildings" type="TileMapLayer" parent="Static"]
+tile_map_data = PackedByteArray("AAAAAAMAAAAAAAUAAAAAAAIAAAAAAAMAAAABAAIAAAABAAMAAAABAAMAAAABAAUAAAADAAIAAAABAAMAAAADAAMAAAABAAUAAAAEAAMAAAABAAUAAAAEAAIAAAABAAMAAAAFAAMAAAABAAUAAAAFAAIAAAABAAMAAAAGAAIAAAACAAMAAAAGAAMAAAACAAUAAAACAAIAAAABAAMAAAAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAACAAEAAAABAAIAAAABAAEAAAABAAIAAAADAAAAAAABAAAAAAADAAEAAAABAAIAAAAEAAEAAAABAAIAAAAFAAEAAAABAAIAAAAFAAAAAAABAAAAAAAEAAAAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAGAAEAAAABAAIAAAAHAAEAAAADAAEAAAAIAAEAAAACAAEAAAAIAAAAAAACAAAAAAAIAAIAAAACAAEAAAAHAAIAAAAAAAEAAAAHAAMAAAAAAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAACAAEAAAAIAAMAAAACAAEAAAAIAAUAAAACAAIAAAAHAAUAAAAAAAIAAAAHAAYAAAAAAAMAAAAHAAcAAAAAAAUAAAAIAAcAAAACAAUAAAAIAAYAAAACAAMAAAACAAMAAAABAAUAAAABAAQAAAABAAkAAAAAAAQAAAAAAAkAAAACAAQAAAABAAYAAAADAAQAAAABAAYAAAAEAAQAAAABAAYAAAAFAAQAAAABAAYAAAAGAAQAAAACAAYAAAAGAAUAAAACAAcAAAAGAAYAAAACAAcAAAAGAAcAAAACAAgAAAAFAAcAAAABAAgAAAAEAAcAAAABAAsAAAACAAcAAAABAAsAAAABAAcAAAABAAgAAAAAAAUAAAAAAAcAAAAAAAcAAAAAAAsAAAABAAUAAAABAAcAAAADAAUAAAABAAcAAAADAAYAAAABAAcAAAAEAAYAAAABAAcAAAAFAAYAAAABAAcAAAAFAAUAAAABAAcAAAABAAYAAAABAAcAAAAAAAYAAAAAAAcAAAADAAcAAAABAAgAAAACAAYAAAABAAoAAAACAAUAAAABAAcAAAAEAAUAAAABAAcAAAA=")
+tile_set = ExtResource("3_wkb0e")
+
+[node name="CityDeco" type="TileMapLayer" parent="Static"]
+tile_map_data = PackedByteArray("AAAIAAcAAQAAAAAAAAACAAMAAQAAAAEAAAA=")
+tile_set = ExtResource("3_wkb0e")
+
+[node name="Windows" type="TileMapLayer" parent="Static"]
+tile_map_data = PackedByteArray("AAABAAUAAAAAAAAAAAABAAYAAAAAAAIAAAACAAYAAAACAAIAAAACAAUAAAACAAAAAAAPAA0AAAAAAAAAAAAPAA4AAAAAAAIAAAAQAA4AAAACAAIAAAAQAA0AAAACAAAAAAA=")
+tile_set = ExtResource("4_paa45")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(74, 91)
+zoom = Vector2(4, 4)
+process_callback = 0
+position_smoothing_enabled = true
+drag_vertical_offset = -0.1
+drag_left_margin = 0.1
+drag_top_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.1
+editor_draw_drag_margin = true
+script = ExtResource("4_e7anx")
+
+[node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
+script = ExtResource("7_wndkh")
+defaultCheckpoint = NodePath("checkpoint")
+metadata/_custom_type_script = "uid://cfq0owrq0jkht"
+
+[node name="checkpoint" parent="CheckpointManager" instance=ExtResource("8_wndkh")]
+position = Vector2(40, 72)
+
+[node name="checkpoint2" parent="CheckpointManager" instance=ExtResource("8_wndkh")]
+position = Vector2(128, 144)
+scale = Vector2(1.93, 2)
+
+[node name="luz" parent="." instance=ExtResource("9_ly3hx")]
+position = Vector2(40, 136)
+
+[node name="Logan" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(98, 84)
+texture = ExtResource("11_wkb0e")
+offset = Vector2(0, -8)
+
+[node name="Shadow" type="Sprite2D" parent="Logan"]
+z_as_relative = false
+position = Vector2(0, 3)
+texture = ExtResource("11_paa45")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NPCManager" type="Node" parent="."]
+script = ExtResource("13_662sx")
+metadata/_custom_type_script = "uid://lqfi5tnjwi8c"
+
+[node name="NPC" parent="NPCManager" instance=ExtResource("13_axl34")]
+position = Vector2(76, 112)
+dialog = SubResource("Resource_wjuib")
+possesionData = SubResource("Resource_ra35m")
+
+[node name="Player" parent="." instance=ExtResource("19_pgbyh")]
+position = Vector2(39, 112)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("17_xag4j")]
+position = Vector2(8, 120)

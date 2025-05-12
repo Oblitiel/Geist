@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvjf58bjuy6rk"]
+
+[ext_resource type="Script" uid="uid://dy1nd7e85mmql" path="res://actors/npc/npc.gd" id="1_w4kyd"]
+[ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="3_3jjbx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x13w6"]
+size = Vector2(6, 13)
+
+[node name="NPC" type="CharacterBody2D"]
+collision_layer = 48
+collision_mask = 12
+script = ExtResource("1_w4kyd")
+metadata/_custom_type_script = "uid://dy1nd7e85mmql"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("3_3jjbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_x13w6")
