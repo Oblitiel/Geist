@@ -1,10 +1,19 @@
 [gd_scene load_steps=6 format=3 uid="uid://bd6730w55njhg"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Theme" uid="uid://bfjfjpdmxcwel" path="res://ui/themes/menuTheme.tres" id="1_6pkie"]
 [ext_resource type="PackedScene" uid="uid://cb0rekj3v6p6e" path="res://ui/menus/input_button.tscn" id="2_1a2dv"]
 [ext_resource type="Script" uid="uid://5ynynexvsmir" path="res://ui/menus/inputSettings.gd" id="2_h8720"]
 [ext_resource type="Script" uid="uid://kfg0qab2rcwi" path="res://ui/menus/settings.gd" id="2_j5sgt"]
 [ext_resource type="PackedScene" uid="uid://bw0mjnwkmqtkm" path="res://ui/menus/volumeSlider.tscn" id="3_g263u"]
+=======
+[ext_resource type="Theme" path="res://ui/themes/menuTheme.tres" id="1_6pkie"]
+[ext_resource type="PackedScene" uid="uid://b05jtrrwh6gja" path="res://ui/menus/input_button.tscn" id="2_1a2dv"]
+[ext_resource type="Script" uid="uid://bex5x32lrqr5s" path="res://ui/menus/tab_bar.gd" id="2_bti7b"]
+[ext_resource type="Script" uid="uid://duyk31203t6uq" path="res://ui/menus/inputSettings.gd" id="2_h8720"]
+[ext_resource type="Script" uid="uid://p8ejg7o2ajwx" path="res://ui/menus/settings.gd" id="2_j5sgt"]
+[ext_resource type="PackedScene" uid="uid://b8d0avf1gl2kn" path="res://ui/menus/volumeSlider.tscn" id="3_g263u"]
+>>>>>>> Stashed changes
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3

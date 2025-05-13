@@ -1,9 +1,17 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=12 format=3 uid="uid://bjeg3a5ll4ggr"]
+=======
+[gd_scene load_steps=12 format=3 uid="uid://cfplwynf41qad"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://Levels/Level.gd" id="1_8a2b0"]
 [ext_resource type="Script" uid="uid://lqfi5tnjwi8c" path="res://actors/npc/NPCManager.gd" id="2_ecu0b"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://actors/npc/npc.tscn" id="3_t2u7g"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://assets/text/dialogs/DialogLine.gd" id="4_t2u7g"]
+=======
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://assets/text/dialogs/DialogLine.gd" id="4_t2u7g"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://actors/player/Player.tscn" id="4_vx8ih"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://actors/checkpoint/CheckpointManager.gd" id="5_ugh17"]
 [ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://assets/text/dialogs/DialogPlay.gd" id="5_vx8ih"]
