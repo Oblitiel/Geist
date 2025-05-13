@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cgupy7wksde80"]
+[gd_scene format=3 uid="uid://cb0rekj3v6p6e"]
 
 [node name="InputButton" type="Button"]
 custom_minimum_size = Vector2(0, 32)
