@@ -1,12 +1,6 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=2 format=3 uid="uid://bw0mjnwkmqtkm"]
 
 [ext_resource type="Script" uid="uid://gxk7m6hd04gg" path="res://ui/menus/volume_slider.gd" id="1_rkgfh"]
-=======
-[gd_scene load_steps=2 format=3 uid="uid://b8d0avf1gl2kn"]
-
-[ext_resource type="Script" uid="uid://d1r2ed8mxx1g0" path="res://ui/menus/volume_slider.gd" id="1_rkgfh"]
->>>>>>> Stashed changes
 
 [node name="HBoxContainer" type="HBoxContainer"]
 script = ExtResource("1_rkgfh")

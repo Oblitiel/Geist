@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://cb0rekj3v6p6e"]
-=======
-[gd_scene format=3 uid="uid://b05jtrrwh6gja"]
->>>>>>> Stashed changes
 
 [node name="InputButton" type="Button"]
 custom_minimum_size = Vector2(0, 32)
