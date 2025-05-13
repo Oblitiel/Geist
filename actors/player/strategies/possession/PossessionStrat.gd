@@ -1,1 +1,0 @@
-class_name PossessionStrat extends PlayerStrategy

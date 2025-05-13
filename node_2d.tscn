@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://dm121i07uk727"]
+[gd_scene load_steps=2 format=3 uid="uid://bk2ywih3ul7pp"]
 
-[ext_resource type="Script" uid="uid://b56d55jlgxv6h" path="res://Test.gd" id="1_wtcfe"]
+[sub_resource type="GDScript" id="GDScript_y32ns"]
+script/source = "extends Node2D
+
+@export_color_no_alpha var unActive
+@export_color_no_alpha var active
+
+@export var power : Activator
+
+func _process(_delta: float) -> void:
+	if power.active:
+		$ColorRect.color = active
+	else:
+		$ColorRect.color = unActive
+"
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_wtcfe")
+script = SubResource("GDScript_y32ns")
 unActive = Color(1, 0, 0, 1)
 active = Color(0.0870811, 1, 0, 1)
 

@@ -1,15 +1,17 @@
 class_name Player extends CharacterBody2D
 ## Clase padre que unicamente declara los metodos que deben implementar su hijo, se usa en vez de una interface por que no existen en godot.
+
+#TODO: HACER UN FACADE?
 signal dead()
 
 @export var maxSpeed = 100 ## Velocidad maxima a la que puede llegar el jugador
 @export var aceleration = 800 ## Aceleracion del jugador
 @export var friction = 1200 ## Friccion que se ejerce cunado el jugador deja de moverse
 
-@onready var sprite: Sprite2D = $Sprite
 @onready var interactionArea: InteractionArea = $InteractionArea
 
-@export var strategySet : StrategySet
+#TODO: Cambiar esto al factoy¿?¿?¿?¿??
+@export var bodyProperies : BodyProperties
 
 #TODO: esto esta guarrindongo
 var oldBody : Node2D
@@ -26,10 +28,10 @@ func move(delta, direction : Vector2) -> void:
 	move_and_slide()
 
 func interact() -> void:
-	strategySet.interaction.execute(self)
+	bodyProperies.getStrategy().interact(self)
 
 func possess() -> void:
-	strategySet.possession.execute(self)
+	bodyProperies.getStrategy().possess(self)
 
 func die() -> void:
 	#TODO: animación de muerte
@@ -38,3 +40,9 @@ func die() -> void:
 func respawn(respawPosition : Vector2) -> void:
 	#TODO: animacion de respawn y mas
 	global_position = respawPosition
+
+func changePorperties(properties : BodyProperties) -> void:
+	bodyProperies = properties
+	$Sprite.texture = properties.texture
+	collision_layer = properties.colisionLayer
+	collision_mask = properties.colisionMask
