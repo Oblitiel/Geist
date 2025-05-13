@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=4 uid="uid://wm1rhh1g0mdr"]
 
-[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://levels/Level.gd" id="1_hhvwa"]
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://Levels/Level.gd" id="1_hhvwa"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_xaqma"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="3_v402t"]
 [ext_resource type="TileSet" uid="uid://ckrbh6uslslm8" path="res://assets/tileSets/godotRes/WindowTiles.tres" id="4_681tc"]
