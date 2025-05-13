@@ -1,0 +1,175 @@
+[gd_scene load_steps=6 format=3 uid="uid://bd6730w55njhg"]
+
+[ext_resource type="Theme" uid="uid://bfjfjpdmxcwel" path="res://ui/themes/menuTheme.tres" id="1_6pkie"]
+[ext_resource type="PackedScene" uid="uid://cb0rekj3v6p6e" path="res://ui/menus/input_button.tscn" id="2_1a2dv"]
+[ext_resource type="Script" uid="uid://5ynynexvsmir" path="res://ui/menus/inputSettings.gd" id="2_h8720"]
+[ext_resource type="Script" uid="uid://kfg0qab2rcwi" path="res://ui/menus/settings.gd" id="2_j5sgt"]
+[ext_resource type="PackedScene" uid="uid://bw0mjnwkmqtkm" path="res://ui/menus/volumeSlider.tscn" id="3_g263u"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_6pkie")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -446.0
+offset_top = -255.0
+offset_right = -367.0
+offset_bottom = -185.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(11.3683, 7.21397)
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -215.0
+offset_right = 400.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Settings" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+script = ExtResource("2_j5sgt")
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Settings/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Settings/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Language" type="HBoxContainer" parent="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Language"]
+layout_mode = 2
+text = "LANGUAGE"
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Language"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OptionButton" type="OptionButton" parent="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Language"]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Español"
+popup/item_0/id = 0
+popup/item_1/text = "English"
+popup/item_1/id = 1
+
+[node name="Audio" type="VBoxContainer" parent="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LabelAudio" type="Label" parent="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Audio"]
+layout_mode = 2
+text = "AUDIO"
+
+[node name="CheckBoxMute" type="CheckBox" parent="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Audio"]
+layout_mode = 2
+text = "MUTE"
+
+[node name="HBoxContainer" parent="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Audio" instance=ExtResource("3_g263u")]
+layout_mode = 2
+busName = "Master"
+labelText = "MVOLUME"
+
+[node name="HBoxContainer2" parent="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Audio" instance=ExtResource("3_g263u")]
+layout_mode = 2
+busName = "Music"
+labelText = "BGMUSIC"
+
+[node name="HBoxContainer3" parent="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Audio" instance=ExtResource("3_g263u")]
+layout_mode = 2
+busName = "SFX"
+labelText = "SFX"
+
+[node name="Keys" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("2_h8720")
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Keys"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Keys/MarginContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Keys/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="TabContainer/Keys/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InputButton" parent="TabContainer/Keys/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("2_1a2dv")]
+layout_mode = 2
+
+[node name="InputButton2" parent="TabContainer/Keys/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("2_1a2dv")]
+layout_mode = 2
+
+[node name="InputButton3" parent="TabContainer/Keys/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("2_1a2dv")]
+layout_mode = 2
+
+[node name="InputButton4" parent="TabContainer/Keys/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("2_1a2dv")]
+layout_mode = 2
+
+[node name="InputButton5" parent="TabContainer/Keys/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("2_1a2dv")]
+layout_mode = 2
+
+[node name="InputButton6" parent="TabContainer/Keys/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("2_1a2dv")]
+layout_mode = 2
+
+[node name="ResetButton" type="Button" parent="TabContainer/Keys/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "RESET "
+
+[connection signal="item_selected" from="TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Language/OptionButton" to="TabContainer/Settings" method="_on_option_button_item_selected"]
+[connection signal="pressed" from="TabContainer/Keys/MarginContainer/VBoxContainer/ResetButton" to="TabContainer/Keys" method="_on_reset_button_pressed"]

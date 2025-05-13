@@ -6,7 +6,7 @@ class_name Level
 @export var camera : CustomCamera
 @export var npcManager: NPCManager
 
-var dialogScreen = preload("res://ui/dialog.tscn")
+var dialogScreen = preload("res://ui/dialogs/dialog.tscn")
 
 func _ready() -> void:
 	player.position = spawnManager.respawnPosition

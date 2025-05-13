@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://deqlafa4thvkq"]
+
+[ext_resource type="Script" uid="uid://dtwrh22xbq88p" path="res://ui/dialogs/DialogScreen.gd" id="1_ugmf4"]
+[ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="2_4lr28"]
+[ext_resource type="Texture2D" uid="uid://dw5yp1jlnx1cl" path="res://ui/images/dialogBox.png" id="3_njugh"]
+[ext_resource type="FontFile" uid="uid://dwdrbk8fa71sh" path="res://ui/fonts/Jersey10-Regular.ttf" id="4_4lr28"]
+
+[sub_resource type="Theme" id="Theme_avhl4"]
+default_font = ExtResource("4_4lr28")
+default_font_size = 20
+
+[sub_resource type="Theme" id="Theme_njugh"]
+default_font = ExtResource("4_4lr28")
+default_font_size = 20
+
+[node name="DialogScreen" type="Control"]
+process_mode = 3
+process_priority = 2
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ugmf4")
+
+[node name="Character" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 107.0
+offset_right = 347.0
+offset_bottom = 433.0
+texture = ExtResource("2_4lr28")
+flip_h = true
+
+[node name="TextBox2" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 357.0
+offset_right = 196.0
+offset_bottom = 395.0
+scale = Vector2(2, 2)
+texture = ExtResource("3_njugh")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Text2" type="RichTextLabel" parent="TextBox2"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 6.5
+offset_right = 99.0
+offset_bottom = 25.5
+theme = SubResource("Theme_avhl4")
+text = "TEST"
+scroll_active = false
+
+[node name="TextBox" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 411.0
+offset_right = 573.0
+offset_bottom = 509.0
+scale = Vector2(2, 2)
+texture = ExtResource("3_njugh")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Text" type="RichTextLabel" parent="TextBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = -12.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_njugh")
+text = "TEST"
+scroll_active = false

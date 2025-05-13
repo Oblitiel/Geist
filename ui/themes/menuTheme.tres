@@ -1,0 +1,80 @@
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://bfjfjpdmxcwel"]
+
+[ext_resource type="FontFile" uid="uid://dwdrbk8fa71sh" path="res://ui/fonts/Jersey10-Regular.ttf" id="1_w7en7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt0oc"]
+bg_color = Color(0, 0, 0, 0.462745)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w7en7"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_54tkr"]
+bg_color = Color(0.915878, 0.46912, 0.153186, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_air3u"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehkjq"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rbhnx"]
+bg_color = Color(0, 0, 0, 0.462745)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tslef"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldrp4"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kb08k"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dodt"]
+bg_color = Color(0.917647, 0.470588, 0.152941, 1)
+
+[resource]
+BoxContainer/constants/separation = 7
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0.610003, 0.380657, 0.0511102, 0.5)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0.607843, 0.313726, 0.14902, 1)
+Button/colors/font_hover_pressed_color = Color(0.607843, 0.313726, 0.14902, 1)
+Button/colors/font_pressed_color = Color(0.0627451, 0.580392, 0.584314, 1)
+Button/constants/h_separation = 7
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_w7en7")
+Button/styles/disabled = SubResource("StyleBoxFlat_lt0oc")
+Button/styles/hover = SubResource("StyleBoxFlat_w7en7")
+Button/styles/normal = SubResource("StyleBoxFlat_54tkr")
+Button/styles/pressed = SubResource("StyleBoxFlat_air3u")
+Label/font_sizes/font_size = 25
+Label/fonts/font = ExtResource("1_w7en7")
+TabContainer/colors/drop_mark_color = Color(0.130075, 0.333995, 0.241662, 1)
+TabContainer/colors/font_disabled_color = Color(0.611765, 0.380392, 0.0509804, 0.501961)
+TabContainer/colors/font_hovered_color = Color(0.607843, 0.313726, 0.14902, 1)
+TabContainer/colors/font_selected_color = Color(0.0627451, 0.580392, 0.584314, 1)
+TabContainer/colors/font_unselected_color = Color(0, 0, 0, 1)
+TabContainer/font_sizes/font_size = 30
+TabContainer/fonts/font = ExtResource("1_w7en7")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_ehkjq")
+TabContainer/styles/tab_disabled = SubResource("StyleBoxFlat_rbhnx")
+TabContainer/styles/tab_focus = SubResource("StyleBoxFlat_tslef")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_ldrp4")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_kb08k")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_8dodt")

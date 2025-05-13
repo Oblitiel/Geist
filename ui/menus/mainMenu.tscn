@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://dq68xiljmb0c"]
+
+[ext_resource type="Script" uid="uid://bj6vhr88ehmp0" path="res://ui/menus/MainMenu.gd" id="2_3rsjx"]
+[ext_resource type="Texture2D" uid="uid://ciou4k7kdwiw0" path="res://ui/images/titulo.png" id="2_8xbtc"]
+[ext_resource type="Texture2D" uid="uid://4i88mwsmibqd" path="res://ui/images/backgroundMainMenu.png" id="3_3rsjx"]
+[ext_resource type="Theme" uid="uid://bfjfjpdmxcwel" path="res://ui/themes/menuTheme.tres" id="3_8xbtc"]
+
+[sub_resource type="Animation" id="Animation_bmxya"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundImage:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-407, -3), Vector2(-118, -3)]
+}
+
+[sub_resource type="Animation" id="Animation_3rsjx"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundImage:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-408, -99), Vector2(-374, -99)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2i8be"]
+_data = {
+&"RESET": SubResource("Animation_bmxya"),
+&"new_animation": SubResource("Animation_3rsjx")
+}
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_8xbtc")
+script = ExtResource("2_3rsjx")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -394.819
+offset_top = -99.0
+offset_right = 2353.18
+offset_bottom = 1253.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_3rsjx")
+
+[node name="Title" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 336.0
+offset_top = 139.0
+offset_right = 835.0
+offset_bottom = 344.0
+texture = ExtResource("2_8xbtc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 478.0
+offset_top = 417.0
+offset_right = 670.0
+offset_bottom = 545.0
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "PLAY"
+
+[node name="Load" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "LOAD"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "EXIT"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2i8be")
+}
+autoplay = "new_animation"
