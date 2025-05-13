@@ -1,4 +1,4 @@
-extends TabBar
+extends Panel
 
 @onready var inputButtonScene = preload("res://ui/menus/input_button.tscn")
 @onready var actionList = $MarginContainer/VBoxContainer/ScrollContainer/ActionList

@@ -62,13 +62,6 @@ possess={
 ]
 }
 
-<<<<<<< Updated upstream
-[internationalization]
-
-locale/translations=PackedStringArray("res://assets/text/translations.es.translation", "res://assets/text/translations.en.translation")
-
-=======
->>>>>>> Stashed changes
 [layer_names]
 
 2d_physics/layer_1="Player"

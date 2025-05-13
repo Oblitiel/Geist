@@ -1,4 +1,4 @@
-extends TabBar
+extends Panel
 
 
 func _on_option_button_item_selected(index):
