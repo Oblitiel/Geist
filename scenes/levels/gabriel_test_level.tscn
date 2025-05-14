@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=23 format=4 uid="uid://wm1rhh1g0mdr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_hhvwa"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_xaqma"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://scenes/actors/light/light.tscn" id="8_rtll5"]
 [ext_resource type="Texture2D" uid="uid://c2wd00k1x3hw6" path="res://assets/actors/Logan.png" id="9_iw86c"]
 [ext_resource type="Texture2D" uid="uid://bj8fv4f3ui73p" path="res://assets/actors/Shadow.png" id="10_43iad"]
-[ext_resource type="Script" uid="uid://lqfi5tnjwi8c" path="res://scenes/actors/npc/NPCManager.gd" id="11_8y6oc"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="12_4lhwy"]
 [ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://assets/text/dialogs/DialogLine.gd" id="13_jocxj"]
 [ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="14_oeqy2"]
@@ -34,13 +33,12 @@ script = ExtResource("15_a0edr")
 dialogScript = Array[ExtResource("13_jocxj")]([SubResource("Resource_o5yuq")])
 metadata/_custom_type_script = "uid://cxcmgivfcl054"
 
-[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera", "npcManager")]
+[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 y_sort_enabled = true
 script = ExtResource("1_hhvwa")
 spawnManager = NodePath("CheckpointManager")
 player = NodePath("Player")
 camera = NodePath("Camera2D")
-npcManager = NodePath("NPCManager")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -110,21 +108,19 @@ z_as_relative = false
 position = Vector2(0, 3)
 texture = ExtResource("10_43iad")
 
-[node name="NPCManager" type="Node" parent="."]
-script = ExtResource("11_8y6oc")
-metadata/_custom_type_script = "uid://lqfi5tnjwi8c"
+[node name="NPCs" type="Node" parent="."]
 
-[node name="Rat" parent="NPCManager" instance=ExtResource("12_4lhwy")]
+[node name="Rat" parent="NPCs" instance=ExtResource("12_4lhwy")]
 position = Vector2(60, 134)
 dialog = SubResource("Resource_wjuib")
 possesionData = ExtResource("16_681tc")
 
-[node name="Human" parent="NPCManager" instance=ExtResource("12_4lhwy")]
+[node name="Human" parent="NPCs" instance=ExtResource("12_4lhwy")]
 position = Vector2(94, 134)
 dialog = ExtResource("17_xaqma")
 possesionData = ExtResource("18_1jito")
 
-[node name="Gorilla" parent="NPCManager" instance=ExtResource("12_4lhwy")]
+[node name="Gorilla" parent="NPCs" instance=ExtResource("12_4lhwy")]
 position = Vector2(76, 134)
 possesionData = ExtResource("19_0vjrh")
 

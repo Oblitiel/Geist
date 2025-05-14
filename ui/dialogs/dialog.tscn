@@ -14,8 +14,7 @@ default_font = ExtResource("4_4lr28")
 default_font_size = 20
 
 [node name="DialogScreen" type="Control"]
-process_mode = 3
-process_priority = 2
+process_mode = 2
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_ugmf4")

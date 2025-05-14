@@ -1,8 +1,9 @@
 class_name DialogScreen extends Control
 
-@export var dialogPlay: DialogPlay
+var dialogPlay: DialogPlay
 
-func _ready():
+func start(newDialogPlay: DialogPlay):
+	dialogPlay = newDialogPlay
 	dialogPlay._iter_init()
 	update(dialogPlay._iter_get())
 

@@ -3,6 +3,9 @@ class_name GameControler extends Node
 @export var currentScene : Node2D
 var sceneInMemory : Node2D
 
+func _ready() -> void:
+	Global.gameControler = self
+
 func changeScene(newScene: String, delete: bool = true, keepRunning : bool = false):
 	if delete:
 		currentScene.queue_free()
@@ -20,9 +23,13 @@ func showOptionsMenu():
 	pauseGame()
 	pass
 
-func showDialogMenu(dialogPlay : DialogPlay):
-	pauseGame()
+func hideOptionsMenu():
+	runGame()
 	pass
+
+func showDialog(dialogPlay : DialogPlay):
+	pauseGame()
+	$Ui/DialogScreen.start(dialogPlay)
 
 func pauseGame():
 	get_tree().paused = true

@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjeg3a5ll4ggr"]
+[gd_scene load_steps=11 format=3 uid="uid://bjeg3a5ll4ggr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_8a2b0"]
-[ext_resource type="Script" uid="uid://lqfi5tnjwi8c" path="res://scenes/actors/npc/NPCManager.gd" id="2_ecu0b"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="3_t2u7g"]
 [ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://assets/text/dialogs/DialogLine.gd" id="4_t2u7g"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="4_vx8ih"]
@@ -21,19 +20,16 @@ script = ExtResource("5_vx8ih")
 dialogScript = Array[ExtResource("4_t2u7g")]([SubResource("Resource_ugh17")])
 metadata/_custom_type_script = "uid://cxcmgivfcl054"
 
-[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera", "npcManager")]
+[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 script = ExtResource("1_8a2b0")
 spawnManager = NodePath("CheckpointManager")
 player = NodePath("Player")
 camera = NodePath("CustomCamera")
-npcManager = NodePath("NPCManager")
 metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
 
-[node name="NPCManager" type="Node" parent="."]
-script = ExtResource("2_ecu0b")
-metadata/_custom_type_script = "uid://lqfi5tnjwi8c"
+[node name="NPCs" type="Node" parent="."]
 
-[node name="NPC" parent="NPCManager" instance=ExtResource("3_t2u7g")]
+[node name="NPC" parent="NPCs" instance=ExtResource("3_t2u7g")]
 dialog = SubResource("Resource_eabcg")
 
 [node name="Player" parent="." instance=ExtResource("4_vx8ih")]
