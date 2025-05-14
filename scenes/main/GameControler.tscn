@@ -15,6 +15,6 @@ currentScene = NodePath("Level")
 [node name="Ui" type="CanvasLayer" parent="."]
 
 [node name="MainMenu" parent="Ui" instance=ExtResource("4_e27il")]
-visible = false
 
 [node name="DialogScreen" parent="Ui" instance=ExtResource("4_xir38")]
+visible = false
