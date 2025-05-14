@@ -15,7 +15,7 @@ func changeScene(newScene: String, delete: bool = true, keepRunning : bool = fal
 		sceneInMemory  = currentScene
 		remove_child(currentScene)
 	
-	var new = load("res://scenes/levels/" + newScene + ".tscn")
+	var new = load("res://scenes/levels/" + newScene + ".tscn").instantiate()
 	add_child(new)
 	currentScene = new
 
