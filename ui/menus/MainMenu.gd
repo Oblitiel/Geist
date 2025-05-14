@@ -12,6 +12,7 @@ func _input(event):
 			$OptionsMenu.visible = false
 	
 func play():
+	hide()
 	Global.gameControler.changeScene("gabriel_test_level")
 
 func exitGame():

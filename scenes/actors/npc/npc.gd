@@ -5,6 +5,7 @@ class_name NPC extends CharacterBody2D
 
 func talk():
 	Global.gameControler.showDialog(dialog)
+	print("pene")
 
 func getProperties():
 	return possesionData

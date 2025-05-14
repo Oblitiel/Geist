@@ -30,6 +30,7 @@ func hideOptionsMenu():
 func showDialog(dialogPlay : DialogPlay):
 	pauseGame()
 	$Ui/DialogScreen.start(dialogPlay)
+	$Ui/DialogScreen.show()
 
 func pauseGame():
 	get_tree().paused = true
