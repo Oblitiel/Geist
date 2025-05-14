@@ -1,7 +1,5 @@
 extends Control
 
-var MAINSCENE: String = "res://Levels/level.tscn"
-
 func _ready():
 	$VBoxContainer/PlayButton.pressed.connect(play)
 	$VBoxContainer/ExitButton.pressed.connect(exitGame)
@@ -14,7 +12,7 @@ func _input(event):
 			$OptionsMenu.visible = false
 	
 func play():
-	get_tree().change_scene_to_file(MAINSCENE)
+	Global.gameControler.changeScene("gabriel_test_level")
 
 func exitGame():
 	get_tree().quit()
