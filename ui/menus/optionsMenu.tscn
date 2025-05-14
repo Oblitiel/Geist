@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1q75kxcjcb4j"]
+[gd_scene load_steps=9 format=3 uid="uid://b1q75kxcjcb4j"]
 
 [ext_resource type="Theme" uid="uid://bfjfjpdmxcwel" path="res://ui/themes/menuTheme.tres" id="1_6pkie"]
 [ext_resource type="PackedScene" uid="uid://cb0rekj3v6p6e" path="res://ui/menus/input_button.tscn" id="2_1a2dv"]
 [ext_resource type="Script" uid="uid://b0jx6k5hhxhd" path="res://ui/menus/tab_bar.gd" id="2_bti7b"]
+[ext_resource type="Script" uid="uid://c6t2b2p4pkuav" path="res://ui/menus/options_menu.gd" id="2_foqcw"]
 [ext_resource type="Script" path="res://ui/menus/inputSettings.gd" id="2_h8720"]
 [ext_resource type="Script" path="res://ui/menus/settings.gd" id="2_j5sgt"]
 [ext_resource type="PackedScene" uid="uid://bw0mjnwkmqtkm" path="res://ui/menus/volumeSlider.tscn" id="3_g263u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bti7b"]
+bg_color = Color(0.917647, 0.470588, 0.152941, 1)
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -15,6 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_6pkie")
+script = ExtResource("2_foqcw")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -40,6 +45,21 @@ tab_0/title = "SETTINGS"
 tab_1/title = "KEYS"
 script = ExtResource("2_bti7b")
 tabContainer = NodePath("../TabContainer")
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/TabBar"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -36.5
+offset_bottom = 3.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_bti7b")
+text = "X"
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -170,5 +190,6 @@ focus_mode = 0
 text = "RESET "
 
 [connection signal="tab_changed" from="MarginContainer/VBoxContainer/TabBar" to="MarginContainer/VBoxContainer/TabBar" method="_on_tab_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TabBar/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Language/OptionButton" to="MarginContainer/VBoxContainer/TabContainer/Settings" method="_on_option_button_item_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TabContainer/Keys/MarginContainer/VBoxContainer/ResetButton" to="MarginContainer/VBoxContainer/TabContainer/Keys" method="_on_reset_button_pressed"]
