@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dq68xiljmb0c" path="res://ui/menus/mainMenu.tscn" id="4_e27il"]
 
 [node name="GameControler" type="Node" node_paths=PackedStringArray("currentScene")]
+process_mode = 3
 script = ExtResource("1_xir38")
 currentScene = NodePath("Level")
 
@@ -13,3 +14,4 @@ currentScene = NodePath("Level")
 [node name="Ui" type="CanvasLayer" parent="."]
 
 [node name="MainMenu" parent="Ui" instance=ExtResource("4_e27il")]
+visible = false
