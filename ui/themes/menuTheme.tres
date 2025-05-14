@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=12 format=3 uid="uid://bfjfjpdmxcwel"]
 
-[ext_resource type="FontFile" uid="uid://dwdrbk8fa71sh" path="res://ui/fonts/Jersey10-Regular.ttf" id="1_w7en7"]
+[ext_resource type="FontFile" uid="uid://dwdrbk8fa71sh" path="res://assets/ui/fonts/Jersey10-Regular.ttf" id="1_w7en7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt0oc"]
 bg_color = Color(0, 0, 0, 0.462745)

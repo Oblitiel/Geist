@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Geist"
-run/main_scene="res://levels/gabriel_test_level.tscn"
+run/main_scene="uid://c17n3qtbjcna8"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 PlayerControler="*res://scripts/player/PlayerControler.gd"
+Global="*res://scripts/Global.gd"
 
 [display]
 

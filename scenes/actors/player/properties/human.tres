@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BodyProperties" load_steps=3 format=3 uid="uid://ebf0i775ua76"]
+
+[ext_resource type="Script" uid="uid://bh0xv7bo7kqtt" path="res://scenes/actors/player/properties/BodyProperties.gd" id="1_fdb6a"]
+[ext_resource type="Texture2D" uid="uid://tupg6x0ar1m" path="res://assets/actors/Human.png" id="2_lqmwx"]
+
+[resource]
+script = ExtResource("1_fdb6a")
+texture = ExtResource("2_lqmwx")
+_strategy = "Human"
+colisionLayer = 1
+colisionMask = 12
+metadata/_custom_type_script = "uid://bh0xv7bo7kqtt"

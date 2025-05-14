@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dtwrh22xbq88p" path="res://ui/dialogs/DialogScreen.gd" id="1_ugmf4"]
 [ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="2_4lr28"]
-[ext_resource type="Texture2D" uid="uid://dw5yp1jlnx1cl" path="res://ui/images/dialogBox.png" id="3_njugh"]
-[ext_resource type="FontFile" uid="uid://dwdrbk8fa71sh" path="res://ui/fonts/Jersey10-Regular.ttf" id="4_4lr28"]
+[ext_resource type="Texture2D" uid="uid://dw5yp1jlnx1cl" path="res://assets/ui/images/dialogBox.png" id="3_njugh"]
+[ext_resource type="FontFile" uid="uid://dwdrbk8fa71sh" path="res://assets/ui/fonts/Jersey10-Regular.ttf" id="4_4lr28"]
 
 [sub_resource type="Theme" id="Theme_avhl4"]
 default_font = ExtResource("4_4lr28")
