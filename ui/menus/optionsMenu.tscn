@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cb0rekj3v6p6e" path="res://ui/menus/input_button.tscn" id="2_1a2dv"]
 [ext_resource type="Script" uid="uid://b0jx6k5hhxhd" path="res://ui/menus/tab_bar.gd" id="2_bti7b"]
 [ext_resource type="Script" uid="uid://c6t2b2p4pkuav" path="res://ui/menus/options_menu.gd" id="2_foqcw"]
-[ext_resource type="Script" path="res://ui/menus/inputSettings.gd" id="2_h8720"]
-[ext_resource type="Script" path="res://ui/menus/settings.gd" id="2_j5sgt"]
+[ext_resource type="Script" uid="uid://5ynynexvsmir" path="res://ui/menus/inputSettings.gd" id="2_h8720"]
+[ext_resource type="Script" uid="uid://kfg0qab2rcwi" path="res://ui/menus/settings.gd" id="2_j5sgt"]
 [ext_resource type="PackedScene" uid="uid://bw0mjnwkmqtkm" path="res://ui/menus/volumeSlider.tscn" id="3_g263u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bti7b"]

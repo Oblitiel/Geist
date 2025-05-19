@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="BodyProperties" load_steps=3 format=3 uid="uid://b3tksnra8rrvk"]
 
 [ext_resource type="Script" uid="uid://bh0xv7bo7kqtt" path="res://scenes/actors/player/properties/BodyProperties.gd" id="1_5e5su"]
-[ext_resource type="Texture2D" uid="uid://c2wd00k1x3hw6" path="res://assets/actors/Logan.png" id="2_7xgml"]
+[ext_resource type="Texture2D" uid="uid://ce1xg127fwogq" path="res://assets/actors/Gorilla.png" id="2_3ypvt"]
 
 [resource]
 script = ExtResource("1_5e5su")
-texture = ExtResource("2_7xgml")
+texture = ExtResource("2_3ypvt")
 _strategy = "Gorilla"
 colisionLayer = 1
 colisionMask = 12

@@ -1,11 +1,16 @@
 class_name Box extends CharacterBody2D
 
-@onready var directions: Directions = $Directions
-var positionTween : Tween
+var sliding : bool = false
+@export_range(0,128,16,"or_greater") var distance: int = 16
+@export_range(0,100) var time: float = 1
 
-func bePushed():
-	positionTween = create_tween().set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_IN_OUT)
-	positionTween.set_process_mode(Tween.TWEEN_PROCESS_IDLE)
-	if !positionTween.is_running():
-		if (directions.getMoveDirection() != directions.getCollisionDirection()):
-			positionTween.tween_property(self, "position", position + directions.getMoveDirection() * 16,1)
+func bePushed(direction: Vector2):
+	if not sliding and not test_move(transform, direction * distance):
+		var positionTween = create_tween().set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_IN_OUT)
+		positionTween.set_process_mode(Tween.TWEEN_PROCESS_IDLE)
+		sliding = true
+		positionTween.tween_property(self, "position", position + direction * distance, time)
+		
+		await positionTween.finished
+		
+		sliding = false
