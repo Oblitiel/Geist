@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1q75kxcjcb4j"]
+[gd_scene load_steps=8 format=3 uid="uid://b1q75kxcjcb4j"]
 
 [ext_resource type="Theme" uid="uid://bfjfjpdmxcwel" path="res://ui/themes/menuTheme.tres" id="1_6pkie"]
 [ext_resource type="PackedScene" uid="uid://cb0rekj3v6p6e" path="res://ui/menus/input_button.tscn" id="2_1a2dv"]
@@ -70,7 +70,6 @@ tabs_visible = false
 
 [node name="Settings" type="Panel" parent="MarginContainer/VBoxContainer/TabContainer"]
 layout_mode = 2
-script = ExtResource("2_j5sgt")
 metadata/_tab_index = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer/Settings"]
@@ -192,5 +191,5 @@ text = "RESET "
 
 [connection signal="tab_changed" from="MarginContainer/VBoxContainer/TabBar" to="MarginContainer/VBoxContainer/TabBar" method="_on_tab_changed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TabBar/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="item_selected" from="MarginContainer/VBoxContainer/TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Language/OptionButton" to="MarginContainer/VBoxContainer/TabContainer/Settings" method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Language/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TabContainer/Keys/MarginContainer/VBoxContainer/ResetButton" to="MarginContainer/VBoxContainer/TabContainer/Keys" method="_on_reset_button_pressed"]
