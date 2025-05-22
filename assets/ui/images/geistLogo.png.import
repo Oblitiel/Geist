@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciou4k7kdwiw0"
-path="res://.godot/imported/titulo.png-ec787e8fa5a174c13a403a5c0db34283.ctex"
+uid="uid://b7y4hxkno6616"
+path="res://.godot/imported/geistLogo.png-f349554d8065fe17b57956ce4aa703cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/images/titulo.png"
-dest_files=["res://.godot/imported/titulo.png-ec787e8fa5a174c13a403a5c0db34283.ctex"]
+source_file="res://assets/ui/images/geistLogo.png"
+dest_files=["res://.godot/imported/geistLogo.png-f349554d8065fe17b57956ce4aa703cf.ctex"]
 
 [params]
 

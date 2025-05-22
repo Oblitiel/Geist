@@ -1,15 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1q75kxcjcb4j"]
+[gd_scene load_steps=9 format=3 uid="uid://b1q75kxcjcb4j"]
 
 [ext_resource type="Theme" uid="uid://bfjfjpdmxcwel" path="res://ui/themes/menuTheme.tres" id="1_6pkie"]
 [ext_resource type="PackedScene" uid="uid://cb0rekj3v6p6e" path="res://ui/menus/input_button.tscn" id="2_1a2dv"]
 [ext_resource type="Script" uid="uid://b0jx6k5hhxhd" path="res://ui/menus/tab_bar.gd" id="2_bti7b"]
 [ext_resource type="Script" uid="uid://c6t2b2p4pkuav" path="res://ui/menus/options_menu.gd" id="2_foqcw"]
 [ext_resource type="Script" uid="uid://5ynynexvsmir" path="res://ui/menus/inputSettings.gd" id="2_h8720"]
-[ext_resource type="Script" uid="uid://kfg0qab2rcwi" path="res://ui/menus/settings.gd" id="2_j5sgt"]
 [ext_resource type="PackedScene" uid="uid://bw0mjnwkmqtkm" path="res://ui/menus/volumeSlider.tscn" id="3_g263u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bti7b"]
 bg_color = Color(0.917647, 0.470588, 0.152941, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_bti7b"]
 
 [node name="OptionsMenu" type="Control"]
 process_mode = 3
@@ -108,11 +109,16 @@ size_flags_horizontal = 3
 
 [node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Language"]
 layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_icons/icon = SubResource("ViewportTexture_bti7b")
+theme_override_constants/arrow_margin = 13
+theme_override_constants/modulate_arrow = 1
+icon_alignment = 1
 selected = 0
 item_count = 2
-popup/item_0/text = "Español"
+popup/item_0/text = "  Español"
 popup/item_0/id = 0
-popup/item_1/text = "English"
+popup/item_1/text = "  English"
 popup/item_1/id = 1
 
 [node name="Audio" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer"]

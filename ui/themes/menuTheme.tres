@@ -17,7 +17,7 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_54tkr"]
-bg_color = Color(0.915878, 0.46912, 0.153186, 1)
+bg_color = Color(0.219551, 0.643892, 0.654977, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -51,12 +51,13 @@ bg_color = Color(0.917647, 0.470588, 0.152941, 1)
 [resource]
 BoxContainer/constants/separation = 7
 Button/colors/font_color = Color(0, 0, 0, 1)
-Button/colors/font_disabled_color = Color(0.610003, 0.380657, 0.0511102, 0.5)
+Button/colors/font_disabled_color = Color(0.0627451, 0.580392, 0.584314, 0.486275)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_color = Color(0.607843, 0.313726, 0.14902, 1)
-Button/colors/font_hover_pressed_color = Color(0.607843, 0.313726, 0.14902, 1)
-Button/colors/font_pressed_color = Color(0.0627451, 0.580392, 0.584314, 1)
+Button/colors/font_hover_color = Color(0.0627451, 0.580392, 0.584314, 1)
+Button/colors/font_hover_pressed_color = Color(0.0627451, 0.580392, 0.584314, 1)
+Button/colors/font_pressed_color = Color(0.33003, 0.357711, 0.741362, 1)
 Button/constants/h_separation = 7
+Button/constants/line_spacing = 0
 Button/font_sizes/font_size = 30
 Button/fonts/font = ExtResource("1_w7en7")
 Button/styles/disabled = SubResource("StyleBoxFlat_lt0oc")

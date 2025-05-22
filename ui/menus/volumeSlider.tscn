@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://gxk7m6hd04gg" path="res://ui/menus/volume_slider.gd" id="1_rkgfh"]
 
-[node name="HBoxContainer" type="HBoxContainer"]
+[node name="AudioSettings" type="HBoxContainer"]
 script = ExtResource("1_rkgfh")
 
 [node name="Label" type="Label" parent="."]
