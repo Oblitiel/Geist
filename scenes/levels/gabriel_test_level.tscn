@@ -11,12 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://c2wd00k1x3hw6" path="res://assets/actors/Logan.png" id="9_iw86c"]
 [ext_resource type="Texture2D" uid="uid://bj8fv4f3ui73p" path="res://assets/actors/Shadow.png" id="10_43iad"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="12_4lhwy"]
-[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://assets/text/dialogs/DialogLine.gd" id="13_jocxj"]
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="13_jocxj"]
 [ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="14_oeqy2"]
-[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://assets/text/dialogs/DialogPlay.gd" id="15_a0edr"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="15_a0edr"]
 [ext_resource type="Resource" uid="uid://yr331u3naiyp" path="res://scenes/actors/player/properties/rat.tres" id="16_681tc"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="17_1ugh7"]
-[ext_resource type="Resource" uid="uid://c3kuns5x6lg6f" path="res://ui/dialog.tres" id="17_xaqma"]
+[ext_resource type="Resource" uid="uid://c3kuns5x6lg6f" path="res://assets/text/dialogs/Error.tres" id="17_xaqma"]
 [ext_resource type="Resource" uid="uid://ebf0i775ua76" path="res://scenes/actors/player/properties/human.tres" id="18_1jito"]
 [ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://scenes/actors/box/box.tscn" id="18_hnnve"]
 [ext_resource type="Resource" uid="uid://b3tksnra8rrvk" path="res://scenes/actors/player/properties/gorilla.tres" id="19_0vjrh"]
@@ -122,10 +122,14 @@ possesionData = ExtResource("18_1jito")
 
 [node name="Gorilla" parent="NPCs" instance=ExtResource("12_4lhwy")]
 position = Vector2(76, 134)
+dialog = ExtResource("17_xaqma")
 possesionData = ExtResource("19_0vjrh")
 
 [node name="Player" parent="." instance=ExtResource("17_1ugh7")]
 position = Vector2(60, 91)
 
+[node name="Player2" parent="." instance=ExtResource("17_1ugh7")]
+position = Vector2(-9, 124)
+
 [node name="Box" parent="." instance=ExtResource("18_hnnve")]
-position = Vector2(8, 120)
+position = Vector2(8, 128)

@@ -1,5 +1,7 @@
 class_name GameControler extends Node
 
+const SCENE_PATH_FORMAT = "res://scenes/levels/%s.tscn"
+
 @export var currentScene : Node2D
 var sceneInMemory : Node2D
 
@@ -8,14 +10,15 @@ func _ready() -> void:
 
 func changeScene(newScene: String, delete: bool = true, keepRunning : bool = false):
 	if delete:
-		currentScene.queue_free()
+		if currentScene:
+			currentScene.queue_free()
 	elif keepRunning:
 		currentScene.hide()
 	else:
 		sceneInMemory  = currentScene
 		remove_child(currentScene)
 	
-	var new = load("res://scenes/levels/" + newScene + ".tscn").instantiate()
+	var new = load(SCENE_PATH_FORMAT % newScene).instantiate()
 	add_child(new)
 	currentScene = new
 
