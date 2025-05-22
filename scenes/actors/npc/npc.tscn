@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvjf58bjuy6rk"]
+[gd_scene load_steps=5 format=3 uid="uid://dvjf58bjuy6rk"]
 
 [ext_resource type="Script" uid="uid://dy1nd7e85mmql" path="res://scenes/actors/npc/npc.gd" id="1_w4kyd"]
+[ext_resource type="Resource" uid="uid://c3kuns5x6lg6f" path="res://assets/text/dialogs/Error.tres" id="2_4pvti"]
 [ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="3_3jjbx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x13w6"]
@@ -9,9 +10,10 @@ size = Vector2(6, 13)
 [node name="NPC" type="CharacterBody2D"]
 process_mode = 1
 process_priority = 5
-collision_layer = 48
+collision_layer = 176
 collision_mask = 12
 script = ExtResource("1_w4kyd")
+dialog = ExtResource("2_4pvti")
 metadata/_custom_type_script = "uid://dy1nd7e85mmql"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

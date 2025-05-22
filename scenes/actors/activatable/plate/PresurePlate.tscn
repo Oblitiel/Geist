@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0akybpp0nuyb"]
+
+[ext_resource type="Script" uid="uid://d3ycle3cxcnj7" path="res://scenes/actors/activatable/plate/PresurePlate.gd" id="1_q03nu"]
+[ext_resource type="Texture2D" uid="uid://b3a6amxg6hucs" path="res://assets/actors/activators/PresurePlate.png" id="2_gw4vv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjysv"]
+size = Vector2(0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q03nu"]
+size = Vector2(12, 12)
+
+[node name="PresurePlate" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_q03nu")
+metadata/_custom_type_script = "uid://dbnci1l3p3viv"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gw4vv")
+offset = Vector2(0, 8)
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_xjysv")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_q03nu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
