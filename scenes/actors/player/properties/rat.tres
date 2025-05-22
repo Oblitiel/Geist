@@ -7,6 +7,6 @@
 script = ExtResource("1_cu553")
 texture = ExtResource("2_ajnvb")
 _strategy = "Rat"
-colisionLayer = 1
+colisionLayer = 129
 colisionMask = 12
 metadata/_custom_type_script = "uid://bh0xv7bo7kqtt"

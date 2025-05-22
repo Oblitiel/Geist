@@ -7,6 +7,6 @@
 script = ExtResource("1_4amwr")
 texture = ExtResource("2_1asfv")
 _strategy = "Geist"
-colisionLayer = 3
+colisionLayer = 67
 colisionMask = 12
 metadata/_custom_type_script = "uid://bh0xv7bo7kqtt"

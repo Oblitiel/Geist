@@ -76,6 +76,8 @@ locale/translations=PackedStringArray("res://assets/text/translations.es.transla
 2d_physics/layer_4="WallClimb"
 2d_physics/layer_5="Possessable"
 2d_physics/layer_6="Interactable"
+2d_physics/layer_7="Flying"
+2d_physics/layer_8="Grounded"
 
 [rendering]
 

@@ -1,9 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://h7waw17mr5q0"]
 
-[ext_resource type="Script" uid="uid://oqmerta8ggae" path="res://scenes/actors/activatable/Lever.gd" id="1_mye0d"]
-[ext_resource type="Texture2D" uid="uid://tupg6x0ar1m" path="res://assets/actors/Human.png" id="2_mg4ux"]
+[ext_resource type="Script" uid="uid://oqmerta8ggae" path="res://scenes/actors/activatable/lever/Lever.gd" id="1_mye0d"]
+[ext_resource type="Texture2D" uid="uid://dctrjbmhm1o6i" path="res://assets/actors/activators/Lever.png" id="2_42phq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mye0d"]
+size = Vector2(16, 9)
 
 [node name="Lever" type="StaticBody2D"]
 collision_layer = 32
@@ -12,7 +13,10 @@ script = ExtResource("1_mye0d")
 metadata/_custom_type_script = "uid://oqmerta8ggae"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_mg4ux")
+texture = ExtResource("2_42phq")
+offset = Vector2(0, -8)
+hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_mye0d")

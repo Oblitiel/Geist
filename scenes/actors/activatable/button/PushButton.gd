@@ -5,7 +5,13 @@ class_name PushButton extends Activator
 
 func activate():
 	active = true
+	$Sprite2D.frame = 1
+	activated.emit()
+	
 	timer.wait_time = buttonTime
 	timer.start()
+	
 	await timer.timeout
 	active = false
+	$Sprite2D.frame = 0
+	deactivated.emit()

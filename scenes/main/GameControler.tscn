@@ -4,10 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dq68xiljmb0c" path="res://ui/menus/mainMenu.tscn" id="4_e27il"]
 [ext_resource type="PackedScene" uid="uid://deqlafa4thvkq" path="res://ui/dialogs/dialog.tscn" id="4_xir38"]
 
-[node name="GameControler" type="Node" node_paths=PackedStringArray("currentScene")]
+[node name="GameControler" type="Node"]
 process_mode = 3
 script = ExtResource("1_xir38")
-currentScene = NodePath("")
 
 [node name="Ui" type="CanvasLayer" parent="."]
 

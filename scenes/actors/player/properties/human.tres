@@ -7,6 +7,6 @@
 script = ExtResource("1_fdb6a")
 texture = ExtResource("2_tmrp1")
 _strategy = "Human"
-colisionLayer = 1
+colisionLayer = 129
 colisionMask = 12
 metadata/_custom_type_script = "uid://bh0xv7bo7kqtt"
