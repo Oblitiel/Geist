@@ -5,13 +5,11 @@ var sliding : bool = false
 @export_range(0,100) var time: float = 0.5
 
 func bePushed(direction: Vector2):
-	print(direction * distance)
 	if not sliding and not test_move(transform, direction * distance):
 		var positionTween = create_tween().set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT).set_process_mode(Tween.TWEEN_PROCESS_IDLE)
 		sliding = true
 		positionTween.tween_property(self, "position", position + direction * distance, time)
 		
 		await positionTween.finished
-		print("ended")
 		
 		sliding = false

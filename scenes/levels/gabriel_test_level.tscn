@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="14_oeqy2"]
 [ext_resource type="Resource" uid="uid://yr331u3naiyp" path="res://scenes/actors/player/properties/rat.tres" id="16_681tc"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="17_1ugh7"]
-[ext_resource type="Resource" uid="uid://ebf0i775ua76" path="res://scenes/actors/player/properties/human.tres" id="18_1jito"]
+[ext_resource type="Resource" uid="uid://ebf0i775ua76" path="res://scenes/actors/player/properties/humanBoy.tres" id="18_1jito"]
 [ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://scenes/actors/box/box.tscn" id="18_hnnve"]
 [ext_resource type="Resource" uid="uid://b3tksnra8rrvk" path="res://scenes/actors/player/properties/gorilla.tres" id="19_0vjrh"]
 [ext_resource type="PackedScene" uid="uid://db0nem85kt7uq" path="res://scenes/actors/activatable/button/PushButton.tscn" id="20_qux1j"]
@@ -83,22 +83,23 @@ scale = Vector2(1.93, 2)
 [node name="luz" parent="." instance=ExtResource("8_rtll5")]
 position = Vector2(40, 136)
 
-[node name="NPCs" type="Node" parent="."]
+[node name="NPCs" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="NPC" parent="NPCs" instance=ExtResource("12_4lhwy")]
-position = Vector2(77, 136)
+position = Vector2(83, 136)
 possesionData = ExtResource("19_0vjrh")
-sprite = ExtResource("11_qux1j")
+texture = ExtResource("11_qux1j")
 
 [node name="NPC2" parent="NPCs" instance=ExtResource("12_4lhwy")]
-position = Vector2(90, 136)
+position = Vector2(103, 136)
 possesionData = ExtResource("18_1jito")
-sprite = ExtResource("13_vm620")
+texture = ExtResource("13_vm620")
 
 [node name="NPC3" parent="NPCs" instance=ExtResource("12_4lhwy")]
-position = Vector2(103, 136)
+position = Vector2(62, 136)
 possesionData = ExtResource("16_681tc")
-sprite = ExtResource("14_oeqy2")
+texture = ExtResource("14_oeqy2")
 
 [node name="NPC4" parent="NPCs" instance=ExtResource("12_4lhwy")]
 position = Vector2(153, 136)
