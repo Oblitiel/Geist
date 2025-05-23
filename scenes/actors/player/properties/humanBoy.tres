@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="BodyProperties" load_steps=3 format=3 uid="uid://ebf0i775ua76"]
 
 [ext_resource type="Script" uid="uid://bh0xv7bo7kqtt" path="res://scenes/actors/player/properties/BodyProperties.gd" id="1_fdb6a"]
-[ext_resource type="Texture2D" uid="uid://ebn6y7s5rlro" path="res://assets/actors/HumanGirl.png" id="2_tmrp1"]
+[ext_resource type="Texture2D" uid="uid://ft542vaj7fg8" path="res://assets/actors/HumanBoy.png" id="2_6tmte"]
 
 [resource]
 script = ExtResource("1_fdb6a")
-texture = ExtResource("2_tmrp1")
+texture = ExtResource("2_6tmte")
 _strategy = "Human"
 colisionLayer = 129
 colisionMask = 12
