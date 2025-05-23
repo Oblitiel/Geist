@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=21 format=4 uid="uid://wm1rhh1g0mdr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_hhvwa"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_xaqma"]
@@ -9,10 +9,10 @@
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="6_0vjrh"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="7_dvrdk"]
 [ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://scenes/actors/light/light.tscn" id="8_rtll5"]
+[ext_resource type="Texture2D" uid="uid://ce1xg127fwogq" path="res://assets/actors/Gorilla.png" id="11_qux1j"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="12_4lhwy"]
-[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="13_jocxj"]
+[ext_resource type="Texture2D" uid="uid://ft542vaj7fg8" path="res://assets/actors/HumanBoy.png" id="13_vm620"]
 [ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="14_oeqy2"]
-[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="15_a0edr"]
 [ext_resource type="Resource" uid="uid://yr331u3naiyp" path="res://scenes/actors/player/properties/rat.tres" id="16_681tc"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="17_1ugh7"]
 [ext_resource type="Resource" uid="uid://ebf0i775ua76" path="res://scenes/actors/player/properties/human.tres" id="18_1jito"]
@@ -20,18 +20,6 @@
 [ext_resource type="Resource" uid="uid://b3tksnra8rrvk" path="res://scenes/actors/player/properties/gorilla.tres" id="19_0vjrh"]
 [ext_resource type="PackedScene" uid="uid://db0nem85kt7uq" path="res://scenes/actors/activatable/button/PushButton.tscn" id="20_qux1j"]
 [ext_resource type="PackedScene" uid="uid://b0akybpp0nuyb" path="res://scenes/actors/activatable/plate/PresurePlate.tscn" id="20_vm620"]
-
-[sub_resource type="Resource" id="Resource_o5yuq"]
-script = ExtResource("13_jocxj")
-name = "Pepe"
-text = "Pollas sabrosas"
-image = ExtResource("14_oeqy2")
-metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
-
-[sub_resource type="Resource" id="Resource_wjuib"]
-script = ExtResource("15_a0edr")
-dialogScript = Array[ExtResource("13_jocxj")]([SubResource("Resource_o5yuq")])
-metadata/_custom_type_script = "uid://cxcmgivfcl054"
 
 [node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 y_sort_enabled = true
@@ -97,18 +85,24 @@ position = Vector2(40, 136)
 
 [node name="NPCs" type="Node" parent="."]
 
-[node name="Rat" parent="NPCs" instance=ExtResource("12_4lhwy")]
-position = Vector2(60, 134)
-dialog = SubResource("Resource_wjuib")
-possesionData = ExtResource("16_681tc")
-
-[node name="Human" parent="NPCs" instance=ExtResource("12_4lhwy")]
-position = Vector2(94, 134)
-possesionData = ExtResource("18_1jito")
-
-[node name="Gorilla" parent="NPCs" instance=ExtResource("12_4lhwy")]
-position = Vector2(76, 134)
+[node name="NPC" parent="NPCs" instance=ExtResource("12_4lhwy")]
+position = Vector2(77, 136)
 possesionData = ExtResource("19_0vjrh")
+sprite = ExtResource("11_qux1j")
+
+[node name="NPC2" parent="NPCs" instance=ExtResource("12_4lhwy")]
+position = Vector2(90, 136)
+possesionData = ExtResource("18_1jito")
+sprite = ExtResource("13_vm620")
+
+[node name="NPC3" parent="NPCs" instance=ExtResource("12_4lhwy")]
+position = Vector2(103, 136)
+possesionData = ExtResource("16_681tc")
+sprite = ExtResource("14_oeqy2")
+
+[node name="NPC4" parent="NPCs" instance=ExtResource("12_4lhwy")]
+position = Vector2(153, 136)
+possesionData = ExtResource("16_681tc")
 
 [node name="Player" parent="." instance=ExtResource("17_1ugh7")]
 position = Vector2(60, 91)

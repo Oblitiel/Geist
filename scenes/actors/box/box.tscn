@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7avv"]
 size = Vector2(14, 14)
 
-[node name="Box" type="CharacterBody2D"]
+[node name="Box" type="CharacterBody2D" groups=["Pushable"]]
 collision_layer = 164
 collision_mask = 12
 script = ExtResource("1_leuba")

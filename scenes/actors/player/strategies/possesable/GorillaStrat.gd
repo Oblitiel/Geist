@@ -2,7 +2,7 @@ class_name GorillaStrat extends PossessableStrat
 
 func interact(context : Player) -> void:
 	print(interact)
-	var body : Node2D = context.interactionArea.getSelectedBody()
+	var body : Node2D = context.interactionArea.getSelectedBody("Pushable")
 	if body != null and body.has_method("bePushed"):
 		print(body)
 		var direction : Vector2 = body.global_position - context.global_position

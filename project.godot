@@ -25,6 +25,13 @@ SaveManager="*res://scripts/save/SaveManager.gd"
 
 window/stretch/mode="viewport"
 
+[global_group]
+
+Possessable=""
+Talkable=""
+Pushable=""
+ActivablePowerSource=""
+
 [input]
 
 up={
