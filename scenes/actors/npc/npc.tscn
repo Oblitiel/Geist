@@ -68,4 +68,3 @@ shape = SubResource("RectangleShape2D_x13w6")
 libraries = {
 &"": SubResource("AnimationLibrary_trb5v")
 }
-autoplay = "Idle"

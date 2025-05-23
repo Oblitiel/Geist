@@ -81,4 +81,3 @@ debug_color = Color(0, 0.886954, 0.627881, 0.42)
 libraries = {
 &"": SubResource("AnimationLibrary_nnut8")
 }
-autoplay = "Idle"
