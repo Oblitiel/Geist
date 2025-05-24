@@ -1,11 +1,11 @@
-[gd_scene load_steps=21 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=22 format=4 uid="uid://wm1rhh1g0mdr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_hhvwa"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_xaqma"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="3_v402t"]
 [ext_resource type="TileSet" uid="uid://ckrbh6uslslm8" path="res://assets/tileSets/godotRes/WindowTiles.tres" id="4_681tc"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="5_1jito"]
-[ext_resource type="PackedScene" uid="uid://h7waw17mr5q0" path="res://scenes/actors/activatable/lever/Lever.tscn" id="5_vm620"]
+[ext_resource type="PackedScene" uid="uid://h7waw17mr5q0" path="res://scenes/actors/activators/lever/Lever.tscn" id="5_vm620"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="6_0vjrh"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="7_dvrdk"]
 [ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://scenes/actors/light/light.tscn" id="8_rtll5"]
@@ -14,12 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://ft542vaj7fg8" path="res://assets/actors/HumanBoy.png" id="13_vm620"]
 [ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="14_oeqy2"]
 [ext_resource type="Resource" uid="uid://yr331u3naiyp" path="res://scenes/actors/player/properties/rat.tres" id="16_681tc"]
+[ext_resource type="PackedScene" uid="uid://bf4gq3j1i16aq" path="res://scenes/actors/door/door.tscn" id="16_vm620"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="17_1ugh7"]
 [ext_resource type="Resource" uid="uid://ebf0i775ua76" path="res://scenes/actors/player/properties/humanBoy.tres" id="18_1jito"]
 [ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://scenes/actors/box/box.tscn" id="18_hnnve"]
 [ext_resource type="Resource" uid="uid://b3tksnra8rrvk" path="res://scenes/actors/player/properties/gorilla.tres" id="19_0vjrh"]
-[ext_resource type="PackedScene" uid="uid://db0nem85kt7uq" path="res://scenes/actors/activatable/button/PushButton.tscn" id="20_qux1j"]
-[ext_resource type="PackedScene" uid="uid://b0akybpp0nuyb" path="res://scenes/actors/activatable/plate/PresurePlate.tscn" id="20_vm620"]
+[ext_resource type="PackedScene" uid="uid://db0nem85kt7uq" path="res://scenes/actors/activators/button/PushButton.tscn" id="20_qux1j"]
+[ext_resource type="PackedScene" uid="uid://b0akybpp0nuyb" path="res://scenes/actors/activators/plate/PresurePlate.tscn" id="20_vm620"]
 
 [node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 y_sort_enabled = true
@@ -117,6 +118,10 @@ position = Vector2(88, 80)
 [node name="PushButton" parent="." instance=ExtResource("20_qux1j")]
 position = Vector2(104, 80)
 
-[node name="Activator" parent="." instance=ExtResource("20_vm620")]
+[node name="Plate" parent="." instance=ExtResource("20_vm620")]
 position = Vector2(72, 64)
 scale = Vector2(1.02347, 0.996206)
+
+[node name="Door" parent="." node_paths=PackedStringArray("activators") instance=ExtResource("16_vm620")]
+position = Vector2(88, 88)
+activators = [NodePath("../Lever"), NodePath("../Plate"), NodePath("../PushButton")]

@@ -17,4 +17,4 @@ func getProperties():
 func setSprite(newTexture : Texture2D):
 	texture = newTexture
 	$Sprite2D.texture = texture
-	$Sprite2D.offset = Vector2(0, - texture.get_height() / 2)
+	$Sprite2D.offset = Vector2(0, - snappedi(texture.get_height() / 2.0,1))
