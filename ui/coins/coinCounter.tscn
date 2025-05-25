@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bskobqvu6wxpq"]
+
+[ext_resource type="Theme" uid="uid://bfjfjpdmxcwel" path="res://ui/themes/menuTheme.tres" id="1_rutop"]
+[ext_resource type="Texture2D" uid="uid://xmd6kd0k4gci" path="res://assets/actors/coin.png" id="2_774xb"]
+[ext_resource type="Script" uid="uid://d3s3ib6htvf05" path="res://ui/coins/CoinCounter.gd" id="2_cqaen"]
+
+[node name="CoinCounter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rutop")
+script = ExtResource("2_cqaen")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 60.0
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_774xb")
+
+[node name="CoinsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 79.0
+offset_right = 144.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 50
+text = "X0"

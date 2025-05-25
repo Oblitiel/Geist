@@ -4,7 +4,7 @@ const SAVE_DIR_PATH : String = "user://"
 const SAVE_FILE_PATH : String = "saveSlot%d.save"
 const PASSWORD : String = "0akvj38h1n639n"
 
-var current_game_state : Save
+var current_game_state : Save = Save.new(0,"", [])
 var save_dao : SaveDAO = SaveDAO.new()
 
 #func _ready() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://wm1rhh1g0mdr"]
+[gd_scene load_steps=22 format=4 uid="uid://wm1rhh1g0mdr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_hhvwa"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_xaqma"]
@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://yr331u3naiyp" path="res://scenes/actors/player/properties/rat.tres" id="16_681tc"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="17_1ugh7"]
 [ext_resource type="Resource" uid="uid://ebf0i775ua76" path="res://scenes/actors/player/properties/human.tres" id="18_1jito"]
+[ext_resource type="PackedScene" uid="uid://cqo4gay11xxuw" path="res://scenes/actors/coin/coin.tscn" id="18_h5cix"]
 [ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://scenes/actors/box/box.tscn" id="18_hnnve"]
 [ext_resource type="Resource" uid="uid://b3tksnra8rrvk" path="res://scenes/actors/player/properties/gorilla.tres" id="19_0vjrh"]
 [ext_resource type="PackedScene" uid="uid://db0nem85kt7uq" path="res://scenes/actors/activatable/button/PushButton.tscn" id="20_qux1j"]
@@ -110,6 +111,10 @@ position = Vector2(60, 91)
 [node name="Box" parent="." instance=ExtResource("18_hnnve")]
 position = Vector2(8, 128)
 
+[node name="Coin" parent="." instance=ExtResource("18_h5cix")]
+position = Vector2(73, 194)
+idCoin = "1"
+
 [node name="Lever" parent="." instance=ExtResource("5_vm620")]
 position = Vector2(88, 80)
 
@@ -119,3 +124,11 @@ position = Vector2(104, 80)
 [node name="Activator" parent="." instance=ExtResource("20_vm620")]
 position = Vector2(72, 64)
 scale = Vector2(1.02347, 0.996206)
+
+[node name="Coin2" parent="." instance=ExtResource("18_h5cix")]
+position = Vector2(129, 192)
+idCoin = "2"
+
+[node name="Coin3" parent="." instance=ExtResource("18_h5cix")]
+position = Vector2(105, 223)
+idCoin = "3"

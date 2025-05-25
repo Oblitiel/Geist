@@ -40,3 +40,6 @@ func pauseGame():
 
 func runGame():
 	get_tree().paused = false
+
+func addCoin():
+	$Ui/CoinCounter.update()
