@@ -9,6 +9,8 @@
 process_mode = 3
 script = ExtResource("1_xir38")
 
+[node name="World2D" type="Node2D" parent="."]
+
 [node name="Ui" type="CanvasLayer" parent="."]
 
 [node name="CoinCounter" parent="Ui" instance=ExtResource("4_u81pi")]

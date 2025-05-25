@@ -12,7 +12,7 @@ static var bodies_strat : Dictionary[String, Callable] = {
 @export var texture : Texture2D
 @export_enum("Geist", "Human","Rat","Gorilla") var _strategy : String
 
-@export_flags_2d_physics var colisionLayer : int = 1
+@export_flags_2d_physics var colisionLayer : int = 129
 @export_flags_2d_physics var colisionMask : int = 12
 
 func getStrategy() -> PlayerStrat:

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0akybpp0nuyb"]
 
-[ext_resource type="Script" uid="uid://d3ycle3cxcnj7" path="res://scenes/actors/activatable/plate/PresurePlate.gd" id="1_q03nu"]
+[ext_resource type="Script" uid="uid://d3ycle3cxcnj7" path="res://scenes/actors/activators/plate/PresurePlate.gd" id="1_q03nu"]
 [ext_resource type="Texture2D" uid="uid://b3a6amxg6hucs" path="res://assets/actors/activators/PresurePlate.png" id="2_gw4vv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjysv"]

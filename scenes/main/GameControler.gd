@@ -19,7 +19,7 @@ func changeScene(newScene: String, delete: bool = true, keepRunning : bool = fal
 		remove_child(currentScene)
 	
 	var new = load(SCENE_PATH_FORMAT % newScene).instantiate()
-	add_child(new)
+	$World2D.add_child(new)
 	currentScene = new
 
 func showOptionsMenu():
