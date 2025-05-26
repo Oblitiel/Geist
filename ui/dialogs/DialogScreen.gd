@@ -13,8 +13,8 @@ func  _input(event):
 		if dialogPlay._iter_next():
 			update(dialogPlay._iter_get())
 		else:
-			Global.gameControler.runGame()
 			hide()
+			Global.gameControler.runGame()
 
 func update(line : DialogLine):
 	$TextBox/Text.text = line.text

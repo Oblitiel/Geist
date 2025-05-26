@@ -73,7 +73,7 @@ possess={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://assets/text/translations.es.translation", "res://assets/text/translations.en.translation")
+locale/translations=PackedStringArray("res://assets/text/translations.en.translation", "res://assets/text/translations.es.translation")
 
 [layer_names]
 
