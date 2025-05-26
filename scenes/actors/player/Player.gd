@@ -10,8 +10,7 @@ signal dead()
 
 @onready var interactionArea: InteractionArea = $InteractionArea
 
-#TODO: Cambiar esto al factoy¿?¿?¿?¿??
-@export var bodyProperies : BodyProperties
+var bodyProperies : BodyProperties
 
 #TODO: esto esta guarrindongo
 var oldBody : Node2D

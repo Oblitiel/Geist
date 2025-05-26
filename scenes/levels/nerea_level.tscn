@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="3_1elua"]
 [ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="4_rrj33"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="5_fsh7p"]
-[ext_resource type="Resource" uid="uid://b3tksnra8rrvk" path="res://scenes/actors/player/properties/gorilla.tres" id="5_rrj33"]
+[ext_resource type="Resource" uid="uid://ebf0i775ua76" path="res://scenes/actors/player/properties/humanBoy.tres" id="5_rrj33"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="6_5e6pl"]
 [ext_resource type="Texture2D" uid="uid://ft542vaj7fg8" path="res://assets/actors/HumanBoy.png" id="6_rrj33"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="7_nxkwp"]
@@ -46,7 +46,6 @@ position = Vector2(-113, -33)
 
 [node name="Player" parent="." instance=ExtResource("5_fsh7p")]
 position = Vector2(45, 13)
-bodyProperies = null
 
 [node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
 script = ExtResource("6_5e6pl")
