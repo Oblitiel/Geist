@@ -4,16 +4,15 @@ const SAVE_DIR_PATH : String = "user://"
 const SAVE_FILE_PATH : String = "saveSlot%d.save"
 const PASSWORD : String = "0akvj38h1n639n"
 
-var current_game_state : Save = Save.new(0,"", [])
+var current_game_state : Save = Global.DEFAOULT_SAVE_DATA
 var save_dao : SaveDAO = SaveDAO.new()
 
 #func _ready() -> void:
-	#var dao = SaveDAO.new()
-	#var save = Save.new(1,"",[])
-	#
-	#dao._write_save(save)
-	#print(dao._read_save(save))
-	#dao._delete_save(save)
+	#current_game_state = Save.new(1,"level",[])
+	#save_game()
+
+func save_exists(slot : int) -> bool:
+	return FileAccess.file_exists(SaveManager.get_save_path(slot))
 
 func get_save_path(slot : int):
 	return get_save_dir_path() + get_save_file_path(slot)
@@ -38,3 +37,7 @@ func load_game() -> bool:
 		return true
 	
 	return false
+
+func reset_game_file() -> bool:
+	current_game_state = Global.DEFAOULT_SAVE_DATA
+	return save_game() and load_game()

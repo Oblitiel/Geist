@@ -1,10 +1,8 @@
 extends Control
 
-const MAIN_LEVEL : String = "nerea_level"
-
 func _ready():
-	if FileAccess.file_exists(SaveManager.get_save_file_path(1)): 
-		$VBoxContainer/PlayButton. pressed.connect(play)
+	if SaveManager.save_exists(1): 
+		$VBoxContainer/PlayButton.pressed.connect(play)
 	else:
 		$VBoxContainer/PlayButton.disabled = true
 	$VBoxContainer/ExitButton.pressed.connect(exitGame)
@@ -23,4 +21,4 @@ func showOptions():
 
 func newGame():
 	hide()
-	Global.gameControler.changeScene(MAIN_LEVEL)
+	Global.gameControler.starNewGame()
