@@ -1,5 +1,6 @@
 extends Node
 
-var new_save = Save.new(1,"",[])
+var DEFAOULT_SAVE_DATA : Save = Save.new(1,GameControler.MAIN_LEVEL,[]):
+	set(val):pass
 
 var gameControler : GameControler
