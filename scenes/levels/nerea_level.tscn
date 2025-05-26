@@ -1,0 +1,62 @@
+[gd_scene load_steps=14 format=3 uid="uid://ehgm1olvhi58"]
+
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_p8te0"]
+[ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="2_pfcyd"]
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="3_1elua"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="4_rrj33"]
+[ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="5_fsh7p"]
+[ext_resource type="Resource" uid="uid://b3tksnra8rrvk" path="res://scenes/actors/player/properties/gorilla.tres" id="5_rrj33"]
+[ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="6_5e6pl"]
+[ext_resource type="Texture2D" uid="uid://ft542vaj7fg8" path="res://assets/actors/HumanBoy.png" id="6_rrj33"]
+[ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="7_nxkwp"]
+[ext_resource type="PackedScene" uid="uid://cqo4gay11xxuw" path="res://scenes/actors/coin/coin.tscn" id="7_rrj33"]
+[ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="8_6qss4"]
+
+[sub_resource type="Resource" id="Resource_ugh17"]
+script = ExtResource("3_1elua")
+name = "pene"
+text = "TEST"
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_eabcg"]
+script = ExtResource("4_rrj33")
+dialogScript = Array[ExtResource("3_1elua")]([SubResource("Resource_ugh17")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"
+
+[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
+script = ExtResource("1_p8te0")
+spawnManager = NodePath("CheckpointManager")
+player = NodePath("Player")
+camera = NodePath("CustomCamera")
+metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="NPC" parent="NPCs" instance=ExtResource("2_pfcyd")]
+position = Vector2(48, -15)
+dialog = SubResource("Resource_eabcg")
+possesionData = ExtResource("5_rrj33")
+texture = ExtResource("6_rrj33")
+
+[node name="Coin" parent="NPCs" instance=ExtResource("7_rrj33")]
+position = Vector2(-20, 31)
+
+[node name="Coin2" parent="NPCs" instance=ExtResource("7_rrj33")]
+position = Vector2(-113, -33)
+
+[node name="Player" parent="." instance=ExtResource("5_fsh7p")]
+position = Vector2(45, 13)
+bodyProperies = null
+
+[node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
+script = ExtResource("6_5e6pl")
+defaultCheckpoint = NodePath("checkpoint")
+metadata/_custom_type_script = "uid://cfq0owrq0jkht"
+
+[node name="checkpoint" parent="CheckpointManager" instance=ExtResource("7_nxkwp")]
+
+[node name="CustomCamera" type="Camera2D" parent="." node_paths=PackedStringArray("follow")]
+zoom = Vector2(4, 4)
+script = ExtResource("8_6qss4")
+follow = NodePath("../Player")
+metadata/_custom_type_script = "uid://dbfisgsfj4ai8"

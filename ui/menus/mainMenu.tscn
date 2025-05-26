@@ -82,9 +82,9 @@ offset_bottom = 545.0
 layout_mode = 2
 text = "PLAY"
 
-[node name="LoadButton" type="Button" parent="VBoxContainer"]
+[node name="NewGameButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "LOAD"
+text = "NEWGAME"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
