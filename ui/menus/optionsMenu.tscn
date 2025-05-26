@@ -113,12 +113,24 @@ theme_override_constants/h_separation = 25
 theme_override_icons/icon = SubResource("ViewportTexture_bti7b")
 theme_override_constants/arrow_margin = 13
 theme_override_constants/modulate_arrow = 1
-icon_alignment = 1
 selected = 0
+fit_to_longest_item = false
 item_count = 2
 popup/item_0/text = "  Español"
 popup/item_0/id = 0
 popup/item_1/text = "  English"
+popup/item_1/id = 1
+
+[node name="OptionButton2" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer/Language"]
+visible = false
+layout_mode = 2
+selected = 0
+fit_to_longest_item = false
+allow_reselect = true
+item_count = 2
+popup/item_0/text = "Español"
+popup/item_0/id = 0
+popup/item_1/text = "English"
 popup/item_1/id = 1
 
 [node name="Audio" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Settings/MarginContainer/ScrollContainer/VBoxContainer"]

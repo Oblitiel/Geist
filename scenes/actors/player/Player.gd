@@ -10,7 +10,7 @@ signal dead()
 
 @onready var interactionArea: InteractionArea = $InteractionArea
 
-var bodyProperies : BodyProperties
+var bodyProperies : BodyProperties = preload("res://scenes/actors/player/properties/geist.tres")
 
 #TODO: esto esta guarrindongo
 var oldBody : Node2D
