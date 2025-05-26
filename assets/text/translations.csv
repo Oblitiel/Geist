@@ -3,7 +3,7 @@ TEST;holiwi;helo
 PLAY;Jugar;Play
 OPTIONS;Opciones;Options
 EXIT;Salir;Exit
-LOAD;Cargar;Load
+NEWGAME;Nueva partida;New game
 LANGUAGE;Idioma;Language
 UP;Arriba;Up
 DOWN;Abajo;Down
@@ -12,11 +12,11 @@ RIGHT;Derecha;Right
 INTERACT;Interactuar;Interact
 POSSESS;Poseer;Possess
 PRESSKEY;Presione la tecla a vincular;Press key to bind
-RESET;Restablecer valores por defecto;Reset default values
+RESET;Restablecer;Reset
 AUDIO;Audio;Audio
 MUTE;Silenciar;Mute
 MVOLUME;Volumen general;Master volume
-BGMUSIC;MÃºsica;Music
+BGMUSIC;Música;Music
 SFX;Efectos de sonido;Sound efects
 SETTINGS;Ajustes;Settings
 KEYS;Teclas;Keys
