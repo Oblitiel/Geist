@@ -7,7 +7,7 @@ func interact(context : Player) -> void:
 
 func possess(context : Player) -> void:
 	var body : Node2D = context.interactionArea.getSelectedBody("Possessable")
-	if body != null and body.has_method("getProperties"):
+	if body != null and body.has_method("getProperties") and body.getProperties():
 		context.changePorperties(body.getProperties())
 		
 		hide(body)
