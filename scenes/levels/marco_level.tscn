@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=4 uid="uid://cogvb2ygt2k6i"]
+
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_56etv"]
+[ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="2_4jj2c"]
+[ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="2_rr1uk"]
+[ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="3_wares"]
+[ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="4_eeke1"]
+[ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="5_8lgp2"]
+[ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="6_8lgp2"]
+[ext_resource type="Resource" uid="uid://de0phfmjxo34s" path="res://scenes/actors/player/properties/cat.tres" id="7_4jj2c"]
+[ext_resource type="Texture2D" uid="uid://uklsm2y3yb3s" path="res://assets/actors/cat.png" id="8_jellb"]
+
+[node name="MarcoLevel" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
+script = ExtResource("1_56etv")
+spawnManager = NodePath("CheckpointManager")
+player = NodePath("Player")
+camera = NodePath("CustomCamera")
+metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
+
+[node name="TileSet" type="Node2D" parent="."]
+position = Vector2(-7, 3)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="TileSet"]
+tile_map_data = PackedByteArray("AAD9/wEAAAAAAAcAAAD+/wEAAAABAAcAAAD//wEAAAABAAcAAAD//wAAAAABAAYAAAAAAAAAAAABAAYAAAD+/wAAAAABAAkAAAD9/wAAAAAAAAYAAAAAAAEAAAABAAcAAAABAAAAAAABAAkAAAABAAEAAAABAAoAAAABAAIAAAABAAcAAAAAAAIAAAABAAoAAAD//wIAAAABAAcAAAD+/wIAAAABAAcAAAD9/wIAAAAAAAcAAAD9/wMAAAAAAAgAAAD+/wMAAAABAAgAAAD//wMAAAABAAgAAAAAAAMAAAABAAsAAAABAAMAAAABAAgAAAACAAMAAAABAAgAAAACAAIAAAABAAoAAAACAAEAAAABAAcAAAACAAAAAAABAAkAAAADAAEAAAABAAoAAAAEAAEAAAABAAcAAAADAAAAAAABAAYAAAAEAAAAAAABAAYAAAAEAAIAAAABAAcAAAADAAIAAAABAAcAAAAEAAMAAAABAAgAAAADAAMAAAABAAgAAAD9////AAAAAAUAAAD+////AAABAAUAAAD/////AAABAAUAAAD///7/AAABAAQAAAD///3/AAABAAMAAAD+//3/AAABAAMAAAD9//3/AAAAAAMAAAD9//7/AAAAAAQAAAD+//7/AAABAAQAAAAAAP//AAABAAUAAAAAAP7/AAABAAQAAAAAAP3/AAABAAMAAAABAP//AAABAAUAAAABAP7/AAABAAQAAAABAP3/AAABAAMAAAACAP//AAABAAUAAAACAP7/AAABAAQAAAACAP3/AAABAAMAAAAEAP//AAABAAUAAAAEAP7/AAABAAQAAAAEAP3/AAABAAMAAAAFAP3/AAACAAMAAAAFAP7/AAACAAQAAAAFAP//AAACAAUAAAAFAAAAAAACAAYAAAAFAAEAAAACAAcAAAAFAAIAAAACAAoAAAAFAAMAAAACAAgAAAD9//z/AAABAAEAAAD+//z/AAABAAEAAAD///z/AAABAAEAAAAAAPz/AAABAAEAAAABAPz/AAABAAEAAAACAPz/AAABAAEAAAADAPz/AAABAAEAAAAEAPz/AAABAAEAAAAFAPz/AAABAAEAAAAFAPv/AAABAAEAAAAEAPv/AAABAAEAAAADAPv/AAABAAEAAAACAPv/AAABAAEAAAABAPv/AAABAAEAAAAAAPv/AAABAAEAAAD///v/AAABAAEAAAD+//v/AAABAAEAAAD9//v/AAABAAEAAAD9//r/AAABAAEAAAD+//r/AAABAAEAAAD///r/AAABAAEAAAAAAPr/AAABAAEAAAABAPr/AAABAAEAAAACAPr/AAABAAEAAAADAPr/AAABAAEAAAAEAPr/AAABAAEAAAAFAPr/AAABAAEAAAADAP3/AAABAA8AAAADAP7/AAABABAAAAADAP//AAABABEAAAA=")
+tile_set = ExtResource("2_4jj2c")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="TileSet"]
+tile_map_data = PackedByteArray("AAACAPz/AQAEAAEAAAAEAPz/AQADAAEAAAD9//z/AAAAAA4AAAD+//z/AAABAA4AAAD///z/AAABAA4AAAAAAPz/AAABAA4AAAABAPz/AAABAA4AAAD9//v/AAAAAA0AAAD9//r/AAAAAAwAAAAFAPz/AAACAA4AAAAFAPr/AAACAAwAAAAFAPv/AAACAA0AAAADAPr/AAABAAwAAAAEAPr/AAABAAwAAAACAPr/AAABAAwAAAABAPr/AAABAAwAAAAAAPr/AAABAAwAAAD///r/AAABAAwAAAD+//r/AAABAAwAAAA=")
+tile_set = ExtResource("2_4jj2c")
+
+[node name="CustomCamera" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+script = ExtResource("2_rr1uk")
+metadata/_custom_type_script = "uid://dbfisgsfj4ai8"
+
+[node name="CheckpointManager" type="Node" parent="."]
+script = ExtResource("3_wares")
+metadata/_custom_type_script = "uid://cfq0owrq0jkht"
+
+[node name="checkpoint" parent="CheckpointManager" instance=ExtResource("4_eeke1")]
+position = Vector2(-87, 0)
+
+[node name="Player" parent="." instance=ExtResource("5_8lgp2")]
+position = Vector2(29, 29)
+
+[node name="NPC_Cat" parent="." instance=ExtResource("6_8lgp2")]
+position = Vector2(114, 12)
+possesionData = ExtResource("7_4jj2c")
+texture = ExtResource("8_jellb")
