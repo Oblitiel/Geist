@@ -1,7 +1,7 @@
 class_name GameControler extends Node
 
 const SCENE_PATH_FORMAT = "res://scenes/levels/%s.tscn"
-const MAIN_LEVEL : String = "nerea_level"
+const MAIN_LEVEL : String = "level"
 
 @export var currentScene : Node2D
 var sceneInMemory : Node2D
