@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ehgm1olvhi58"]
+[gd_scene load_steps=15 format=3 uid="uid://ehgm1olvhi58"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_p8te0"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="2_pfcyd"]
@@ -12,15 +12,23 @@
 [ext_resource type="PackedScene" uid="uid://cqo4gay11xxuw" path="res://scenes/actors/coin/coin.tscn" id="7_rrj33"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="8_6qss4"]
 
-[sub_resource type="Resource" id="Resource_ugh17"]
+[sub_resource type="Resource" id="Resource_rrj33"]
 script = ExtResource("3_1elua")
-name = "pene"
-text = "TEST"
+name = "pepe"
+text = "hola"
+image = ExtResource("6_rrj33")
 metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
 
-[sub_resource type="Resource" id="Resource_eabcg"]
+[sub_resource type="Resource" id="Resource_fsh7p"]
+script = ExtResource("3_1elua")
+name = "pepe"
+text = "wawawa"
+image = ExtResource("6_rrj33")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_5e6pl"]
 script = ExtResource("4_rrj33")
-dialogScript = Array[ExtResource("3_1elua")]([SubResource("Resource_ugh17")])
+dialogScript = Array[ExtResource("3_1elua")]([SubResource("Resource_rrj33"), SubResource("Resource_fsh7p")])
 metadata/_custom_type_script = "uid://cxcmgivfcl054"
 
 [node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
@@ -34,7 +42,7 @@ metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
 
 [node name="NPC" parent="NPCs" instance=ExtResource("2_pfcyd")]
 position = Vector2(48, -15)
-dialog = SubResource("Resource_eabcg")
+dialog = SubResource("Resource_5e6pl")
 possesionData = ExtResource("5_rrj33")
 texture = ExtResource("6_rrj33")
 
@@ -43,6 +51,9 @@ position = Vector2(-20, 31)
 
 [node name="Coin2" parent="NPCs" instance=ExtResource("7_rrj33")]
 position = Vector2(-113, -33)
+
+[node name="NPC2" parent="NPCs" instance=ExtResource("2_pfcyd")]
+position = Vector2(-25, -24)
 
 [node name="Player" parent="." instance=ExtResource("5_fsh7p")]
 position = Vector2(45, 13)

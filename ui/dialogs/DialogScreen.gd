@@ -3,9 +3,11 @@ class_name DialogScreen extends Control
 var dialogPlay: DialogPlay
 
 func start(newDialogPlay: DialogPlay):
+	print("empieza el dialogo")
 	dialogPlay = newDialogPlay
 	dialogPlay._iter_init()
 	update(dialogPlay._iter_get())
+	print("acaba la func start")
 	
 
 func  _input(event):
@@ -15,6 +17,8 @@ func  _input(event):
 		else:
 			hide()
 			Global.gameControler.runGame()
+			accept_event()
+			
 
 func update(line : DialogLine):
 	$TextBox/Text.text = line.text
