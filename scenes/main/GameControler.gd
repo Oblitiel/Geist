@@ -1,6 +1,7 @@
 class_name GameControler extends Node
 
 const SCENE_PATH_FORMAT = "res://scenes/levels/%s.tscn"
+const MAIN_LEVEL : String = "nerea_level"
 
 @export var currentScene : Node2D
 var sceneInMemory : Node2D
@@ -21,6 +22,7 @@ func changeScene(newScene: String, delete: bool = true, keepRunning : bool = fal
 	var new = load(SCENE_PATH_FORMAT % newScene).instantiate()
 	$World2D.add_child(new)
 	currentScene = new
+	SaveManager.current_game_state.level = newScene
 
 func showOptionsMenu():
 	pauseGame()
@@ -43,3 +45,11 @@ func runGame():
 
 func addCoin():
 	$Ui/CoinCounter.update()
+
+func starNewGame():
+	SaveManager.reset_game_file()
+	changeScene(SaveManager.current_game_state.level)
+
+func continueGame():
+	SaveManager.reset_game_file()
+	changeScene(SaveManager.current_game_state.level)

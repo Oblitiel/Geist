@@ -48,9 +48,11 @@ texture = ExtResource("6_rrj33")
 
 [node name="Coin" parent="NPCs" instance=ExtResource("7_rrj33")]
 position = Vector2(-20, 31)
+idCoin = "1"
 
 [node name="Coin2" parent="NPCs" instance=ExtResource("7_rrj33")]
 position = Vector2(-113, -33)
+idCoin = "2"
 
 [node name="NPC2" parent="NPCs" instance=ExtResource("2_pfcyd")]
 position = Vector2(-25, -24)
