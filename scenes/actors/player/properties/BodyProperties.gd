@@ -7,10 +7,11 @@ static var bodies_strat : Dictionary[String, Callable] = {
 	"Human" : func (): return HumanStrat.new(),
 	"Rat" : func (): return RatStrat.new(),
 	"Gorilla" : func (): return GorillaStrat.new(),
+	"Cat" : func(): return CatStrat.new(),
 }
 
 @export var texture : Texture2D
-@export_enum("Geist", "Human","Rat","Gorilla") var _strategy : String
+@export_enum("Geist", "Human","Rat","Gorilla", "Cat") var _strategy : String
 
 @export_flags_2d_physics var colisionLayer : int = 129
 @export_flags_2d_physics var colisionMask : int = 12
