@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://yicb3i162lfn"]
+[gd_scene load_steps=14 format=4 uid="uid://yicb3i162lfn"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_56etv"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="2_4jj2c"]
@@ -8,7 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="5_8lgp2"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="6_8lgp2"]
 [ext_resource type="Resource" uid="uid://de0phfmjxo34s" path="res://scenes/actors/player/properties/cat.tres" id="7_4jj2c"]
+[ext_resource type="Resource" uid="uid://b3tksnra8rrvk" path="res://scenes/actors/player/properties/gorilla.tres" id="7_ke2wl"]
 [ext_resource type="Texture2D" uid="uid://uklsm2y3yb3s" path="res://assets/actors/cat.png" id="8_jellb"]
+[ext_resource type="PackedScene" uid="uid://vq2i1b6lxkax" path="res://scenes/actors/mouseDoor/MouseDoor.tscn" id="10_jellb"]
+[ext_resource type="Resource" uid="uid://yr331u3naiyp" path="res://scenes/actors/player/properties/rat.tres" id="10_t1d4v"]
+[ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="11_ke2wl"]
 
 [node name="MarcoLevel" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 script = ExtResource("1_56etv")
@@ -28,7 +32,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAwAAAAAAAEAAAAAAA0AAAAAAAIAAAAAAA4
 tile_set = ExtResource("2_4jj2c")
 
 [node name="CustomCamera" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
 script = ExtResource("2_rr1uk")
 metadata/_custom_type_script = "uid://dbfisgsfj4ai8"
 
@@ -42,8 +46,18 @@ position = Vector2(8, 152)
 
 [node name="Player" parent="." instance=ExtResource("5_8lgp2")]
 position = Vector2(66, 122)
+bodyProperies = ExtResource("7_ke2wl")
 
 [node name="NPC_Cat" parent="." instance=ExtResource("6_8lgp2")]
 position = Vector2(136, 159)
 possesionData = ExtResource("7_4jj2c")
 texture = ExtResource("8_jellb")
+
+[node name="NPC_Rat" parent="." instance=ExtResource("6_8lgp2")]
+position = Vector2(117, 159)
+possesionData = ExtResource("10_t1d4v")
+texture = ExtResource("11_ke2wl")
+
+[node name="MouseDoor" parent="." instance=ExtResource("10_jellb")]
+position = Vector2(118, 96)
+destination = "nerea_level"

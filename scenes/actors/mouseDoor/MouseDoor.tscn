@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://vq2i1b6lxkax"]
+
+[ext_resource type="Texture2D" uid="uid://cbk0nomuql0rd" path="res://assets/tileSets/CityDecor.png" id="1_a4j8c"]
+[ext_resource type="Script" uid="uid://c3iw1pkc8odli" path="res://scenes/actors/mouseDoor/mouse_door.gd" id="1_q34s3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q34s3"]
+size = Vector2(12, 7)
+
+[node name="MouseDoor" type="StaticBody2D" groups=["Enterable"]]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("1_q34s3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a4j8c")
+offset = Vector2(0, -8)
+hframes = 5
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_q34s3")

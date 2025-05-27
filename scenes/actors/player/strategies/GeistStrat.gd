@@ -10,9 +10,5 @@ func possess(context : Player) -> void:
 	if body != null and body.has_method("getProperties") and body.getProperties():
 		context.changePorperties(body.getProperties())
 		
-		hide(body)
 		context.oldBody = body
-
-func hide(body : Node2D):
-	body.global_position = Vector2(-32,-32)
-	body.hide()
+		Global.gameControler.remove_child(body)

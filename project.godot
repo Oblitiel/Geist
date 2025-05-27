@@ -31,6 +31,7 @@ Possessable=""
 Talkable=""
 Pushable=""
 ActivablePowerSource=""
+Enterable=""
 
 [input]
 
