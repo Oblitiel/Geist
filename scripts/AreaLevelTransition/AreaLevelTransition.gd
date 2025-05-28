@@ -5,6 +5,6 @@ class_name AreaLevelTransition extends Area2D
 func _ready() -> void:
 	body_entered.connect(onBodyEntered)
 
-func onBodyEntered(body: Node2D):
-	Global.gameControler.changeScene(destination)
+func onBodyEntered(_body: Node2D):
+	Global.gameControler.call_deferred_thread_group("changeScene",destination)
 	

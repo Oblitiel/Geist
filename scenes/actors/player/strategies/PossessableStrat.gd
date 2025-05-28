@@ -8,5 +8,5 @@ func interact(context : Player) -> void:
 func possess(context : Player) -> void:
 	context.changePorperties(geist)
 	
-	Global.gameControler.add_child(context.oldBody)
+	Global.gameControler.currentScene.add_child(context.oldBody)
 	context.oldBody.position = context.global_position

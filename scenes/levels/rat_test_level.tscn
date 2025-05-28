@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbd5eur5o4x7"]
+[gd_scene load_steps=7 format=3 uid="uid://cbd5eur5o4x7"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_u3lkl"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="2_0853q"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="3_urt7l"]
 [ext_resource type="PackedScene" uid="uid://vq2i1b6lxkax" path="res://scenes/actors/mouseDoor/MouseDoor.tscn" id="4_3847q"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="4_urt7l"]
-[ext_resource type="Resource" uid="uid://yr331u3naiyp" path="res://scenes/actors/player/properties/rat.tres" id="6_jdnd1"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="7_jdnd1"]
 
 [node name="RatTestLevel" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
@@ -28,7 +27,6 @@ destination = "marco_level"
 
 [node name="Player" parent="." instance=ExtResource("4_urt7l")]
 position = Vector2(0, 46)
-bodyProperies = ExtResource("6_jdnd1")
 
 [node name="CustomCamera" type="Camera2D" parent="." node_paths=PackedStringArray("follow")]
 zoom = Vector2(4, 4)

@@ -11,4 +11,4 @@ func possess(context : Player) -> void:
 		context.changePorperties(body.getProperties())
 		
 		context.oldBody = body
-		Global.gameControler.remove_child(body)
+		Global.gameControler.currentScene.remove_child(body)

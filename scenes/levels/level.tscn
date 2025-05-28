@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bjeg3a5ll4ggr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_8a2b0"]
-[ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="4_vx8ih"]
+[ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="2_d4w6o"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="5_ugh17"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="6_eabcg"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="7_dvejp"]
@@ -17,8 +17,7 @@ player = NodePath("Player")
 camera = NodePath("CustomCamera")
 metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
 
-[node name="Player" parent="." instance=ExtResource("4_vx8ih")]
-position = Vector2(69, 76)
+[node name="Player" parent="." instance=ExtResource("2_d4w6o")]
 
 [node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
 script = ExtResource("5_ugh17")
@@ -27,15 +26,15 @@ metadata/_custom_type_script = "uid://cfq0owrq0jkht"
 
 [node name="checkpoint" parent="CheckpointManager" instance=ExtResource("6_eabcg")]
 
-[node name="CustomCamera" type="Camera2D" parent="." node_paths=PackedStringArray("follow")]
+[node name="CustomCamera" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 script = ExtResource("7_dvejp")
-follow = NodePath("../Player")
 metadata/_custom_type_script = "uid://dbfisgsfj4ai8"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="AreaLevelTransition" type="Area2D" parent="."]
+position = Vector2(-42, -71)
 script = ExtResource("9_icy5c")
 destination = "marco_level"
 metadata/_custom_type_script = "uid://c5leey8510kyp"
@@ -52,7 +51,7 @@ position = Vector2(-39.5, 47)
 shape = SubResource("RectangleShape2D_rmjfq")
 
 [node name="AreaLevelTransition2" type="Area2D" parent="."]
-position = Vector2(0, 23)
+position = Vector2(-42, -48)
 script = ExtResource("9_icy5c")
 destination = "nerea_level"
 metadata/_custom_type_script = "uid://c5leey8510kyp"
@@ -70,7 +69,7 @@ position = Vector2(-39.5, 47)
 shape = SubResource("RectangleShape2D_rmjfq")
 
 [node name="AreaLevelTransition3" type="Area2D" parent="."]
-position = Vector2(0, 46)
+position = Vector2(-42, -25)
 script = ExtResource("9_icy5c")
 destination = "gabriel_level"
 metadata/_custom_type_script = "uid://c5leey8510kyp"
