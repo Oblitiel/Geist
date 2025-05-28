@@ -10,10 +10,13 @@ signal dead()
 
 @onready var interactionArea: InteractionArea = $InteractionArea
 
-var bodyProperies : BodyProperties = preload("res://scenes/actors/player/properties/geist.tres")
+@export var bodyProperies : BodyProperties = preload("res://scenes/actors/player/properties/geist.tres")
 
 #TODO: esto esta guarrindongo
-var oldBody : Node2D
+var oldBody : Node2D = self
+
+func _ready() -> void:
+	changePorperties(bodyProperies)
 
 ## Dado delta y un [Vector2] direccion calcula la velocidad de personaje y llama al metodo move_and_slide() de la clase [CharacterBody2D].
 func move(delta, direction : Vector2) -> void:

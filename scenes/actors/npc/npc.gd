@@ -9,7 +9,8 @@ extends CharacterBody2D
 
 
 func talk():
-	Global.gameControler.showDialog(dialog)
+	if dialog:
+		Global.gameControler.showDialog(dialog)
 
 func getProperties():
 	return possesionData

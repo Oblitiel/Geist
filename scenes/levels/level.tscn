@@ -1,24 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://bjeg3a5ll4ggr"]
+[gd_scene load_steps=8 format=3 uid="uid://bjeg3a5ll4ggr"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_8a2b0"]
-[ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="3_t2u7g"]
-[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="4_t2u7g"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="4_vx8ih"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="5_ugh17"]
-[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="5_vx8ih"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="6_eabcg"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="7_dvejp"]
+[ext_resource type="Script" uid="uid://c5leey8510kyp" path="res://scripts/AreaLevelTransition/AreaLevelTransition.gd" id="9_icy5c"]
 
-[sub_resource type="Resource" id="Resource_ugh17"]
-script = ExtResource("4_t2u7g")
-name = "pene"
-text = "TEST"
-metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
-
-[sub_resource type="Resource" id="Resource_eabcg"]
-script = ExtResource("5_vx8ih")
-dialogScript = Array[ExtResource("4_t2u7g")]([SubResource("Resource_ugh17")])
-metadata/_custom_type_script = "uid://cxcmgivfcl054"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmjfq"]
+size = Vector2(90, 21)
 
 [node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 script = ExtResource("1_8a2b0")
@@ -27,14 +17,8 @@ player = NodePath("Player")
 camera = NodePath("CustomCamera")
 metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
 
-[node name="NPCs" type="Node" parent="."]
-
-[node name="NPC" parent="NPCs" instance=ExtResource("3_t2u7g")]
-position = Vector2(-59, 16)
-dialog = SubResource("Resource_eabcg")
-
 [node name="Player" parent="." instance=ExtResource("4_vx8ih")]
-position = Vector2(0, 1)
+position = Vector2(69, 76)
 
 [node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
 script = ExtResource("5_ugh17")
@@ -42,7 +26,6 @@ defaultCheckpoint = NodePath("checkpoint")
 metadata/_custom_type_script = "uid://cfq0owrq0jkht"
 
 [node name="checkpoint" parent="CheckpointManager" instance=ExtResource("6_eabcg")]
-position = Vector2(12, 23)
 
 [node name="CustomCamera" type="Camera2D" parent="." node_paths=PackedStringArray("follow")]
 zoom = Vector2(4, 4)
@@ -51,3 +34,54 @@ follow = NodePath("../Player")
 metadata/_custom_type_script = "uid://dbfisgsfj4ai8"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AreaLevelTransition" type="Area2D" parent="."]
+script = ExtResource("9_icy5c")
+destination = "marco_level"
+metadata/_custom_type_script = "uid://c5leey8510kyp"
+
+[node name="Label" type="Label" parent="AreaLevelTransition"]
+offset_left = -84.0
+offset_top = 34.0
+offset_right = 5.0
+offset_bottom = 57.0
+text = "Marco level"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLevelTransition"]
+position = Vector2(-39.5, 47)
+shape = SubResource("RectangleShape2D_rmjfq")
+
+[node name="AreaLevelTransition2" type="Area2D" parent="."]
+position = Vector2(0, 23)
+script = ExtResource("9_icy5c")
+destination = "nerea_level"
+metadata/_custom_type_script = "uid://c5leey8510kyp"
+
+[node name="Label" type="Label" parent="AreaLevelTransition2"]
+offset_left = -84.0
+offset_top = 34.0
+offset_right = 5.0
+offset_bottom = 57.0
+text = "Nerea level"
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLevelTransition2"]
+position = Vector2(-39.5, 47)
+shape = SubResource("RectangleShape2D_rmjfq")
+
+[node name="AreaLevelTransition3" type="Area2D" parent="."]
+position = Vector2(0, 46)
+script = ExtResource("9_icy5c")
+destination = "gabriel_level"
+metadata/_custom_type_script = "uid://c5leey8510kyp"
+
+[node name="Label" type="Label" parent="AreaLevelTransition3"]
+offset_left = -84.0
+offset_top = 34.0
+offset_right = 5.0
+offset_bottom = 57.0
+text = "Gabriel level"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLevelTransition3"]
+position = Vector2(-39, 47.5)
+shape = SubResource("RectangleShape2D_rmjfq")
