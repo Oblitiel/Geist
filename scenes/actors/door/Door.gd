@@ -15,7 +15,6 @@ func activatorChanged(_activatorState : bool):
 		Logics.AND:
 			var activated : bool = true
 			for activator in activators:
-				print(activator.active)
 				if activator.active == notLogic:
 					activated = false
 			open(activated)
