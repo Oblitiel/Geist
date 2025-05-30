@@ -99,7 +99,7 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_g8yue")
 
 [node name="Door" parent="." node_paths=PackedStringArray("activators") instance=ExtResource("16_a1utd")]
-position = Vector2(24, 72)
+position = Vector2(24, 79)
 activators = [NodePath("../Activators/PresurePlate"), NodePath("../Activators/Lever")]
 
 [node name="Box" parent="." instance=ExtResource("16_bom64")]
