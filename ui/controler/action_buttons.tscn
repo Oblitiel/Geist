@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://1b5kk3c6ike0"]
+
+[ext_resource type="Script" uid="uid://b1bnjh3fmjikf" path="res://ui/controler/action_buttons.gd" id="1_o4wwr"]
+[ext_resource type="Texture2D" uid="uid://cb7frfh1foc1o" path="res://assets/ui/buttons/Possess.svg" id="2_qb2gm"]
+[ext_resource type="Texture2D" uid="uid://dtc0urqusmok2" path="res://assets/ui/buttons/PossessPressed.svg" id="3_cnewb"]
+[ext_resource type="Texture2D" uid="uid://bvf68nxhkbryj" path="res://assets/ui/buttons/Interact.svg" id="4_qb2gm"]
+[ext_resource type="Texture2D" uid="uid://ddwubejhbep2a" path="res://assets/ui/buttons/InteractionPressed.svg" id="5_cnewb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knn5c"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="ActionButtons" type="MarginContainer"]
+modulate = Color(1, 1, 1, 0.498039)
+offset_right = 280.0
+offset_bottom = 280.0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+script = ExtResource("1_o4wwr")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="PossesButton" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 100.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_knn5c")
+
+[node name="Button" type="TextureButton" parent="Control/PossesButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("2_qb2gm")
+texture_pressed = ExtResource("3_cnewb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="InteractButton" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_knn5c")
+
+[node name="Button" type="TextureButton" parent="Control/InteractButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("4_qb2gm")
+texture_pressed = ExtResource("5_cnewb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="button_down" from="Control/PossesButton/Button" to="." method="_on_possess_button_down"]
+[connection signal="button_down" from="Control/InteractButton/Button" to="." method="_on_interact_button_down"]
