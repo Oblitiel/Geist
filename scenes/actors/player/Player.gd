@@ -1,6 +1,7 @@
 class_name Player extends CharacterBody2D
 ## Clase padre que unicamente declara los metodos que deben implementar su hijo, se usa en vez de una interface por que no existen en godot.
 
+#TODO: HACER UN FACADE?
 signal dead()
 
 @export var maxSpeed = 100 ## Velocidad maxima a la que puede llegar el jugador
@@ -11,6 +12,7 @@ signal dead()
 
 @export var bodyProperies : BodyProperties = preload("res://scenes/actors/player/properties/geist.tres")
 
+#TODO: esto esta guarrindongo
 var oldBody : Node2D = self
 
 func _ready() -> void:
@@ -34,9 +36,11 @@ func possess() -> void:
 	bodyProperies.getStrategy().possess(self)
 
 func die() -> void:
+	#TODO: animación de muerte
 	dead.emit()
 
 func respawn(respawPosition : Vector2) -> void:
+	#TODO: animacion de respawn y mas
 	global_position = respawPosition
 
 func changePorperties(properties : BodyProperties) -> void:

@@ -8,8 +8,6 @@ var sceneInMemory : Node2D
 
 func _ready() -> void:
 	Global.gameControler = self
-	if OS.get_name() in ["Android", "iOS"]:
-		$Ui/VirtualControler.show()
 
 func changeScene(newScene: String, delete: bool = true, keepRunning : bool = false):
 	if delete:
@@ -28,9 +26,11 @@ func changeScene(newScene: String, delete: bool = true, keepRunning : bool = fal
 
 func showOptionsMenu():
 	pauseGame()
+	pass
 
 func hideOptionsMenu():
 	runGame()
+	pass
 
 func showDialog(dialogPlay : DialogPlay):
 	pauseGame()

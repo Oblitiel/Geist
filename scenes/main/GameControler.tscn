@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c17n3qtbjcna8"]
+[gd_scene load_steps=5 format=3 uid="uid://c17n3qtbjcna8"]
 
 [ext_resource type="Script" uid="uid://noyl6m1dxng7" path="res://scenes/main/GameControler.gd" id="1_xir38"]
 [ext_resource type="PackedScene" uid="uid://dq68xiljmb0c" path="res://ui/menus/mainMenu.tscn" id="4_e27il"]
 [ext_resource type="PackedScene" uid="uid://bskobqvu6wxpq" path="res://ui/coins/coinCounter.tscn" id="4_u81pi"]
 [ext_resource type="PackedScene" uid="uid://deqlafa4thvkq" path="res://ui/dialogs/dialog.tscn" id="4_xir38"]
-[ext_resource type="PackedScene" uid="uid://da1e2o71dusif" path="res://ui/controler/virtual_controler.tscn" id="5_u81pi"]
 
 [node name="GameControler" type="Node"]
 process_mode = 3
@@ -15,9 +14,6 @@ script = ExtResource("1_xir38")
 [node name="Ui" type="CanvasLayer" parent="."]
 
 [node name="CoinCounter" parent="Ui" instance=ExtResource("4_u81pi")]
-
-[node name="VirtualControler" parent="Ui" instance=ExtResource("5_u81pi")]
-visible = false
 
 [node name="DialogScreen" parent="Ui" instance=ExtResource("4_xir38")]
 visible = false
