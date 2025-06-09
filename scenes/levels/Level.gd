@@ -6,7 +6,7 @@ class_name Level
 @export var camera : CustomCamera
 
 func _ready() -> void:
-	player.position = spawnManager.respawnPosition
+	player.global_position = spawnManager.respawnPosition
 	PlayerControler.underControl = player
 	
 	camera.follow = player
