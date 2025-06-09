@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cnb38atraodmx" path="res://assets/actors/light.png" id="2_qnxsf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4o07j"]
-size = Vector2(13, 13)
+size = Vector2(16, 16)
 
 [node name="Light" type="Area2D"]
 collision_layer = 2
