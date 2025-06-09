@@ -51,5 +51,4 @@ func starNewGame():
 	changeScene(SaveManager.current_game_state.level)
 
 func continueGame():
-	SaveManager.reset_game_file()
 	changeScene(SaveManager.current_game_state.level)
