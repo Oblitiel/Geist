@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4o07j"]
 size = Vector2(13, 13)
 
-[node name="luz" type="Area2D"]
+[node name="Light" type="Area2D"]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_ktscr")

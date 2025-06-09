@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=4 uid="uid://nag2iyt153yc"]
+
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_8lk3y"]
+[ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="1_geiq8"]
+[ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="2_tkkka"]
+[ext_resource type="Texture2D" uid="uid://1uyyobjnp1ow" path="res://assets/actors/caronte.png" id="3_8lk3y"]
+[ext_resource type="Script" uid="uid://c5leey8510kyp" path="res://scripts/AreaLevelTransition/AreaLevelTransition.gd" id="4_h35hl"]
+[ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="5_kwk8y"]
+[ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="7_h35hl"]
+[ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="8_kwk8y"]
+[ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="9_c7w6w"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c7w6w"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_erkku"]
+normal = Vector2(0, 1)
+distance = 44.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_63vgv"]
+normal = Vector2(1, 0)
+distance = 42.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g2oho"]
+distance = 51.0
+
+[node name="MainLevel" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
+script = ExtResource("1_8lk3y")
+spawnManager = NodePath("CheckpointManager")
+player = NodePath("Player")
+camera = NodePath("CustomCamera")
+metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
+
+[node name="TileMap" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="TileMap"]
+tile_map_data = PackedByteArray("AAAEAAYAAAAAAAkAAAAEAAcAAAAAAAoAAAAEAAgAAAAAAAoAAAAEAAkAAAAAAAoAAAAEAAoAAAAAAAoAAAAEAAsAAAAAAAsAAAAEAA4AAAADAAsAAAAFAAQAAAAAAAkAAAAFAAUAAAAAAAoAAAAFAAYAAAABAAcAAAAFAAcAAAABAAcAAAAFAAgAAAABAAcAAAAFAAkAAAAAAAoAAAAFAAoAAAABAAcAAAAFAAsAAAABAAsAAAAFAA0AAAAFAAkAAAAFAA4AAAAFAAoAAAAFAA8AAAAFAAoAAAAGAAQAAAABAAkAAAAGAAUAAAABAAoAAAAGAAYAAAABAAcAAAAGAAcAAAABAAcAAAAGAAgAAAABAAcAAAAGAAkAAAABAAcAAAAGAAoAAAABAAcAAAAGAAsAAAABAAsAAAAGAAwAAAAAAAsAAAAGAA4AAAAEAAsAAAAGAA8AAAAGAAoAAAAHAAMAAAAAAAkAAAAHAAQAAAABAAkAAAAHAAUAAAABAAcAAAAHAAYAAAABAAcAAAAHAAcAAAABAAcAAAAHAAgAAAABAAcAAAAHAAkAAAABAAoAAAAHAAoAAAABAAcAAAAHAAsAAAABAAoAAAAHAAwAAAABAAcAAAAHAA0AAAAAAAsAAAAIAAMAAAABAAkAAAAIAAQAAAABAAcAAAAIAAUAAAABAAcAAAAIAAYAAAABAAcAAAAIAAcAAAABAAoAAAAIAAgAAAABAAcAAAAIAAkAAAABAAcAAAAIAAoAAAABAAcAAAAIAAsAAAABAAoAAAAIAAwAAAABAAcAAAAIAA0AAAABAAsAAAAMAAMAAAABAAkAAAAMAAQAAAABAAcAAAAMAAUAAAABAAcAAAAMAAYAAAABAAcAAAAMAAcAAAABAAcAAAAMAAgAAAABAAcAAAAMAAkAAAABAAcAAAAMAAoAAAABAAcAAAAMAAsAAAABAAcAAAAMAAwAAAABAAcAAAAMAA0AAAABAAcAAAAMAA4AAAAAAAsAAAANAAQAAAABAAcAAAANAAUAAAABAAcAAAANAAYAAAABAAcAAAANAAcAAAABAAcAAAANAAgAAAABAAoAAAANAAkAAAABAAcAAAANAAoAAAABAAcAAAANAAsAAAABAAoAAAANAAwAAAABAAcAAAANAA0AAAABAAcAAAANAA4AAAABAAsAAAAOAAYAAAABAAcAAAAOAAcAAAABAAcAAAAOAAgAAAABAAcAAAAOAAkAAAABAAoAAAAOAAoAAAABAAcAAAAOAAsAAAABAAcAAAAOAAwAAAABAAcAAAAOAA0AAAABAAcAAAAPAAgAAAABAAcAAAAPAAkAAAABAAcAAAAPAAoAAAABAAcAAAAPAAsAAAABAAcAAAAPAAwAAAABAAcAAAAQAAoAAAABAAcAAAAQAAsAAAABAAcAAAAQAAwAAAABAAcAAAANAAMAAAABAAkAAAAOAAMAAAABAAkAAAAOAAQAAAABAAcAAAAOAAUAAAABAAcAAAAOAA4AAAABAAsAAAAPAAMAAAACAAkAAAAPAAQAAAABAAkAAAAPAAUAAAABAAcAAAAPAAYAAAABAAcAAAAPAAcAAAABAAcAAAAPAA0AAAABAAcAAAAPAA4AAAABAAsAAAAQAAQAAAACAAkAAAAQAAUAAAACAAoAAAAQAAYAAAABAAcAAAAQAAcAAAABAAoAAAAQAAgAAAABAAcAAAAQAAkAAAABAAcAAAAQAA0AAAABAAoAAAAQAA4AAAACAAsAAAARAAYAAAACAAkAAAARAAcAAAABAAcAAAARAAgAAAABAAoAAAARAAkAAAABAAoAAAARAAoAAAABAAcAAAARAAsAAAABAAcAAAARAAwAAAABAAcAAAARAA0AAAACAAsAAAASAAoAAAABAAcAAAASAAsAAAABAAcAAAASAAwAAAABAAsAAAATAAoAAAABAAcAAAATAAsAAAACAAoAAAATAAwAAAACAAsAAAAJAAwAAAABAAcAAAAKAAwAAAABAAcAAAALAAwAAAABAAcAAAALAAsAAAABAAcAAAAKAAsAAAABAAcAAAAJAAsAAAABAAcAAAAKAAoAAAABAAcAAAAJAAoAAAABAAcAAAAKAAkAAAABAAcAAAAJAAkAAAABAAcAAAALAAkAAAABAAcAAAALAAoAAAABAAcAAAAKAAgAAAABAAcAAAAJAAgAAAABAAcAAAAJAAcAAAABAAcAAAALAAgAAAABAAcAAAALAAcAAAABAAcAAAAKAAcAAAABAAcAAAALAAYAAAABAAcAAAAKAAYAAAABAAcAAAAJAAYAAAABAAcAAAALAAUAAAABAAcAAAAKAAUAAAABAAcAAAAJAAUAAAABAAcAAAAJAAQAAAABAAcAAAAKAAQAAAABAAcAAAALAAQAAAABAAcAAAAJAAMAAAABAAkAAAAKAAMAAAABAAkAAAALAAMAAAABAAkAAAAJAA0AAAABAAsAAAAKAA0AAAABAAsAAAALAA0AAAABAAoAAAALAA4AAAAAAAsAAAAXAAgAAAACAAkAAAAXAAkAAAACAAoAAAASAAgAAAABAAcAAAASAAkAAAABAAcAAAATAAkAAAABAAcAAAAUAAkAAAABAAcAAAAVAAkAAAABAAcAAAAVAAgAAAABAAcAAAAWAAgAAAABAAcAAAAWAAkAAAABAAcAAAAUAAgAAAABAAcAAAATAAgAAAABAAcAAAASAAcAAAABAAkAAAATAAcAAAABAAkAAAAUAAcAAAABAAkAAAAVAAcAAAABAAkAAAAWAAcAAAABAAkAAAAVAAoAAAABAAsAAAAWAAoAAAABAAsAAAAXAAoAAAABAAsAAAAUAAoAAAABAAsAAAATAAQAAAAEAAsAAAASAAQAAAADAAsAAAASAAUAAAAAAAsAAAATAAUAAAAGAAoAAAAXAAcAAAACAAkAAAAVAAMAAAAGAAoAAAATAA8AAAAGAAoAAAA=")
+tile_set = ExtResource("1_geiq8")
+
+[node name="NPC" parent="." instance=ExtResource("2_tkkka")]
+position = Vector2(114, 157)
+texture = ExtResource("3_8lk3y")
+
+[node name="AreaLevelTransition" type="Area2D" parent="."]
+script = ExtResource("4_h35hl")
+destination = "cementery_level"
+metadata/_custom_type_script = "uid://c5leey8510kyp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLevelTransition"]
+position = Vector2(381, 142)
+shape = SubResource("WorldBoundaryShape2D_c7w6w")
+
+[node name="worldBoundaries" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="worldBoundaries"]
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries/StaticBody2D"]
+position = Vector2(140, 0)
+shape = SubResource("WorldBoundaryShape2D_erkku")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="worldBoundaries"]
+position = Vector2(-196, 181)
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries/StaticBody2D2"]
+position = Vector2(215, -17)
+shape = SubResource("WorldBoundaryShape2D_63vgv")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="worldBoundaries"]
+position = Vector2(29, 355)
+collision_layer = 12
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries/StaticBody2D3"]
+position = Vector2(153, -43)
+shape = SubResource("WorldBoundaryShape2D_g2oho")
+
+[node name="Player" parent="." instance=ExtResource("5_kwk8y")]
+position = Vector2(214, 152)
+
+[node name="CustomCamera" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+script = ExtResource("7_h35hl")
+metadata/_custom_type_script = "uid://dbfisgsfj4ai8"
+
+[node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
+script = ExtResource("8_kwk8y")
+defaultCheckpoint = NodePath("checkpoint")
+metadata/_custom_type_script = "uid://cfq0owrq0jkht"
+
+[node name="checkpoint" parent="CheckpointManager" instance=ExtResource("9_c7w6w")]
+position = Vector2(214, 150)

@@ -47,7 +47,7 @@ func onInputButtonPressed(button, action):
 		actionToRemap = action
 		remappingButton = button
 		button.find_child("LabelInput").text = "PRESSKEY"
-		
+		 
 func _input(event):
 	if isRemapping:
 		if(
