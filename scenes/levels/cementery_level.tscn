@@ -60,7 +60,7 @@ script = ExtResource("6_v8yvr")
 metadata/_custom_type_script = "uid://cfq0owrq0jkht"
 
 [node name="checkpoint" parent="CheckpointManager" instance=ExtResource("7_dyvl0")]
-position = Vector2(-1.19209e-07, -3.8147e-06)
+position = Vector2(55, 0)
 scale = Vector2(1, 23.6)
 
 [node name="Logan" parent="." instance=ExtResource("8_xxkeb")]
@@ -75,6 +75,8 @@ position = Vector2(6, -1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="worldBoundaries"]
 position = Vector2(-14, 2)
+collision_layer = 12
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries/StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_rhnpq")
