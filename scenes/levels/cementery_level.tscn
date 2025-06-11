@@ -99,7 +99,7 @@ position = Vector2(280, 40)
 
 [node name="ligth3" parent="light" instance=ExtResource("12_dyvl0")]
 position = Vector2(376, -8)
-scale = Vector2(6.96, 11)
+scale = Vector2(7, 11)
 
 [node name="AreaLevelTransition" type="Area2D" parent="."]
 position = Vector2(510, 154)
