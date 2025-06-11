@@ -17,7 +17,7 @@ func exitGame():
 	get_tree().quit()
 	
 func showOptions():
-	$OptionsMenu.show()
+	Global.gameControler.showOptionsMenu()
 
 func newGame():
 	hide()

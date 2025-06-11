@@ -27,9 +27,11 @@ func changeScene(newScene: String, delete: bool = true, keepRunning : bool = fal
 	SaveManager.current_game_state.level = newScene
 
 func showOptionsMenu():
-	pauseGame()
+	$Ui/OptionsMenu.show()
+	
 
 func hideOptionsMenu():
+	$Ui/OptionsMenu.hide()
 	runGame()
 
 func showDialog(dialogPlay : DialogPlay):
