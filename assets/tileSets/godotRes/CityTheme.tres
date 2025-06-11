@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bfq2j2oi1nnqj"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://bfq2j2oi1nnqj"]
 
 [ext_resource type="Texture2D" uid="uid://ddqpi1not515h" path="res://assets/tileSets/CityTiles.png" id="1_4iaya"]
 [ext_resource type="Texture2D" uid="uid://cbk0nomuql0rd" path="res://assets/tileSets/CityDecor.png" id="2_o8isb"]
+[ext_resource type="Texture2D" uid="uid://db20hifumg2cr" path="res://assets/tileSets/streetlight.png" id="3_o8isb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hof0q"]
 texture = ExtResource("1_4iaya")
@@ -938,6 +939,13 @@ texture = ExtResource("2_o8isb")
 4:1/0 = 0
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1, 1, -1, 1, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56act"]
+texture = ExtResource("3_o8isb")
+0:0/size_in_atlas = Vector2i(1, 3)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 16)
+0:0/0/y_sort_origin = 1
+
 [resource]
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 4
@@ -956,3 +964,4 @@ terrain_set_0/terrain_4/name = "CeilingRail"
 terrain_set_0/terrain_4/color = Color(0.288868, 0.162592, 0.588253, 1)
 sources/0 = SubResource("TileSetAtlasSource_hof0q")
 sources/1 = SubResource("TileSetAtlasSource_ymrxp")
+sources/2 = SubResource("TileSetAtlasSource_56act")
