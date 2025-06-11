@@ -46,6 +46,12 @@ texture = ExtResource("1_md1rk")
 4:1/0/z_index = -1
 4:1/0/terrain_set = 0
 4:1/0/terrain = 2
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 4
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 4
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cro4l"]
 texture = ExtResource("2_b67p8")
@@ -396,6 +402,8 @@ terrain_set_0/terrain_2/name = "Dirt Deco"
 terrain_set_0/terrain_2/color = Color(0.65389, 0.696871, 0.353019, 1)
 terrain_set_0/terrain_3/name = "Grass Deco"
 terrain_set_0/terrain_3/color = Color(0.680947, 1, 0.361893, 1)
+terrain_set_0/terrain_4/name = "Light_Deco"
+terrain_set_0/terrain_4/color = Color(0.931652, 1, 0.565765, 1)
 sources/0 = SubResource("TileSetAtlasSource_0x0su")
 sources/1 = SubResource("TileSetAtlasSource_cro4l")
 sources/3 = SubResource("TileSetAtlasSource_6ff7d")
