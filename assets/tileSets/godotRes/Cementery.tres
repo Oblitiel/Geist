@@ -1,19 +1,24 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b6brhw7h56dxc"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://b6brhw7h56dxc"]
 
+[ext_resource type="Texture2D" uid="uid://6hhcfkf1ucnb" path="res://assets/tileSets/transitionLight.png" id="1_5v0gp"]
 [ext_resource type="Texture2D" uid="uid://lbbr0wni0kw2" path="res://assets/tileSets/cementery.png" id="1_sgtb3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c3u0r"]
+texture = ExtResource("1_5v0gp")
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5v0gp"]
 texture = ExtResource("1_sgtb3")
 1:0/0 = 0
-1:0/0/y_sort_origin = 8
+1:0/0/y_sort_origin = 9
 2:0/0 = 0
-2:0/0/y_sort_origin = 8
+2:0/0/y_sort_origin = 9
 3:0/0 = 0
-3:0/0/y_sort_origin = 8
+3:0/0/y_sort_origin = 9
 1:1/0 = 0
-1:1/0/y_sort_origin = 8
+1:1/0/y_sort_origin = 4
 2:1/0 = 0
-2:1/0/y_sort_origin = 8
+2:1/0/y_sort_origin = 4
 0:0/size_in_atlas = Vector2i(1, 2)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -8)
@@ -24,3 +29,4 @@ texture = ExtResource("1_sgtb3")
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_5v0gp")
+sources/0 = SubResource("TileSetAtlasSource_c3u0r")
