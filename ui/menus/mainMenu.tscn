@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dq68xiljmb0c"]
+[gd_scene load_steps=8 format=3 uid="uid://dq68xiljmb0c"]
 
 [ext_resource type="Script" uid="uid://bj6vhr88ehmp0" path="res://ui/menus/MainMenu.gd" id="2_3rsjx"]
 [ext_resource type="Texture2D" uid="uid://crd5f2fix1fjj" path="res://assets/ui/images/backgroundMainMenu.png" id="3_3rsjx"]
 [ext_resource type="Theme" uid="uid://bfjfjpdmxcwel" path="res://ui/themes/menuTheme.tres" id="3_8xbtc"]
 [ext_resource type="Texture2D" uid="uid://b7y4hxkno6616" path="res://assets/ui/images/geistLogo.png" id="4_bmxya"]
-[ext_resource type="PackedScene" uid="uid://b1q75kxcjcb4j" path="res://ui/menus/optionsMenu.tscn" id="5_bmxya"]
 
 [sub_resource type="Animation" id="Animation_bmxya"]
 loop_mode = 2
@@ -93,10 +92,6 @@ text = "OPTIONS"
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "EXIT"
-
-[node name="OptionsMenu" parent="." instance=ExtResource("5_bmxya")]
-visible = false
-layout_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

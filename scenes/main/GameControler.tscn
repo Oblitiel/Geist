@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c17n3qtbjcna8"]
+[gd_scene load_steps=7 format=3 uid="uid://c17n3qtbjcna8"]
 
 [ext_resource type="Script" uid="uid://noyl6m1dxng7" path="res://scenes/main/GameControler.gd" id="1_xir38"]
+[ext_resource type="PackedScene" uid="uid://b1q75kxcjcb4j" path="res://ui/menus/optionsMenu.tscn" id="2_atnlg"]
 [ext_resource type="PackedScene" uid="uid://dq68xiljmb0c" path="res://ui/menus/mainMenu.tscn" id="4_e27il"]
 [ext_resource type="PackedScene" uid="uid://bskobqvu6wxpq" path="res://ui/coins/coinCounter.tscn" id="4_u81pi"]
 [ext_resource type="PackedScene" uid="uid://deqlafa4thvkq" path="res://ui/dialogs/dialog.tscn" id="4_xir38"]
@@ -23,3 +24,6 @@ visible = false
 visible = false
 
 [node name="MainMenu" parent="Ui" instance=ExtResource("4_e27il")]
+
+[node name="OptionsMenu" parent="Ui" instance=ExtResource("2_atnlg")]
+visible = false
