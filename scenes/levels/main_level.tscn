@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://nag2iyt153yc"]
+[gd_scene load_steps=18 format=4 uid="uid://nag2iyt153yc"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_8lk3y"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="1_geiq8"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="7_h35hl"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="8_kwk8y"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="9_c7w6w"]
+[ext_resource type="PackedScene" uid="uid://cqo4gay11xxuw" path="res://scenes/actors/coin/coin.tscn" id="12_63vgv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwk8y"]
 size = Vector2(20, 62)
@@ -126,3 +127,9 @@ metadata/_custom_type_script = "uid://cfq0owrq0jkht"
 
 [node name="checkpoint" parent="CheckpointManager" instance=ExtResource("9_c7w6w")]
 position = Vector2(214, 150)
+
+[node name="Coin" parent="." instance=ExtResource("12_63vgv")]
+position = Vector2(161, 139)
+
+[node name="Coin2" parent="." instance=ExtResource("12_63vgv")]
+position = Vector2(169, 87)
