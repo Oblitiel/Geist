@@ -99,15 +99,15 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_g8yue")
 
 [node name="Door" parent="." node_paths=PackedStringArray("activators") instance=ExtResource("16_a1utd")]
-position = Vector2(24, 79)
+position = Vector2(24, 80)
 activators = [NodePath("../Activators/PresurePlate"), NodePath("../Activators/Lever")]
-
-[node name="Box" parent="." instance=ExtResource("16_bom64")]
-position = Vector2(40, 176)
 
 [node name="MouseDoor" parent="." instance=ExtResource("17_gc5nv")]
 position = Vector2(88, 112)
 destination = "rat_test_level"
+
+[node name="Box" parent="." instance=ExtResource("16_bom64")]
+position = Vector2(40, 176)
 
 [node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
 script = ExtResource("18_o7fck")
