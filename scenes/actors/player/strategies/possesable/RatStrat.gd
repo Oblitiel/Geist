@@ -1,4 +1,4 @@
-class_name RatStrat extends PossessableStrat
+class_name RatStrat extends PossesableStrat
 
 func interact(context : Player) -> void:
 	super(context)

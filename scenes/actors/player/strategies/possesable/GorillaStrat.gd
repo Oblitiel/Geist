@@ -1,4 +1,4 @@
-class_name GorillaStrat extends PossessableStrat
+class_name GorillaStrat extends PossesableStrat
 
 func interact(context : Player) -> void:
 	var body : Node2D = context.interactionArea.getSelectedBody("Pushable")
