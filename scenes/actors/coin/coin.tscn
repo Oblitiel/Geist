@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqo4gay11xxuw"]
+[gd_scene load_steps=8 format=3 uid="uid://cqo4gay11xxuw"]
 
 [ext_resource type="Texture2D" uid="uid://xmd6kd0k4gci" path="res://assets/actors/coin.png" id="1_druxc"]
 [ext_resource type="Script" uid="uid://boq2q0e8t1goe" path="res://scenes/actors/coin/Coin.gd" id="1_yn28d"]
+[ext_resource type="AudioStream" uid="uid://f5qkn5t848fx" path="res://assets/audio/coin-pickup.mp3" id="3_fdkoa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_18u8n"]
 
@@ -56,5 +57,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_fdkoa")
 }
 autoplay = "coinMovement"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fdkoa")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,4 +1,4 @@
-class_name CatStrat extends PossessableStrat
+class_name CatStrat extends PossesableStrat
 
 # El gato no hace nada al interactuar
 func interact(context : Player) -> void:

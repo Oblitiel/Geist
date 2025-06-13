@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhysk1tjg7lqn"
-path="res://.godot/imported/natureDecor2.png-7995b9cbf49da94b1ea5eae13ddfe6a3.ctex"
+uid="uid://3to2cmtapoum"
+path="res://.godot/imported/Up.svg-9fdaae8c14f408cfa7bbc68f02c4aebb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/main/natureDecor2.png"
-dest_files=["res://.godot/imported/natureDecor2.png-7995b9cbf49da94b1ea5eae13ddfe6a3.ctex"]
+source_file="res://assets/ui/buttons/Up.svg"
+dest_files=["res://.godot/imported/Up.svg-9fdaae8c14f408cfa7bbc68f02c4aebb.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

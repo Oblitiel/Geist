@@ -1,0 +1,142 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0hiamrv0atqh"]
+
+[ext_resource type="Texture2D" uid="uid://3to2cmtapoum" path="res://assets/ui/buttons/Up.svg" id="1_jkp5u"]
+[ext_resource type="Script" uid="uid://cr1hyuog4mkn7" path="res://ui/controler/joy_stick.gd" id="1_s1ma2"]
+[ext_resource type="Texture2D" uid="uid://cymlvswpe27f4" path="res://assets/ui/buttons/Rigth.svg" id="1_wcor6"]
+[ext_resource type="Texture2D" uid="uid://c4bdmvgldwxgw" path="res://assets/ui/buttons/UpPressed.svg" id="2_csao7"]
+[ext_resource type="Texture2D" uid="uid://dyokw4piavnpb" path="res://assets/ui/buttons/RigthPressed.svg" id="4_s1ma2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkp5u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ya4xq"]
+load_path = "res://.godot/imported/UpPressed.svg-d2eb4645407713947b36f47c51dbb29e.ctex"
+
+[node name="JoyStick" type="MarginContainer"]
+modulate = Color(1, 1, 1, 0.498039)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -380.0
+offset_right = 380.0
+grow_vertical = 0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+script = ExtResource("1_s1ma2")
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 2
+
+[node name="UpButton" type="Panel" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jkp5u")
+
+[node name="Button" type="TextureButton" parent="Buttons/UpButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("1_jkp5u")
+texture_pressed = ExtResource("2_csao7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RigthButton" type="Panel" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -50.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jkp5u")
+
+[node name="Button" type="TextureButton" parent="Buttons/RigthButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("1_wcor6")
+texture_pressed = ExtResource("4_s1ma2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LeftButton" type="Panel" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jkp5u")
+
+[node name="Button" type="TextureButton" parent="Buttons/LeftButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("1_wcor6")
+texture_pressed = ExtResource("4_s1ma2")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="DownButton" type="Panel" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -100.0
+offset_right = 50.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jkp5u")
+
+[node name="Button" type="TextureButton" parent="Buttons/DownButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("1_jkp5u")
+texture_pressed = SubResource("CompressedTexture2D_ya4xq")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
+
+[connection signal="button_down" from="Buttons/UpButton/Button" to="." method="_on_up_button_down"]
+[connection signal="button_up" from="Buttons/UpButton/Button" to="." method="_on_up_button_up"]
+[connection signal="button_down" from="Buttons/RigthButton/Button" to="." method="_on_rigth_button_down"]
+[connection signal="button_up" from="Buttons/RigthButton/Button" to="." method="_on_rigth_button_up"]
+[connection signal="button_down" from="Buttons/LeftButton/Button" to="." method="_on_left_button_down"]
+[connection signal="button_up" from="Buttons/LeftButton/Button" to="." method="_on_left_button_up"]
+[connection signal="button_down" from="Buttons/DownButton/Button" to="." method="_on_down_button_down"]
+[connection signal="button_up" from="Buttons/DownButton/Button" to="." method="_on_down_button_up"]

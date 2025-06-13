@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b1q75kxcjcb4j"]
+[gd_scene load_steps=8 format=3 uid="uid://b1q75kxcjcb4j"]
 
 [ext_resource type="Theme" uid="uid://bfjfjpdmxcwel" path="res://ui/themes/menuTheme.tres" id="1_6pkie"]
 [ext_resource type="PackedScene" uid="uid://cb0rekj3v6p6e" path="res://ui/menus/input_button.tscn" id="2_1a2dv"]
@@ -9,12 +9,6 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bti7b"]
 bg_color = Color(0.917647, 0.470588, 0.152941, 1)
-
-[sub_resource type="InputEventAction" id="InputEventAction_bti7b"]
-action = &"back"
-
-[sub_resource type="Shortcut" id="Shortcut_foqcw"]
-events = [SubResource("InputEventAction_bti7b")]
 
 [node name="OptionsMenu" type="Control"]
 process_mode = 3
@@ -65,7 +59,6 @@ offset_bottom = 3.5
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_bti7b")
-shortcut = SubResource("Shortcut_foqcw")
 text = "X"
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
