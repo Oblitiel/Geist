@@ -129,14 +129,7 @@ metadata/_custom_type_script = "uid://cfq0owrq0jkht"
 position = Vector2(214, 150)
 
 [node name="Coin" parent="." instance=ExtResource("12_63vgv")]
-<<<<<<< Updated upstream
 position = Vector2(161, 139)
 
 [node name="Coin2" parent="." instance=ExtResource("12_63vgv")]
 position = Vector2(169, 87)
-=======
-position = Vector2(168, 138)
-
-[node name="Coin2" parent="." instance=ExtResource("12_63vgv")]
-position = Vector2(175, 182)
->>>>>>> Stashed changes

@@ -2,11 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://xmd6kd0k4gci" path="res://assets/actors/coin.png" id="1_druxc"]
 [ext_resource type="Script" uid="uid://boq2q0e8t1goe" path="res://scenes/actors/coin/Coin.gd" id="1_yn28d"]
-<<<<<<< Updated upstream
 [ext_resource type="AudioStream" uid="uid://f5qkn5t848fx" path="res://assets/audio/coin-pickup.mp3" id="3_fdkoa"]
-=======
-[ext_resource type="AudioStream" uid="uid://c7x3t70d13ih3" path="res://assets/audio/coin-pickup.mp3" id="3_fdkoa"]
->>>>>>> Stashed changes
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_18u8n"]
 
