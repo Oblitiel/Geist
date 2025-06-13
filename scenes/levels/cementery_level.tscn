@@ -9,8 +9,8 @@
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="6_v8yvr"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="7_dyvl0"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="8_xxkeb"]
-[ext_resource type="Texture2D" uid="uid://ft542vaj7fg8" path="res://assets/actors/HumanBoy.png" id="9_4glq7"]
-[ext_resource type="Resource" uid="uid://ebf0i775ua76" path="res://scenes/actors/player/properties/humanBoy.tres" id="9_v8yvr"]
+[ext_resource type="Resource" uid="uid://lepan206s0vh" path="res://scenes/actors/player/properties/logan.tres" id="9_xxkeb"]
+[ext_resource type="Texture2D" uid="uid://0m6np5ovtiqy" path="res://assets/actors/logan.png" id="10_4glq7"]
 [ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://scenes/actors/light/light.tscn" id="12_dyvl0"]
 [ext_resource type="Script" uid="uid://c5leey8510kyp" path="res://scripts/AreaLevelTransition/AreaLevelTransition.gd" id="13_xxkeb"]
 
@@ -75,8 +75,8 @@ scale = Vector2(1, 23.6)
 
 [node name="Logan" parent="." instance=ExtResource("8_xxkeb")]
 position = Vector2(310, 166)
-possesionData = ExtResource("9_v8yvr")
-texture = ExtResource("9_4glq7")
+possesionData = ExtResource("9_xxkeb")
+texture = ExtResource("10_4glq7")
 
 [node name="Player" parent="." instance=ExtResource("5_22h0r")]
 position = Vector2(24, 159)
