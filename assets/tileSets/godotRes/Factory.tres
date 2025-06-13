@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://wiybp0uyql13"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://wiybp0uyql13"]
 
 [ext_resource type="Texture2D" uid="uid://i44saksf1fpv" path="res://assets/tileSets/factoryTiles.png" id="1_4fec3"]
 [ext_resource type="Texture2D" uid="uid://ih203sj5g07o" path="res://assets/tileSets/factoryDecor.png" id="2_0kj7d"]
+[ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://scenes/actors/box/box.tscn" id="3_0kj7d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8l1fj"]
 texture = ExtResource("1_4fec3")
@@ -600,6 +601,9 @@ texture = ExtResource("2_0kj7d")
 2:2/0/terrains_peering_bit/bottom_side = 5
 2:2/0/terrains_peering_bit/left_side = 5
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_8l1fj"]
+scenes/1/scene = ExtResource("3_0kj7d")
+
 [resource]
 physics_layer_0/collision_layer = 12
 physics_layer_0/collision_mask = 0
@@ -618,3 +622,4 @@ terrain_set_0/terrain_5/name = "pipe"
 terrain_set_0/terrain_5/color = Color(0.731585, 0.779923, 0.8895, 1)
 sources/0 = SubResource("TileSetAtlasSource_8l1fj")
 sources/1 = SubResource("TileSetAtlasSource_jl8k0")
+sources/2 = SubResource("TileSetScenesCollectionSource_8l1fj")

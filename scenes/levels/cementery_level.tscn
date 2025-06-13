@@ -108,6 +108,7 @@ scale = Vector2(7, 11)
 [node name="AreaLevelTransition" type="Area2D" parent="."]
 position = Vector2(510, 154)
 script = ExtResource("13_xxkeb")
+destination = "human_level"
 metadata/_custom_type_script = "uid://c5leey8510kyp"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLevelTransition"]

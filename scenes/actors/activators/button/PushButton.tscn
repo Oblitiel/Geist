@@ -7,6 +7,7 @@
 size = Vector2(16, 8)
 
 [node name="PushButton" type="StaticBody2D" groups=["ActivablePowerSource"]]
+y_sort_enabled = true
 collision_layer = 32
 collision_mask = 0
 script = ExtResource("1_jn8t6")
