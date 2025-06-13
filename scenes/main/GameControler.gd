@@ -28,11 +28,10 @@ func changeScene(newScene: String, delete: bool = true, keepRunning : bool = fal
 	SaveManager.save_game()
 
 func showOptionsMenu():
-	$Ui/OptionsMenu.show()
-	
+	$Ui/OptionsMenu.show_menu()
 
 func hideOptionsMenu():
-	$Ui/OptionsMenu.hide()
+	$Ui/OptionsMenu.hide_menu()
 	runGame()
 
 func showDialog(dialogPlay : DialogPlay):
@@ -52,6 +51,7 @@ func addCoin():
 func starNewGame():
 	SaveManager.reset_game_file()
 	$Ui/CoinCounter.update()
+	$Ui/PauseMenu.hide_menu()
 	changeScene(SaveManager.current_game_state.level)
 
 func continueGame():

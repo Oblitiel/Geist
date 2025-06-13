@@ -93,6 +93,7 @@ collision_mask = 0
 shape = SubResource("WorldBoundaryShape2D_rhnpq")
 
 [node name="light" type="Node2D" parent="."]
+z_index = 1
 position = Vector2(18, 160)
 
 [node name="ligth" parent="light" instance=ExtResource("12_dyvl0")]
