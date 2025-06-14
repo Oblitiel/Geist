@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://nag2iyt153yc"]
+[gd_scene load_steps=25 format=4 uid="uid://nag2iyt153yc"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_8lk3y"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="1_geiq8"]
@@ -8,9 +8,39 @@
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="4_erkku"]
 [ext_resource type="Script" uid="uid://c5leey8510kyp" path="res://scripts/AreaLevelTransition/AreaLevelTransition.gd" id="4_h35hl"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="5_kwk8y"]
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="6_g2oho"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="7_c0gn3"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="7_h35hl"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="8_kwk8y"]
+[ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="8_pmkt5"]
+[ext_resource type="Texture2D" uid="uid://0m6np5ovtiqy" path="res://assets/actors/Logan.png" id="9_413c4"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="9_c7w6w"]
+
+[sub_resource type="Resource" id="Resource_g2oho"]
+script = ExtResource("6_g2oho")
+name = "Caronte"
+text = "Guardamos objetos que son las lineas de dialogo, como esta, en una estructura iterable."
+image = ExtResource("3_8lk3y")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_5ru7i"]
+script = ExtResource("6_g2oho")
+name = "Harold"
+text = "Cada objeto guarda el nombre, Harold, el texto, este, y la imagen. No salgo muy agraciado."
+image = ExtResource("8_pmkt5")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_44ape"]
+script = ExtResource("6_g2oho")
+name = "Logan"
+text = "Recorremos esos objetos y los mostramos en pantalla, como ahora mismo."
+image = ExtResource("9_413c4")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_413c4"]
+script = ExtResource("7_c0gn3")
+dialogScript = Array[ExtResource("6_g2oho")]([SubResource("Resource_g2oho"), SubResource("Resource_5ru7i"), SubResource("Resource_44ape")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwk8y"]
 size = Vector2(20, 62)
@@ -63,6 +93,7 @@ tile_set = ExtResource("4_erkku")
 
 [node name="NPC" parent="." instance=ExtResource("2_tkkka")]
 position = Vector2(114, 157)
+dialog = SubResource("Resource_413c4")
 texture = ExtResource("3_8lk3y")
 
 [node name="AreaLevelTransition" type="Area2D" parent="."]

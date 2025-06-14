@@ -24,6 +24,7 @@ normal = Vector2(-1, 0)
 size = Vector2(134, 20)
 
 [node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
+y_sort_enabled = true
 script = ExtResource("1_wvefg")
 spawnManager = NodePath("CheckpointManager")
 player = NodePath("Player")
@@ -82,13 +83,10 @@ position = Vector2(280, 144)
 
 [node name="Door2" parent="." node_paths=PackedStringArray("activators") instance=ExtResource("10_wb7ma")]
 position = Vector2(248, 187)
-activators = [NodePath("../PresurePlate2"), NodePath("../PresurePlate3"), NodePath("../PresurePlate4")]
+activators = [NodePath("../PresurePlate"), NodePath("../PresurePlate2"), NodePath("../PresurePlate3")]
 
 [node name="PresurePlate3" parent="." instance=ExtResource("12_wb7ma")]
-position = Vector2(232, 63)
-
-[node name="PresurePlate4" parent="." instance=ExtResource("12_wb7ma")]
-position = Vector2(200, 63)
+position = Vector2(168, 128)
 
 [node name="Node2D2" type="Node2D" parent="."]
 
@@ -120,7 +118,7 @@ shape = SubResource("RectangleShape2D_2qm00")
 
 [node name="Door3" parent="." node_paths=PackedStringArray("activators") instance=ExtResource("10_wb7ma")]
 position = Vector2(136, 111)
-activators = [NodePath("../PresurePlate4"), NodePath("../PresurePlate3")]
+activators = [NodePath("../PresurePlate"), NodePath("../PresurePlate3")]
 
 [node name="Coin" parent="." instance=ExtResource("14_lknxd")]
 position = Vector2(144, 78)
