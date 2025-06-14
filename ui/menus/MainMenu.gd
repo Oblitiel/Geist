@@ -11,7 +11,7 @@ func _ready():
 
 func play():
 	hide()
-	SaveManager.load_game()
+	Global.gameControler.continueGame()
 
 func exitGame():
 	get_tree().quit()
