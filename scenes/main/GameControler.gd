@@ -57,4 +57,11 @@ func starNewGame():
 func continueGame():
 	SaveManager.load_game()
 	$Ui/CoinCounter.update()
+	$Ui/PauseMenu.hide_menu()
 	changeScene(SaveManager.current_game_state.level)
+
+func demostrationLevel():
+	SaveManager.reset_game_file()
+	$Ui/CoinCounter.update()
+	$Ui/PauseMenu.hide_menu()
+	changeScene("demostration_level")

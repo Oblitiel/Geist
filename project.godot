@@ -25,6 +25,10 @@ SaveManager="*res://scripts/save/SaveManager.gd"
 
 window/stretch/mode="viewport"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/Rafael Miguel.Sánche/Desktop/Gabriel/VideoGorilla.avi"
+
 [global_group]
 
 Possessable=""
