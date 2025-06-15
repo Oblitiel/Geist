@@ -21,7 +21,6 @@ func changeScene(newScene: String, delete: bool = true, keepRunning : bool = fal
 		sceneInMemory  = currentScene
 		remove_child(currentScene)
 	
-	await get_tree().process_frame
 	var new = load(SCENE_PATH_FORMAT % newScene).instantiate()
 	$World2D.add_child(new)
 	currentScene = new
