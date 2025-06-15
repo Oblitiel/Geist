@@ -36,7 +36,7 @@ offset_left = -110.0
 offset_top = -111.0
 offset_right = 312.0
 offset_bottom = 299.0
-color = Color(0.380255, 0.612632, 0.78492, 1)
+color = Color(0.186887, 0.529025, 0.598822, 1)
 
 [node name="tilemap" type="Node2D" parent="."]
 

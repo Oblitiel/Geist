@@ -77,6 +77,10 @@ position = Vector2(40, 89)
 
 [node name="CustomCamera" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+limit_right = 288
+limit_bottom = 176
 script = ExtResource("6_xfack")
 metadata/_custom_type_script = "uid://dbfisgsfj4ai8"
 
