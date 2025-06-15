@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="DialogPlay" load_steps=10 format=3 uid="uid://bfeu7ij0c01hu"]
+
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="1_ia22v"]
+[ext_resource type="Texture2D" uid="uid://uklsm2y3yb3s" path="res://assets/actors/cat.png" id="2_wm1w8"]
+[ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="3_lh8pe"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="4_3nae0"]
+
+[sub_resource type="Resource" id="Resource_t4v1x"]
+script = ExtResource("1_ia22v")
+name = "CAT"
+text = "CITY1"
+image = ExtResource("2_wm1w8")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_x7uv6"]
+script = ExtResource("1_ia22v")
+name = "CAT"
+text = "CITY2"
+image = ExtResource("2_wm1w8")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_vn4sr"]
+script = ExtResource("1_ia22v")
+name = "HAROLD"
+text = "CITY3"
+image = ExtResource("3_lh8pe")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_bqjun"]
+script = ExtResource("1_ia22v")
+name = "CAT"
+text = "CITY4"
+image = ExtResource("2_wm1w8")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_y1hrr"]
+script = ExtResource("1_ia22v")
+name = "CAT"
+text = "CITY5"
+image = ExtResource("2_wm1w8")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[resource]
+script = ExtResource("4_3nae0")
+dialogScript = Array[ExtResource("1_ia22v")]([SubResource("Resource_t4v1x"), SubResource("Resource_x7uv6"), SubResource("Resource_vn4sr"), SubResource("Resource_bqjun"), SubResource("Resource_y1hrr")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogPlay" load_steps=17 format=3 uid="uid://dsn1b87ohvihl"]
+[gd_resource type="Resource" script_class="DialogPlay" load_steps=16 format=3 uid="uid://dsn1b87ohvihl"]
 
 [ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="1_6e650"]
 [ext_resource type="Texture2D" uid="uid://1uyyobjnp1ow" path="res://assets/actors/caronte.png" id="2_ktnje"]
@@ -12,13 +12,6 @@ image = ExtResource("2_ktnje")
 metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
 
 [sub_resource type="Resource" id="Resource_413c4"]
-script = ExtResource("1_6e650")
-name = "CARONTE"
-text = "CAR2"
-image = ExtResource("2_ktnje")
-metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
-
-[sub_resource type="Resource" id="Resource_5ru7i"]
 script = ExtResource("1_6e650")
 name = "CARONTE"
 text = "CAR2"
@@ -97,5 +90,5 @@ metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
 
 [resource]
 script = ExtResource("3_akx67")
-dialogScript = Array[ExtResource("1_6e650")]([SubResource("Resource_pmkt5"), SubResource("Resource_413c4"), SubResource("Resource_5ru7i"), SubResource("Resource_44ape"), SubResource("Resource_7cmq6"), SubResource("Resource_kb5nk"), SubResource("Resource_58boi"), SubResource("Resource_ry3r4"), SubResource("Resource_moggy"), SubResource("Resource_5xq6v"), SubResource("Resource_eiw2m"), SubResource("Resource_fjfeh"), SubResource("Resource_mafxj")])
+dialogScript = Array[ExtResource("1_6e650")]([SubResource("Resource_pmkt5"), SubResource("Resource_413c4"), SubResource("Resource_44ape"), SubResource("Resource_7cmq6"), SubResource("Resource_kb5nk"), SubResource("Resource_58boi"), SubResource("Resource_ry3r4"), SubResource("Resource_moggy"), SubResource("Resource_5xq6v"), SubResource("Resource_eiw2m"), SubResource("Resource_fjfeh"), SubResource("Resource_mafxj")])
 metadata/_custom_type_script = "uid://cxcmgivfcl054"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://dxexnv354pafs"]
+[gd_scene load_steps=26 format=4 uid="uid://dxexnv354pafs"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_wvefg"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="2_rnprj"]
@@ -9,11 +9,47 @@
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="6_ckhv8"]
 [ext_resource type="Resource" uid="uid://b3tksnra8rrvk" path="res://scenes/actors/player/properties/gorilla.tres" id="7_lknxd"]
 [ext_resource type="Texture2D" uid="uid://ce1xg127fwogq" path="res://assets/actors/Gorilla.png" id="8_68vyq"]
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="8_u0814"]
+[ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="10_0pif8"]
 [ext_resource type="PackedScene" uid="uid://bf4gq3j1i16aq" path="res://scenes/actors/door/door.tscn" id="10_wb7ma"]
 [ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://scenes/actors/box/box.tscn" id="11_ckhv8"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="11_l2njc"]
 [ext_resource type="PackedScene" uid="uid://b0akybpp0nuyb" path="res://scenes/actors/activators/plate/PresurePlate.tscn" id="12_wb7ma"]
 [ext_resource type="Script" uid="uid://c5leey8510kyp" path="res://scripts/AreaLevelTransition/AreaLevelTransition.gd" id="13_ckhv8"]
 [ext_resource type="PackedScene" uid="uid://cqo4gay11xxuw" path="res://scenes/actors/coin/coin.tscn" id="14_lknxd"]
+
+[sub_resource type="Resource" id="Resource_hq01q"]
+script = ExtResource("8_u0814")
+name = "GORILLA"
+text = "FACTORY1"
+image = ExtResource("8_68vyq")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_g3l6r"]
+script = ExtResource("8_u0814")
+name = "HAROLD"
+text = "FACTORY2"
+image = ExtResource("10_0pif8")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_gmgq2"]
+script = ExtResource("8_u0814")
+name = "GORILLA"
+text = "FACTORY3"
+image = ExtResource("8_68vyq")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_apbv7"]
+script = ExtResource("8_u0814")
+name = "GORILLA"
+text = "FACTORY4"
+image = ExtResource("8_68vyq")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_gfltl"]
+script = ExtResource("11_l2njc")
+dialogScript = Array[ExtResource("8_u0814")]([SubResource("Resource_hq01q"), SubResource("Resource_g3l6r"), SubResource("Resource_gmgq2"), SubResource("Resource_apbv7")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lknxd"]
 
@@ -60,8 +96,9 @@ metadata/_custom_type_script = "uid://dbfisgsfj4ai8"
 
 [node name="Player" parent="." instance=ExtResource("5_wb7ma")]
 
-[node name="NPC" parent="." instance=ExtResource("6_ckhv8")]
+[node name="Gorilla" parent="." instance=ExtResource("6_ckhv8")]
 position = Vector2(222, 126)
+dialog = SubResource("Resource_gfltl")
 possesionData = ExtResource("7_lknxd")
 texture = ExtResource("8_68vyq")
 

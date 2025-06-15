@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cin0ac3u5qnvf"]
+[gd_scene load_steps=17 format=4 uid="uid://cin0ac3u5qnvf"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_yrx5t"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_gf8ng"]
@@ -9,8 +9,9 @@
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="6_v8yvr"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="7_dyvl0"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="8_xxkeb"]
+[ext_resource type="Resource" uid="uid://cri4744k3yti6" path="res://assets/text/dialogs/dialog_cementery.tres" id="9_4glq7"]
 [ext_resource type="Resource" uid="uid://lepan206s0vh" path="res://scenes/actors/player/properties/logan.tres" id="9_xxkeb"]
-[ext_resource type="Texture2D" uid="uid://bnyejhfcgqkap" path="res://assets/actors/logan.png" id="10_4glq7"]
+[ext_resource type="Texture2D" uid="uid://bnyejhfcgqkap" path="res://assets/actors/Logan.png" id="10_4glq7"]
 [ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://scenes/actors/light/light.tscn" id="12_dyvl0"]
 [ext_resource type="Script" uid="uid://c5leey8510kyp" path="res://scripts/AreaLevelTransition/AreaLevelTransition.gd" id="13_xxkeb"]
 
@@ -75,6 +76,7 @@ scale = Vector2(1, 23.6)
 
 [node name="Logan" parent="." instance=ExtResource("8_xxkeb")]
 position = Vector2(310, 166)
+dialog = ExtResource("9_4glq7")
 possesionData = ExtResource("9_xxkeb")
 texture = ExtResource("10_4glq7")
 
