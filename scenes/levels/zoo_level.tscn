@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://cu5wrsar2asvk"]
+[gd_scene load_steps=24 format=4 uid="uid://cu5wrsar2asvk"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_pebhx"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_laro4"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://b0akybpp0nuyb" path="res://scenes/actors/activators/plate/PresurePlate.tscn" id="18_bqyfo"]
 [ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://scenes/actors/box/box.tscn" id="19_uo6ah"]
 [ext_resource type="PackedScene" uid="uid://vq2i1b6lxkax" path="res://scenes/actors/mouseDoor/MouseDoor.tscn" id="20_4v5l5"]
+[ext_resource type="PackedScene" uid="uid://cqo4gay11xxuw" path="res://scenes/actors/coin/coin.tscn" id="23_u4lb0"]
 
 [node name="NvlFinalZoo" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 y_sort_enabled = true
@@ -165,3 +166,6 @@ texture = ExtResource("16_5e3ek")
 position = Vector2(259, -137)
 possesionData = ExtResource("13_uudf2")
 texture = ExtResource("14_ghcu7")
+
+[node name="Coin" parent="." instance=ExtResource("23_u4lb0")]
+position = Vector2(-348, -105)
