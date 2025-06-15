@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://db0nem85kt7uq" path="res://scenes/actors/activators/button/PushButton.tscn" id="10_ayhqm"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="10_ovo4x"]
 [ext_resource type="PackedScene" uid="uid://bf4gq3j1i16aq" path="res://scenes/actors/door/door.tscn" id="11_i3yn8"]
-[ext_resource type="Resource" uid="uid://ebf0i775ua76" path="res://scenes/actors/player/properties/humanBoy.tres" id="11_surmj"]
-[ext_resource type="Texture2D" uid="uid://ft542vaj7fg8" path="res://assets/actors/HumanBoy.png" id="12_svmhw"]
+[ext_resource type="Resource" uid="uid://lepan206s0vh" path="res://scenes/actors/player/properties/logan.tres" id="11_svmhw"]
+[ext_resource type="Texture2D" uid="uid://bnyejhfcgqkap" path="res://assets/actors/Logan.png" id="12_ayhqm"]
 [ext_resource type="Script" uid="uid://c5leey8510kyp" path="res://scripts/AreaLevelTransition/AreaLevelTransition.gd" id="15_svmhw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oaa4j"]
@@ -97,8 +97,8 @@ position = Vector2(110, 242)
 
 [node name="NPC" parent="." instance=ExtResource("10_ovo4x")]
 position = Vector2(244, 147)
-possesionData = ExtResource("11_surmj")
-texture = ExtResource("12_svmhw")
+possesionData = ExtResource("11_svmhw")
+texture = ExtResource("12_ayhqm")
 
 [node name="PushButton" parent="." instance=ExtResource("10_ayhqm")]
 position = Vector2(188, 159)

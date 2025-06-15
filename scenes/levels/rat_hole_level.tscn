@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://colj70vqkm3k2"]
+[gd_scene load_steps=17 format=4 uid="uid://colj70vqkm3k2"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_2eg5f"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="2_t04ki"]
@@ -10,8 +10,22 @@
 [ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://scenes/actors/box/box.tscn" id="7_dsb3p"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="8_x8axm"]
 [ext_resource type="Resource" uid="uid://yr331u3naiyp" path="res://scenes/actors/player/properties/rat.tres" id="9_hg5lv"]
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="10_hg5lv"]
 [ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="10_jfpjc"]
 [ext_resource type="PackedScene" uid="uid://vq2i1b6lxkax" path="res://scenes/actors/mouseDoor/MouseDoor.tscn" id="11_f2lgv"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="11_jfpjc"]
+
+[sub_resource type="Resource" id="Resource_hg5lv"]
+script = ExtResource("10_hg5lv")
+name = "RAT"
+text = "RATHOLE"
+image = ExtResource("10_jfpjc")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_f2lgv"]
+script = ExtResource("11_jfpjc")
+dialogScript = Array[ExtResource("10_hg5lv")]([SubResource("Resource_hg5lv")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"
 
 [node name="RatHoleLevel" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 script = ExtResource("1_2eg5f")
@@ -131,9 +145,11 @@ position = Vector2(72, 96)
 
 [node name="NPC" parent="." instance=ExtResource("8_x8axm")]
 position = Vector2(41, 92)
+dialog = SubResource("Resource_f2lgv")
 possesionData = ExtResource("9_hg5lv")
 texture = ExtResource("10_jfpjc")
 
 [node name="MouseDoor" parent="." instance=ExtResource("11_f2lgv")]
 modulate = Color(1, 0.831373, 0.376471, 1)
 position = Vector2(200, 32)
+destination = "zoo_level"
