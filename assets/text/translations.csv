@@ -1,5 +1,4 @@
 key;es;en
-TEST;holiwi;helo
 PLAY;Jugar;Play
 OPTIONS;Opciones;Options
 EXIT;Salir;Exit
@@ -20,3 +19,47 @@ BGMUSIC;Música;Music
 SFX;Efectos de sonido;Sound efects
 SETTINGS;Ajustes;Settings
 KEYS;Teclas;Keys
+CONTINUE;Continuar;Continue
+RESETLEVEL;Reiniciar;Reset
+CARONTE;Caronte;Caronte
+CAR1;Hola Harold.;Hello Harold.
+CAR2;Te estaba esperando.;I was waiting for you.
+CAR3;Soy Caronte, el encargado de llevarte al otro lado…;I am Caronte, the one in charge of taking you to the other side…
+CAR4;Siempre y cuando me pagues.;Only if you pay me.
+CAR5;Sabes, estamos pasando por una crisis…;You know, we are going trow a crisis…
+CAR6;Y no estoy en mi mejor momento con el dinero…;And I'm currently struggling with money...
+CAR7;¡Asi que por la inflación me veo obligado a cobrarte 5 monedas!;So due to inflation I am forced to charge you 5 coins!
+CAR8;…;…
+CAR9;¡¿NO LLEVAS MONEDAS?!;YOU HAVE NO COINS?!
+CAR10;Uff pues vaya movida.;Ugh, what a hassle.
+CAR11;Si no me pagas no te llevo a ninguna parte lo siento.;You are not going anywhere if you don't pay me I'm sorry.
+CAR12;Tendrás que buscar por la ciudad a ver si tienes suerte.;You'll have to try your luck searching arround the city.
+LOGAN;Logan;Logan
+CAT;Gato;Cat
+GORILLA;Gorila;Gorilla
+RAT;Rata;Rat
+HAROLD;Harold;Harold
+CEMENTERY1;!¿HAROLD?!;HAROLD?!
+CEMENTERY2;!¿ERES TU?! !¿EN FORMA DE FANTASMA?!;IS THAT YOU?! AS A GHOST?!
+CEMENTERY3;… ¿Quién eres?;… ¿who are you?
+CEMENTERY4;¿No me recuerdas? Soy Logan, tu amigo. Eramos compañeros de trabajo.;Don't you  remember me? I'm Logan, your friend. We were coworkers.
+CEMENTERY5;Lo siento, no recuerdo nada desde que morí.;I'm sorry, my memory is blank from the moment I died.
+CEMENTERY6;Vaya… Espera, si sigues aquí es que tienes algun asunto pendiente ¿Verdad?;Damn… Wait, if you are still here that means you have some pending matters, am I right?
+CEMENTERY7;Bueno, necesito encontrar 5 monedas para llegar al otro lado ¿Me ayudarías a buscarlas?;Well, I need to find 5 coins so I can get to the other side. Will you help me find them?
+CEMENTERY8;Claro que si, siempre que me necesites estaré allí.;Of coure I will, I'll be there whenever you need me.
+CEMENTERY9;Gracias Logan.;Thank you Logan.
+FACTORY1;¿Un fantasma en la fabrica de cajas?¿Te explotan laboralmente incluso despues de muerto?;A ghost in the box factory? They exploit you at work even after death.
+FACTORY2;¿Qué? ¡No! Estoy buscando monedas ¿Has visto alguna?;What? No! I'm looking for coins, have you seen any?
+FACTORY3;Allí enfrente hay una, me tomaré el día libre y te ayudaré a encontrarlas.;I see one there, I'll take the day off to help you find them.
+FACTORY4;Total, no me pagan lo suficiente.;I'm underpaid anyway, so I don't care.
+CITY1;¡Miau! ¿Un fantasma? :0 ¿No has podido pasar al otro lado?;Meow! A ghost? :0 Have you not been able to get to the other side?
+CITY2;¡Que terrible! >< ¿Necesitas ayda? :3;That's awful! >< Do you need help? :3
+CITY3;Estaba buscando monedas para pagar a Caronte, ¿Sabes dónde puedo encontrar alguna?;I was looking for some coins to pay Caronte, Do you know where can I find some?
+CITY4;Ese viejo tacaño… ùnú;That cheap old geezer… ùnú
+CITY5;Me suena haber jugado con una moneda en algún tejado ¡Te ayudaré! ^^;I think I played with a coin somewhere on a rooftop. I'll help you out! ^^
+CITYBOY1;ME HE CAIDO DEL TEJADO AYUDA;I'VE FALLEN OFF THE ROOF I NEED HELP
+CITYBOY2;Me duele;it hurts :(
+ENDCARONTE1;Felicidades Harold, parece que hasencontrado las 5 monedas que te pedí.;Congratulations Harold, it seems you have found the 5 coins I asked for.
+ENDCARONTE2;Ahora si puedo llevarte al otro lado y podrás descansar en paz.;Now I can take you to the other side, and you can rest in peace.
+ENDCARONTE3;Y no te preocupes por tus nuevos amigos, los volveras a ver tarde o temprano.;And don't worry about your new friends. You'll see them again sooner or later.
+ENDCARONTE4;Espero que ellos si traigan monedas cuando vaya a por ellos.;I hope they have coins when I go for them.

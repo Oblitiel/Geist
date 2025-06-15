@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="DialogPlay" load_steps=14 format=3 uid="uid://cri4744k3yti6"]
+
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="1_5rhyi"]
+[ext_resource type="Texture2D" uid="uid://bnyejhfcgqkap" path="res://assets/actors/Logan.png" id="2_r8ei3"]
+[ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="3_t0475"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="4_y81a0"]
+
+[sub_resource type="Resource" id="Resource_l8t5g"]
+script = ExtResource("1_5rhyi")
+name = "LOGAN"
+text = "CEMENTERY1"
+image = ExtResource("2_r8ei3")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_aydqf"]
+script = ExtResource("1_5rhyi")
+name = "LOGAN"
+text = "CEMENTERY2"
+image = ExtResource("2_r8ei3")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_5fyhx"]
+script = ExtResource("1_5rhyi")
+name = "HAROLD"
+text = "CEMENTERY3"
+image = ExtResource("3_t0475")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_6rs24"]
+script = ExtResource("1_5rhyi")
+name = "LOGAN"
+text = "CEMENTERY4"
+image = ExtResource("2_r8ei3")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_gyfwk"]
+script = ExtResource("1_5rhyi")
+name = "HAROLD"
+text = "CEMENTERY5"
+image = ExtResource("3_t0475")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_mouib"]
+script = ExtResource("1_5rhyi")
+name = "LOGAN"
+text = "CEMENTERY6"
+image = ExtResource("2_r8ei3")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_22cdc"]
+script = ExtResource("1_5rhyi")
+name = "HAROLD"
+text = "CEMENTERY7"
+image = ExtResource("3_t0475")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_gxu00"]
+script = ExtResource("1_5rhyi")
+name = "LOGAN"
+text = "CEMENTERY8"
+image = ExtResource("2_r8ei3")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_itrpg"]
+script = ExtResource("1_5rhyi")
+name = "HAROLD"
+text = "CEMENTERY9"
+image = ExtResource("3_t0475")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[resource]
+script = ExtResource("4_y81a0")
+dialogScript = Array[ExtResource("1_5rhyi")]([SubResource("Resource_l8t5g"), SubResource("Resource_aydqf"), SubResource("Resource_5fyhx"), SubResource("Resource_6rs24"), SubResource("Resource_gyfwk"), SubResource("Resource_mouib"), SubResource("Resource_22cdc"), SubResource("Resource_gxu00"), SubResource("Resource_itrpg")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"

@@ -1,0 +1,94 @@
+[gd_resource type="Resource" script_class="DialogPlay" load_steps=16 format=3 uid="uid://dsn1b87ohvihl"]
+
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="1_6e650"]
+[ext_resource type="Texture2D" uid="uid://1uyyobjnp1ow" path="res://assets/actors/caronte.png" id="2_ktnje"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="3_akx67"]
+
+[sub_resource type="Resource" id="Resource_pmkt5"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR1"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_413c4"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR2"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_44ape"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR3"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_7cmq6"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR4"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_kb5nk"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR5"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_58boi"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR6"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_ry3r4"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR7"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_moggy"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR8"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_5xq6v"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR9"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_eiw2m"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR10"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_fjfeh"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR11"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_mafxj"]
+script = ExtResource("1_6e650")
+name = "CARONTE"
+text = "CAR12"
+image = ExtResource("2_ktnje")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[resource]
+script = ExtResource("3_akx67")
+dialogScript = Array[ExtResource("1_6e650")]([SubResource("Resource_pmkt5"), SubResource("Resource_413c4"), SubResource("Resource_44ape"), SubResource("Resource_7cmq6"), SubResource("Resource_kb5nk"), SubResource("Resource_58boi"), SubResource("Resource_ry3r4"), SubResource("Resource_moggy"), SubResource("Resource_5xq6v"), SubResource("Resource_eiw2m"), SubResource("Resource_fjfeh"), SubResource("Resource_mafxj")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"

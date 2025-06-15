@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="DialogPlay" load_steps=6 format=3 uid="uid://ba3sykbylo08p"]
+
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="1_28f17"]
+[ext_resource type="Texture2D" uid="uid://ft542vaj7fg8" path="res://assets/actors/HumanBoy.png" id="2_v348b"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="3_ncd52"]
+
+[sub_resource type="Resource" id="Resource_ryo5x"]
+script = ExtResource("1_28f17")
+name = "BOYCITY"
+text = "CITYBOY1"
+image = ExtResource("2_v348b")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_sqioa"]
+script = ExtResource("1_28f17")
+name = "BOYCITY"
+text = "CITYBOY2"
+image = ExtResource("2_v348b")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[resource]
+script = ExtResource("3_ncd52")
+dialogScript = Array[ExtResource("1_28f17")]([SubResource("Resource_ryo5x"), SubResource("Resource_sqioa")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"
