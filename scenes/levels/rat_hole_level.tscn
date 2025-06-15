@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://colj70vqkm3k2"]
+[gd_scene load_steps=22 format=4 uid="uid://colj70vqkm3k2"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_2eg5f"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="2_t04ki"]
@@ -27,12 +27,34 @@ script = ExtResource("11_jfpjc")
 dialogScript = Array[ExtResource("10_hg5lv")]([SubResource("Resource_hg5lv")])
 metadata/_custom_type_script = "uid://cxcmgivfcl054"
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hg5lv"]
+size = Vector2(128, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfpjc"]
+size = Vector2(7, 90)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f2lgv"]
+distance = 14.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hax7q"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0ibsd"]
+normal = Vector2(1, 0)
+
 [node name="RatHoleLevel" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 script = ExtResource("1_2eg5f")
 spawnManager = NodePath("CheckpointManager")
 player = NodePath("Player")
 camera = NodePath("CustomCamera")
 metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -33.0
+offset_top = -21.0
+offset_right = 287.0
+offset_bottom = 225.0
+color = Color(0.10095, 0.0646151, 0.031, 1)
 
 [node name="TileMap" type="Node2D" parent="."]
 
@@ -46,6 +68,11 @@ tile_set = ExtResource("3_dsb3p")
 
 [node name="CustomCamera" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
+limit_left = 0
+limit_top = 0
+limit_right = 224
+limit_bottom = 192
+editor_draw_limits = true
 script = ExtResource("2_t04ki")
 metadata/_custom_type_script = "uid://dbfisgsfj4ai8"
 
@@ -153,3 +180,29 @@ texture = ExtResource("10_jfpjc")
 modulate = Color(1, 0.831373, 0.376471, 1)
 position = Vector2(200, 32)
 destination = "zoo_level"
+
+[node name="WorldBoundaries" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WorldBoundaries"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(64, 99)
+shape = SubResource("RectangleShape2D_hg5lv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(124.5, 147)
+shape = SubResource("RectangleShape2D_jfpjc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(173, 207)
+shape = SubResource("WorldBoundaryShape2D_f2lgv")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(226, 100)
+shape = SubResource("WorldBoundaryShape2D_hax7q")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(-2, 65)
+shape = SubResource("WorldBoundaryShape2D_0ibsd")

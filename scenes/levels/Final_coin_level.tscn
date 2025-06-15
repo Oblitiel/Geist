@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bp6btg0pnbwlk"]
+[gd_scene load_steps=20 format=4 uid="uid://bp6btg0pnbwlk"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_4gswq"]
 [ext_resource type="TileSet" uid="uid://wiybp0uyql13" path="res://assets/tileSets/godotRes/Factory.tres" id="2_ewd2n"]
@@ -13,6 +13,28 @@
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="10_u8x5h"]
 [ext_resource type="Texture2D" uid="uid://1uyyobjnp1ow" path="res://assets/actors/caronte.png" id="11_piqje"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_piqje"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0ybia"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j3748"]
+normal = Vector2(0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cmdu"]
+size = Vector2(1025, 14)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1ehq1"]
+normal = Vector2(1, 0)
+distance = -1.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3v766"]
+a = Vector2(193, 31)
+b = Vector2(497, 183)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ottc7"]
+b = Vector2(-195, -27)
+
 [node name="FinalCoinLevel" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 script = ExtResource("1_4gswq")
 spawnManager = NodePath("CheckpointManager")
@@ -21,9 +43,9 @@ camera = NodePath("CustomCamera")
 metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -113.0
+offset_left = -112.0
 offset_top = -94.0
-offset_right = 1924.0
+offset_right = 1925.0
 offset_bottom = 346.0
 color = Color(0.0470588, 0.0509804, 0.101961, 1)
 
@@ -46,7 +68,7 @@ tile_map_data = PackedByteArray("AABAAAQAAgAAAAAAAABHAAYAAgAAAAAAAABLAAUAAgAAAAA
 tile_set = ExtResource("3_qqg55")
 
 [node name="DistoNaturDeco" type="TileMapLayer" parent="TileMap"]
-tile_map_data = PackedByteArray("AABCAAUAAwAAAAAAAABFAAIAAwAAAAAAAABPAAUAAwAAAAAAAABUAAMAAAAEAAAAAABUAAgAAwAAAAAAAABWAAoAAAAEAAAAAABXAAAAAwAAAAAAAABXAAEAAAAEAAAAAABXAAYAAwAAAAAAAABXAAoAAwAAAAAAAABYAA0AAAAEAAAAAABZAAUAAAAAAAAAAABaAAEAAwAAAAAAAABaAA0AAwAAAAAAAABbAAoAAAAEAAAAAABcAAEAAAAAAAAAAABcAA4AAAABAAAAAABeAAQAAAAAAAAAAABfAAQAAAADAAAAAABfAA4AAwAAAAAAAABgAAUAAwAAAAAAAABhAAEAAwAAAAAAAABhAA0AAAAAAAAAAABiAAEAAAACAAAAAABjAAoAAAABAAAAAABkAAcAAAADAAAAAABkAA8AAwAAAAAAAABmAAsAAwAAAAAAAABoAAEAAAACAAAAAABoAA4AAAACAAAAAABpAAAAAAACAAAAAABpAAQAAAAAAAAAAABqAA4AAAAEAAAAAABrAAAAAwAAAAAAAABrAAgAAAAAAAAAAABrAAwAAAACAAAAAABsAAEAAAABAAAAAABtAAQAAAACAAAAAABtAAoAAwAAAAAAAABuAAMAAwAAAAAAAABuAAgAAAACAAAAAAA=")
+tile_map_data = PackedByteArray("AABCAAUAAwAAAAAAAABFAAIAAwAAAAAAAABPAAUAAwAAAAAAAABUAAMAAAAEAAAAAABUAAgAAwAAAAAAAABWAAoAAAAEAAAAAABXAAAAAwAAAAAAAABXAAEAAAAEAAAAAABXAAYAAwAAAAAAAABXAAoAAwAAAAAAAABZAAUAAAAAAAAAAABaAAEAAwAAAAAAAABaAA0AAwAAAAAAAABbAAoAAAAEAAAAAABcAAEAAAAAAAAAAABcAA4AAAABAAAAAABeAAQAAAAAAAAAAABfAAQAAAADAAAAAABfAA4AAwAAAAAAAABgAAUAAwAAAAAAAABhAAEAAwAAAAAAAABhAA0AAAAAAAAAAABiAAEAAAACAAAAAABjAAoAAAABAAAAAABkAAcAAAADAAAAAABkAA8AAwAAAAAAAABmAAsAAwAAAAAAAABoAAEAAAACAAAAAABoAA4AAAACAAAAAABpAAAAAAACAAAAAABpAAQAAAAAAAAAAABqAA4AAAAEAAAAAABrAAAAAwAAAAAAAABrAAgAAAAAAAAAAABrAAwAAAACAAAAAABsAAEAAAABAAAAAABtAAQAAAACAAAAAABtAAoAAwAAAAAAAABuAAMAAwAAAAAAAABuAAgAAAACAAAAAAA=")
 tile_set = ExtResource("5_piqje")
 
 [node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
@@ -72,3 +94,37 @@ position = Vector2(89, 56)
 [node name="Charon" parent="." instance=ExtResource("10_u8x5h")]
 position = Vector2(1657, 104)
 texture = ExtResource("11_piqje")
+
+[node name="WorldBoundaries" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WorldBoundaries"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(1788, 115)
+shape = SubResource("WorldBoundaryShape2D_piqje")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(1617, 269)
+shape = SubResource("WorldBoundaryShape2D_0ybia")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(243, -1)
+shape = SubResource("WorldBoundaryShape2D_j3748")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(512.5, 87)
+shape = SubResource("RectangleShape2D_6cmdu")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(-1, 57)
+shape = SubResource("WorldBoundaryShape2D_1ehq1")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(1023, 87)
+shape = SubResource("SegmentShape2D_3v766")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="WorldBoundaries/StaticBody2D"]
+position = Vector2(1215, 118)
+shape = SubResource("SegmentShape2D_ottc7")
