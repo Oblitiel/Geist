@@ -13,7 +13,10 @@ config_version=5
 config/name="Geist"
 run/main_scene="uid://c17n3qtbjcna8"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.189161, 0.350649, 0.335151, 1)
+boot_splash/image="uid://doo58skc7u721"
+config/icon="uid://doo58skc7u721"
+boot_splash/minimum_display_time=2000
 
 [autoload]
 
@@ -24,6 +27,7 @@ SaveManager="*res://scripts/save/SaveManager.gd"
 [display]
 
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="uid://cpykrcnudwv8i"
 
 [editor]
 
