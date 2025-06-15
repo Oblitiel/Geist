@@ -14,7 +14,7 @@ func _ready() -> void:
 func changeScene(newScene: String, delete: bool = true, keepRunning : bool = false):
 	if delete:
 		if currentScene:
-			currentScene.queue_free()
+			currentScene.free()
 	elif keepRunning:
 		currentScene.hide()
 	else:
