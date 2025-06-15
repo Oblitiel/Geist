@@ -20,6 +20,13 @@ player = NodePath("Player")
 camera = NodePath("CustomCamera")
 metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -113.0
+offset_top = -94.0
+offset_right = 1924.0
+offset_bottom = 346.0
+color = Color(0.0470588, 0.0509804, 0.101961, 1)
+
 [node name="TileMap" type="Node2D" parent="."]
 
 [node name="Floor" type="TileMapLayer" parent="TileMap"]
@@ -52,7 +59,7 @@ position = Vector2(9, 56)
 
 [node name="Player" parent="." instance=ExtResource("7_u8x5h")]
 position = Vector2(9, 56)
-maxSpeed = 40
+maxSpeed = 60
 
 [node name="CustomCamera" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
