@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://dnjsftg5x3yj2"]
+[gd_scene load_steps=27 format=4 uid="uid://dnjsftg5x3yj2"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_kb3sr"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_ac2fv"]
@@ -21,8 +21,7 @@
 [ext_resource type="Resource" uid="uid://lepan206s0vh" path="res://scenes/actors/player/properties/logan.tres" id="18_hh52r"]
 [ext_resource type="Texture2D" uid="uid://bnyejhfcgqkap" path="res://assets/actors/Logan.png" id="19_buxln"]
 [ext_resource type="Script" uid="uid://c5leey8510kyp" path="res://scripts/AreaLevelTransition/AreaLevelTransition.gd" id="19_ws424"]
-[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="21_muels"]
-[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="23_rath7"]
+[ext_resource type="Resource" uid="uid://ba3sykbylo08p" path="res://assets/text/dialogs/dialog_city_boy.tres" id="21_ahulw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nsy6u"]
 normal = Vector2(1, 0)
@@ -33,25 +32,6 @@ normal = Vector2(1, 0)
 normal = Vector2(-1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xvwa"]
-
-[sub_resource type="Resource" id="Resource_ryo5x"]
-script = ExtResource("21_muels")
-name = "BOYCITY"
-text = "CITYBOY1"
-image = ExtResource("18_7xaha")
-metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
-
-[sub_resource type="Resource" id="Resource_sqioa"]
-script = ExtResource("21_muels")
-name = "BOYCITY"
-text = "CITYBOY2"
-image = ExtResource("18_7xaha")
-metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
-
-[sub_resource type="Resource" id="Resource_acxvw"]
-script = ExtResource("23_rath7")
-dialogScript = Array[ExtResource("21_muels")]([SubResource("Resource_ryo5x"), SubResource("Resource_sqioa")])
-metadata/_custom_type_script = "uid://cxcmgivfcl054"
 
 [node name="CiudadLevel" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
 y_sort_enabled = true
@@ -197,5 +177,5 @@ shape = SubResource("RectangleShape2D_7xvwa")
 
 [node name="NPC" parent="." instance=ExtResource("11_acxvw")]
 position = Vector2(265, -404)
-dialog = SubResource("Resource_acxvw")
+dialog = ExtResource("21_ahulw")
 texture = ExtResource("18_7xaha")

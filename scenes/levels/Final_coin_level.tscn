@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://bp6btg0pnbwlk"]
+[gd_scene load_steps=21 format=4 uid="uid://bp6btg0pnbwlk"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_4gswq"]
 [ext_resource type="TileSet" uid="uid://wiybp0uyql13" path="res://assets/tileSets/godotRes/Factory.tres" id="2_ewd2n"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cqo4gay11xxuw" path="res://scenes/actors/coin/coin.tscn" id="9_x35cc"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="10_u8x5h"]
 [ext_resource type="Texture2D" uid="uid://1uyyobjnp1ow" path="res://assets/actors/caronte.png" id="11_piqje"]
+[ext_resource type="Resource" uid="uid://7kshjmhbmcig" path="res://assets/text/dialogs/dialog_caronte_end.tres" id="12_0ybia"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_piqje"]
 normal = Vector2(-1, 0)
@@ -93,6 +94,7 @@ position = Vector2(89, 56)
 
 [node name="Charon" parent="." instance=ExtResource("10_u8x5h")]
 position = Vector2(1657, 104)
+dialog = ExtResource("12_0ybia")
 texture = ExtResource("11_piqje")
 
 [node name="WorldBoundaries" type="Node2D" parent="."]

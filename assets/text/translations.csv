@@ -57,7 +57,9 @@ CITY2;¡Que terrible! >< ¿Necesitas ayda? :3;That's awful! >< Do you need help?
 CITY3;Estaba buscando monedas para pagar a Caronte, ¿Sabes dónde puedo encontrar alguna?;I was looking for some coins to pay Caronte, Do you know where can I find some?
 CITY4;Ese viejo tacaño… ùnú;That cheap old geezer… ùnú
 CITY5;Me suena haber jugado con una moneda en algún tejado ¡Te ayudaré! ^^;I think I played with a coin somewhere on a rooftop. I'll help you out! ^^
-CITYBOY1;¡ME HE CAIDO DEL TEJADO AYUDA!;I'VE FALLEN OFF THE ROOF I NEED HELP!
-CITYBOY2;Me duele.;it hurts :(
-RATHOLE;¿Te gusta mi casa? Acabo de limpiar.;Do you like my house? I 've just cleaned it.
-BOYCITY;Chico de ciudad; City guy
+CITYBOY1;ME HE CAIDO DEL TEJADO AYUDA;I'VE FALLEN OFF THE ROOF I NEED HELP
+CITYBOY2;Me duele;it hurts :(
+ENDCARONTE1;Felicidades Harold, parece que hasencontrado las 5 monedas que te pedí.;Congratulations Harold, it seems you have found the 5 coins I asked for.
+ENDCARONTE2;Ahora si puedo llevarte al otro lado y podrás descansar en paz.;Now I can take you to the other side, and you can rest in peace.
+ENDCARONTE3;Y no te preocupes por tus nuevos amigos, los volveras a ver tarde o temprano.;And don't worry about your new friends. You'll see them again sooner or later.
+ENDCARONTE4;Espero que ellos si traigan monedas cuando vaya a por ellos.;I hope they have coins when I go for them.

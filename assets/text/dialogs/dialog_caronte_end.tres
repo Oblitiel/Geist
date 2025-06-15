@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="DialogPlay" load_steps=8 format=3 uid="uid://7kshjmhbmcig"]
+
+[ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="1_ssave"]
+[ext_resource type="Texture2D" uid="uid://1uyyobjnp1ow" path="res://assets/actors/caronte.png" id="2_gngck"]
+[ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="3_movt2"]
+
+[sub_resource type="Resource" id="Resource_1ehq1"]
+script = ExtResource("1_ssave")
+name = "CARONTE"
+text = "ENDCARONTE1"
+image = ExtResource("2_gngck")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_3v766"]
+script = ExtResource("1_ssave")
+name = "CARONTE"
+text = "ENDCARONTE2"
+image = ExtResource("2_gngck")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_ottc7"]
+script = ExtResource("1_ssave")
+name = "CARONTE"
+text = "ENDCARONTE3"
+image = ExtResource("2_gngck")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[sub_resource type="Resource" id="Resource_15uf6"]
+script = ExtResource("1_ssave")
+name = "CARONTE"
+text = "ENDCARONTE4"
+image = ExtResource("2_gngck")
+metadata/_custom_type_script = "uid://d3vt8uwmn3v7m"
+
+[resource]
+script = ExtResource("3_movt2")
+dialogScript = Array[ExtResource("1_ssave")]([SubResource("Resource_1ehq1"), SubResource("Resource_3v766"), SubResource("Resource_ottc7"), SubResource("Resource_15uf6")])
+metadata/_custom_type_script = "uid://cxcmgivfcl054"
