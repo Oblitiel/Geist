@@ -43,6 +43,7 @@ normal = Vector2(-1, 0)
 normal = Vector2(1, 0)
 
 [node name="RatHoleLevel" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
+y_sort_enabled = true
 script = ExtResource("1_2eg5f")
 spawnManager = NodePath("CheckpointManager")
 player = NodePath("Player")
@@ -178,6 +179,7 @@ texture = ExtResource("10_jfpjc")
 
 [node name="MouseDoor" parent="." instance=ExtResource("11_f2lgv")]
 modulate = Color(1, 0.831373, 0.376471, 1)
+y_sort_enabled = true
 position = Vector2(200, 32)
 destination = "zoo_level"
 

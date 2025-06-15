@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://0qb3ocpmqyp7"]
+[gd_scene load_steps=25 format=4 uid="uid://c33eo37qi1uqm"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_qrlwe"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_3f8nj"]

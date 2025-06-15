@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="DialogPlay" load_steps=14 format=3 uid="uid://cri4744k3yti6"]
 
 [ext_resource type="Script" uid="uid://d3vt8uwmn3v7m" path="res://ui/dialogs/DialogLine.gd" id="1_5rhyi"]
-[ext_resource type="Texture2D" uid="uid://bnyejhfcgqkap" path="res://assets/actors/Logan.png" id="2_r8ei3"]
+[ext_resource type="Texture2D" uid="uid://bnyejhfcgqkap" path="res://assets/actors/logan.png" id="2_r8ei3"]
 [ext_resource type="Texture2D" uid="uid://112e7hc5iufs" path="res://assets/actors/Harold.png" id="3_t0475"]
 [ext_resource type="Script" uid="uid://cxcmgivfcl054" path="res://ui/dialogs/DialogPlay.gd" id="4_y81a0"]
 
