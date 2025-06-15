@@ -164,6 +164,7 @@ shape = SubResource("WorldBoundaryShape2D_bjn0b")
 [node name="AreaLevelTransition" type="Area2D" parent="."]
 position = Vector2(40, -488)
 script = ExtResource("19_ws424")
+destination = "rat_hole_level"
 metadata/_custom_type_script = "uid://c5leey8510kyp"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLevelTransition"]

@@ -1,0 +1,139 @@
+[gd_scene load_steps=13 format=4 uid="uid://colj70vqkm3k2"]
+
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_2eg5f"]
+[ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="2_t04ki"]
+[ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="3_ceso7"]
+[ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="3_dsb3p"]
+[ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="4_bmgh4"]
+[ext_resource type="TileSet" uid="uid://wiybp0uyql13" path="res://assets/tileSets/godotRes/Factory.tres" id="5_46j5h"]
+[ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="6_mjvbr"]
+[ext_resource type="PackedScene" uid="uid://dc6ixsgrxytu1" path="res://scenes/actors/box/box.tscn" id="7_dsb3p"]
+[ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="8_x8axm"]
+[ext_resource type="Resource" uid="uid://yr331u3naiyp" path="res://scenes/actors/player/properties/rat.tres" id="9_hg5lv"]
+[ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="10_jfpjc"]
+[ext_resource type="PackedScene" uid="uid://vq2i1b6lxkax" path="res://scenes/actors/mouseDoor/MouseDoor.tscn" id="11_f2lgv"]
+
+[node name="RatHoleLevel" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
+script = ExtResource("1_2eg5f")
+spawnManager = NodePath("CheckpointManager")
+player = NodePath("Player")
+camera = NodePath("CustomCamera")
+metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
+
+[node name="TileMap" type="Node2D" parent="."]
+
+[node name="Floor" type="TileMapLayer" parent="TileMap"]
+tile_map_data = PackedByteArray("AAAHAAUAAAABAAgAAAAHAAQAAAABAAcAAAAHAAMAAAABAAcAAAAHAAIAAAABAAYAAAAHAAEAAAAIAAUAAAAHAAAAAAAIAAMAAAAGAAUAAAABAAgAAAAGAAQAAAABAAcAAAAGAAMAAAABAAcAAAAGAAIAAAABAAYAAAAGAAEAAAAIAAUAAAAGAAAAAAAIAAMAAAAFAAUAAAABAAgAAAAFAAQAAAABAAcAAAAFAAMAAAABAAcAAAAFAAIAAAABAAYAAAAFAAEAAAAIAAUAAAAFAAAAAAAIAAMAAAAEAAUAAAABAAgAAAAEAAQAAAABAAcAAAAEAAMAAAABAAcAAAAEAAIAAAABAAYAAAAEAAEAAAAIAAUAAAAEAAAAAAAIAAMAAAADAAUAAAABAAgAAAADAAQAAAABAAcAAAADAAMAAAABAAcAAAADAAIAAAABAAYAAAADAAEAAAAIAAUAAAADAAAAAAAIAAMAAAACAAUAAAABAAgAAAACAAQAAAABAAcAAAACAAMAAAABAAcAAAACAAIAAAABAAYAAAACAAEAAAAIAAUAAAACAAAAAAAIAAMAAAABAAUAAAABAAgAAAABAAQAAAABAAcAAAABAAMAAAABAAcAAAABAAIAAAABAAYAAAABAAEAAAAIAAUAAAABAAAAAAAIAAMAAAAAAAUAAAAAAAgAAAAAAAQAAAAAAAcAAAAAAAMAAAAAAAcAAAAAAAIAAAAAAAYAAAAAAAEAAAAHAAUAAAAAAAAAAAAHAAMAAAANAAsAAAACAAgAAAANAAoAAAACAAcAAAANAAkAAAACAAcAAAANAAgAAAACAAcAAAANAAcAAAACAAcAAAANAAYAAAACAAcAAAANAAUAAAACAAcAAAANAAQAAAACAAcAAAANAAMAAAACAAcAAAANAAIAAAACAAYAAAANAAEAAAAJAAUAAAANAAAAAAAJAAMAAAAMAAsAAAABAAgAAAAMAAoAAAABAAcAAAAMAAkAAAABAAcAAAAMAAgAAAABAAcAAAAMAAcAAAABAAcAAAAMAAYAAAABAAcAAAAMAAUAAAABAAcAAAAMAAQAAAABAAcAAAAMAAMAAAABAAcAAAAMAAIAAAABAAYAAAAMAAEAAAAIAAUAAAAMAAAAAAAIAAMAAAALAAsAAAABAAgAAAALAAoAAAABAAcAAAALAAkAAAABAAcAAAALAAgAAAABAAcAAAALAAcAAAABAAcAAAALAAYAAAABAAcAAAALAAUAAAABAAcAAAALAAQAAAABAAcAAAALAAMAAAABAAcAAAALAAIAAAABAAYAAAALAAEAAAAIAAUAAAALAAAAAAAIAAMAAAAKAAsAAAABAAgAAAAKAAoAAAABAAcAAAAKAAkAAAABAAcAAAAKAAgAAAABAAcAAAAKAAcAAAABAAcAAAAKAAYAAAABAAcAAAAKAAUAAAABAAcAAAAKAAQAAAABAAcAAAAKAAMAAAABAAcAAAAKAAIAAAABAAYAAAAKAAEAAAAIAAUAAAAKAAAAAAAIAAMAAAAJAAsAAAABAAgAAAAJAAoAAAABAAcAAAAJAAkAAAABAAcAAAAJAAgAAAABAAcAAAAJAAcAAAABAAcAAAAJAAYAAAABAAcAAAAJAAUAAAABAAcAAAAJAAQAAAABAAcAAAAJAAMAAAABAAcAAAAJAAIAAAABAAYAAAAJAAEAAAAIAAUAAAAJAAAAAAAIAAMAAAAIAAsAAAAAAAgAAAAIAAoAAAAAAAcAAAAIAAkAAAAAAAcAAAAIAAgAAAAAAAcAAAAIAAcAAAAAAAcAAAAIAAYAAAAAAAcAAAAIAAUAAAABAAcAAAAIAAQAAAABAAcAAAAIAAMAAAABAAcAAAAIAAIAAAABAAYAAAAIAAEAAAAIAAUAAAAIAAAAAAAIAAMAAAA=")
+tile_set = ExtResource("5_46j5h")
+
+[node name="Decos" type="TileMapLayer" parent="TileMap"]
+tile_map_data = PackedByteArray("AAAGAAMAAAADAAEAAAAJAAoAAAABAAEAAAANAAsAAAADAAEAAAAMAAQAAAADAAEAAAANAAIAAAABAAEAAAAAAAUAAAACAAEAAAACAAMAAAAAAAIAAAAJAAgAAAABAAIAAAAKAAsAAAAAAAIAAAANAAYAAAAAAAIAAAA=")
+tile_set = ExtResource("3_dsb3p")
+
+[node name="CustomCamera" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+script = ExtResource("2_t04ki")
+metadata/_custom_type_script = "uid://dbfisgsfj4ai8"
+
+[node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
+script = ExtResource("3_ceso7")
+defaultCheckpoint = NodePath("checkpoint")
+metadata/_custom_type_script = "uid://cfq0owrq0jkht"
+
+[node name="checkpoint" parent="CheckpointManager" instance=ExtResource("4_bmgh4")]
+position = Vector2(24, 87)
+
+[node name="Player" parent="." instance=ExtResource("6_mjvbr")]
+position = Vector2(24, 87)
+
+[node name="Box_Deco" type="Node2D" parent="."]
+
+[node name="Box" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(57, 96)
+
+[node name="Box2" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(88, 96)
+
+[node name="Box4" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(57, 76)
+
+[node name="Box5" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(72, 76)
+
+[node name="Box6" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(104, 96)
+
+[node name="Box7" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(104, 49)
+
+[node name="Box8" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(120, 49)
+
+[node name="Box9" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(136, 49)
+
+[node name="Box10" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(151, 49)
+
+[node name="Box11" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(168, 65)
+
+[node name="Box12" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(184, 80)
+
+[node name="Box13" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(185, 97)
+
+[node name="Box14" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(183, 111)
+
+[node name="Box15" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(190, 124)
+
+[node name="Box16" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(183, 136)
+
+[node name="Box17" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(183, 150)
+
+[node name="Box18" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(188, 160)
+
+[node name="Box19" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(182, 176)
+
+[node name="Box20" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(120, 96)
+
+[node name="Box21" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(9, 55)
+
+[node name="Box22" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(9, 70)
+
+[node name="Box23" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(136, 112)
+
+[node name="Box24" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(137, 128)
+
+[node name="Box25" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(137, 143)
+
+[node name="Box26" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(137, 159)
+
+[node name="Box27" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(137, 176)
+
+[node name="Box3" parent="Box_Deco" instance=ExtResource("7_dsb3p")]
+position = Vector2(72, 96)
+
+[node name="NPC" parent="." instance=ExtResource("8_x8axm")]
+position = Vector2(41, 92)
+possesionData = ExtResource("9_hg5lv")
+texture = ExtResource("10_jfpjc")
+
+[node name="MouseDoor" parent="." instance=ExtResource("11_f2lgv")]
+modulate = Color(1, 0.831373, 0.376471, 1)
+position = Vector2(200, 32)
