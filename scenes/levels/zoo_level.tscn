@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://cu5wrsar2asvk"]
+[gd_scene load_steps=23 format=4 uid="uid://cu5wrsar2asvk"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_pebhx"]
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="2_laro4"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ce1xg127fwogq" path="res://assets/actors/Gorilla.png" id="12_gda12"]
 [ext_resource type="Resource" uid="uid://de0phfmjxo34s" path="res://scenes/actors/player/properties/cat.tres" id="13_uudf2"]
 [ext_resource type="Texture2D" uid="uid://uklsm2y3yb3s" path="res://assets/actors/cat.png" id="14_ghcu7"]
+[ext_resource type="Resource" uid="uid://yr331u3naiyp" path="res://scenes/actors/player/properties/rat.tres" id="15_7tmh2"]
 [ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="15_bqyfo"]
 [ext_resource type="Resource" uid="uid://b76vasvbq1qgi" path="res://scenes/actors/player/properties/humanGirl.tres" id="15_bwij2"]
 [ext_resource type="Texture2D" uid="uid://ebn6y7s5rlro" path="res://assets/actors/HumanGirl.png" id="16_5e3ek"]
@@ -104,18 +105,18 @@ destination = "Final_coin_level"
 position = Vector2(606, 7)
 
 [node name="CatPlate" parent="Plates" instance=ExtResource("18_bqyfo")]
-position = Vector2(113, 85)
+position = Vector2(120, 80)
 
 [node name="GorillaPlate" parent="Plates" instance=ExtResource("18_bqyfo")]
 position = Vector2(408, 192)
 
 [node name="HumanPlate" parent="Plates" instance=ExtResource("18_bqyfo")]
-position = Vector2(727, 64)
+position = Vector2(728, 64)
 
 [node name="Boxes" type="Node2D" parent="."]
 
 [node name="CatBox" parent="Boxes" instance=ExtResource("19_uo6ah")]
-position = Vector2(250, 102)
+position = Vector2(248, 96)
 
 [node name="GorillaBox" parent="Boxes" instance=ExtResource("19_uo6ah")]
 position = Vector2(488, 160)
@@ -124,13 +125,14 @@ position = Vector2(488, 160)
 position = Vector2(600, 79)
 
 [node name="Lever" parent="." instance=ExtResource("17_4qdg1")]
-position = Vector2(31, 405)
+position = Vector2(349, 75)
 
 [node name="Player" parent="." instance=ExtResource("7_rh7d3")]
 position = Vector2(776, 407)
 
 [node name="Rat" parent="." instance=ExtResource("10_uo6ah")]
 position = Vector2(122, 233)
+possesionData = ExtResource("15_7tmh2")
 texture = ExtResource("15_bqyfo")
 
 [node name="Gorilla" parent="." instance=ExtResource("10_uo6ah")]
