@@ -76,7 +76,7 @@ texture = ExtResource("3_8lk3y")
 
 [node name="AreaLevelTransition" type="Area2D" parent="."]
 script = ExtResource("4_h35hl")
-destination = "citilevel"
+destination = "cementery_level"
 metadata/_custom_type_script = "uid://c5leey8510kyp"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLevelTransition"]
