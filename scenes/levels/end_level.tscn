@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="5_2astq"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="6_onokq"]
 [ext_resource type="Texture2D" uid="uid://uklsm2y3yb3s" path="res://assets/actors/cat.png" id="7_w36ck"]
-[ext_resource type="Texture2D" uid="uid://0m6np5ovtiqy" path="res://assets/actors/Logan.png" id="8_o5xk7"]
+[ext_resource type="Texture2D" uid="uid://bnyejhfcgqkap" path="res://assets/actors/Logan.png" id="8_o5xk7"]
 [ext_resource type="Texture2D" uid="uid://ce1xg127fwogq" path="res://assets/actors/Gorilla.png" id="9_x2ve4"]
 [ext_resource type="Texture2D" uid="uid://bk61shxp0cy0m" path="res://assets/actors/rat.png" id="10_y0qxc"]
 [ext_resource type="Texture2D" uid="uid://1uyyobjnp1ow" path="res://assets/actors/caronte.png" id="11_vygaa"]

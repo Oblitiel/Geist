@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="7_dyvl0"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="8_xxkeb"]
 [ext_resource type="Resource" uid="uid://lepan206s0vh" path="res://scenes/actors/player/properties/logan.tres" id="9_xxkeb"]
-[ext_resource type="Texture2D" uid="uid://0m6np5ovtiqy" path="res://assets/actors/logan.png" id="10_4glq7"]
+[ext_resource type="Texture2D" uid="uid://bnyejhfcgqkap" path="res://assets/actors/logan.png" id="10_4glq7"]
 [ext_resource type="PackedScene" uid="uid://os8clulonheb" path="res://scenes/actors/light/light.tscn" id="12_dyvl0"]
 [ext_resource type="Script" uid="uid://c5leey8510kyp" path="res://scripts/AreaLevelTransition/AreaLevelTransition.gd" id="13_xxkeb"]
 

@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bf4gq3j1i16aq" path="res://scenes/actors/door/door.tscn" id="9_4mdqc"]
 [ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="10_if8ms"]
 [ext_resource type="Resource" uid="uid://lepan206s0vh" path="res://scenes/actors/player/properties/logan.tres" id="11_bqli8"]
-[ext_resource type="Texture2D" uid="uid://0m6np5ovtiqy" path="res://assets/actors/Logan.png" id="12_y1g4u"]
+[ext_resource type="Texture2D" uid="uid://bnyejhfcgqkap" path="res://assets/actors/Logan.png" id="12_y1g4u"]
 [ext_resource type="Texture2D" uid="uid://1uyyobjnp1ow" path="res://assets/actors/caronte.png" id="13_pjeex"]
 [ext_resource type="Resource" uid="uid://de0phfmjxo34s" path="res://scenes/actors/player/properties/cat.tres" id="14_otkdi"]
 [ext_resource type="Texture2D" uid="uid://uklsm2y3yb3s" path="res://assets/actors/cat.png" id="15_jcl7i"]
