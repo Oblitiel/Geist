@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c17n3qtbjcna8"]
+[gd_scene load_steps=9 format=3 uid="uid://c17n3qtbjcna8"]
 
 [ext_resource type="Script" uid="uid://noyl6m1dxng7" path="res://scenes/main/GameControler.gd" id="1_xir38"]
 [ext_resource type="PackedScene" uid="uid://b1q75kxcjcb4j" path="res://ui/menus/optionsMenu.tscn" id="2_atnlg"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://deqlafa4thvkq" path="res://ui/dialogs/dialog.tscn" id="4_xir38"]
 [ext_resource type="PackedScene" uid="uid://da1e2o71dusif" path="res://ui/controler/virtual_controler.tscn" id="5_u81pi"]
 [ext_resource type="PackedScene" uid="uid://dtal3hlb6dajv" path="res://ui/menus/pause_menu.tscn" id="7_e27il"]
+[ext_resource type="AudioStream" uid="uid://dj2xdq034jksv" path="res://assets/audio/geistSong.mp3" id="8_lil24"]
 
 [node name="GameControler" type="Node"]
 process_mode = 3
@@ -31,3 +32,8 @@ visible = false
 
 [node name="OptionsMenu" parent="Ui" instance=ExtResource("2_atnlg")]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_lil24")
+autoplay = true
+bus = &"Music"
