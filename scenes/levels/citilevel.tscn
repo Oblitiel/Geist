@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://m5ddk7jex680"]
+
+[ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_cmayh"]
+[ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="5_gyplf"]
+[ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="6_4t06x"]
+[ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="6_28o1e"]
+[ext_resource type="PackedScene" uid="uid://dvjf58bjuy6rk" path="res://scenes/actors/npc/npc.tscn" id="6_hicbq"]
+[ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="7_gxo46"]
+
+[node name="Level" type="Node2D" node_paths=PackedStringArray("spawnManager", "player", "camera")]
+script = ExtResource("1_cmayh")
+spawnManager = NodePath("CheckpointManager")
+player = NodePath("Player")
+camera = NodePath("CustomCamera")
+metadata/_custom_type_script = "uid://d2y8j2yk2wc6s"
+
+[node name="CheckpointManager" type="Node" parent="." node_paths=PackedStringArray("defaultCheckpoint")]
+script = ExtResource("5_gyplf")
+defaultCheckpoint = NodePath("checkpoint")
+metadata/_custom_type_script = "uid://cfq0owrq0jkht"
+
+[node name="checkpoint" parent="CheckpointManager" instance=ExtResource("6_4t06x")]
+position = Vector2(994, 66)
+
+[node name="CustomCamera" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+script = ExtResource("6_28o1e")
+metadata/_custom_type_script = "uid://dbfisgsfj4ai8"
+
+[node name="Player" parent="." instance=ExtResource("7_gxo46")]
+
+[node name="NPC" parent="." instance=ExtResource("6_hicbq")]
+position = Vector2(199, 86)

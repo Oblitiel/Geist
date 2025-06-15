@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://nag2iyt153yc"]
+[gd_scene load_steps=18 format=4 uid="uid://nag2iyt153yc"]
 
 [ext_resource type="Script" uid="uid://d2y8j2yk2wc6s" path="res://scenes/levels/Level.gd" id="1_8lk3y"]
 [ext_resource type="TileSet" uid="uid://bfq2j2oi1nnqj" path="res://assets/tileSets/godotRes/CityTheme.tres" id="1_geiq8"]
@@ -8,6 +8,7 @@
 [ext_resource type="TileSet" uid="uid://k1j3clsfnan4" path="res://assets/tileSets/godotRes/NatureTheme.tres" id="4_erkku"]
 [ext_resource type="Script" uid="uid://c5leey8510kyp" path="res://scripts/AreaLevelTransition/AreaLevelTransition.gd" id="4_h35hl"]
 [ext_resource type="PackedScene" uid="uid://dw2om3s18q5sr" path="res://scenes/actors/player/Player.tscn" id="5_kwk8y"]
+[ext_resource type="Resource" uid="uid://dsn1b87ohvihl" path="res://assets/text/dialogs/dialog_caronte1.tres" id="6_63vgv"]
 [ext_resource type="Script" uid="uid://dbfisgsfj4ai8" path="res://scripts/camera/CustomCamera.gd" id="7_h35hl"]
 [ext_resource type="Script" uid="uid://cfq0owrq0jkht" path="res://scenes/actors/checkpoint/CheckpointManager.gd" id="8_kwk8y"]
 [ext_resource type="PackedScene" uid="uid://doohe2m0rmkqe" path="res://scenes/actors/checkpoint/checkpoint.tscn" id="9_c7w6w"]
@@ -70,11 +71,12 @@ tile_set = ExtResource("4_erkku")
 
 [node name="NPC" parent="." instance=ExtResource("2_tkkka")]
 position = Vector2(114, 157)
+dialog = ExtResource("6_63vgv")
 texture = ExtResource("3_8lk3y")
 
 [node name="AreaLevelTransition" type="Area2D" parent="."]
 script = ExtResource("4_h35hl")
-destination = "cementery_level"
+destination = "citilevel"
 metadata/_custom_type_script = "uid://c5leey8510kyp"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLevelTransition"]

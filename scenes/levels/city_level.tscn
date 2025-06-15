@@ -90,7 +90,7 @@ defaultCheckpoint = NodePath("checkpoint")
 metadata/_custom_type_script = "uid://cfq0owrq0jkht"
 
 [node name="checkpoint" parent="CheckpointManager" instance=ExtResource("7_muels")]
-position = Vector2(32, 571)
+position = Vector2(29, 559)
 
 [node name="Levers" type="Node2D" parent="."]
 
@@ -131,29 +131,29 @@ position = Vector2(15, 247)
 possesionData = ExtResource("17_v8fjd")
 texture = ExtResource("18_7xaha")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="worldBoundaries" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="worldBoundaries"]
 collision_layer = 12
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries/StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_nsy6u")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="worldBoundaries"]
 position = Vector2(94, 592)
 collision_layer = 12
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries/StaticBody2D2"]
 shape = SubResource("WorldBoundaryShape2D_ilp07")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="worldBoundaries"]
 position = Vector2(287, 48)
 collision_layer = 12
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="worldBoundaries/StaticBody2D3"]
 shape = SubResource("WorldBoundaryShape2D_bjn0b")
 
 [node name="AreaLevelTransition" type="Area2D" parent="."]
